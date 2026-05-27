@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e4e4e4;
+  font-family: "Fraunces", Helvetica, sans-serif;
+}
+
+/* =====================
+   FONT FACE ALIASES
+   (Google Fonts cargadas en index.html)
+   ===================== */
+.font-fraunces {
+  font-family: "Fraunces", Helvetica, sans-serif;
+}
+.font-great-vibes {
+  font-family: "Great Vibes", cursive;
+}
+.font-kurale {
+  font-family: "Kurale", serif;
+}
+.font-pinyon {
+  font-family: "Pinyon Script", cursive;
+}
+.font-quintessential {
+  font-family: "Quintessential", cursive;
+}
+/* Hace que el navegador no muestre scroll horizontal */
+body {
+  overflow-x: hidden;
+}
+
+/* El ScaleWrapper ya maneja el alto correctamente */
+#app {
+  overflow-x: hidden;
+}

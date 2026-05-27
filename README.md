@@ -1,46 +1,70 @@
-# Astro Starter Kit: Basics
+# Portfolio — Mariana Lara
 
-```sh
-npm create astro@latest -- --template basics
+## Estructura del proyecto
+
+```
+portfolio/
+├── index.html
+├── package.json
+├── vite.config.js
+├── postcss.config.js
+├── tailwind.config.js
+└── src/
+    ├── index.jsx
+    ├── index.css
+    └── screens/
+        └── WebDesign/
+            ├── index.js
+            ├── WebDesign.jsx   ← componente principal
+            ├── style.css       ← CSS exacto de Anima/Figma
+            └── img/            ← PON AQUÍ TODAS TUS IMÁGENES
+                ├── ellipse-3.svg
+                ├── whatsapp-image-2026-04-26-at-5-43-20-PM-1-removebg-preview-1.png
+                ├── image-7.png
+                ├── image-7-2.png
+                ├── image-7-3.png
+                ├── image-7-4.png
+                ├── image-7-5.png
+                ├── image-8.png
+                ├── image-10.png ... image-33.png
+                ├── image.png
+                ├── image.svg
+                ├── line-7.svg ... line-25.svg
+                ├── vector.svg
+                ├── vector-2.svg
+                ├── vector-3.svg
+                ├── ellipse-3.svg
+                ├── gemini-generated-image-7b1teu7b1teu7b1t-removebg-preview-1.png
+                ├── whatsapp-image-2026-04-26-at-5-43-20-PM-removebg-preview-1.png
+                ├── captura-de-pantalla-2026-04-01-103842-removebg-preview-1.png
+                ├── captura-de-pantalla-2026-04-01-103842-removebg-preview-2.png
+                ├── en-la-intersecci-n-entre-la-tecnolog-a-y-los-negocios--surge-une.svg
+                └── en-la-intersecci-n-entre-la-tecnolog-a-y-los-negocios--surge-une-2.svg
+
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Pasos para correr el proyecto
 
-## 🚀 Project Structure
+1. Copia TODAS tus imágenes del proyecto original de Anima
+   a la carpeta `src/screens/WebDesign/img/`
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+2. Instala dependencias:
+```bash
+npm install
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+3. Corre en desarrollo:
+```bash
+npm run dev
+```
 
-## 🧞 Commands
+4. Para build de producción:
+```bash
+npm run build
+```
 
-All commands are run from the root of the project, from a terminal:
+## Las imágenes
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Las imágenes vienen del proyecto de Anima que descargaste.
+Están en la carpeta `img/` del proyecto original de Anima.
+Solo cópialas a `src/screens/WebDesign/img/`.
