@@ -162,7 +162,7 @@
   width: 326px;
 }
 
-.web-design .whatsapp-image {
+.web-design .principalphoto {
   aspect-ratio: 0.48;
   height: 883px;
   left: 525px;
@@ -278,7 +278,7 @@
 
 .web-design .line-4 {
   height: 1px;
-  left: 1169px;
+  left: 1140px;
   object-fit: cover;
   position: absolute;
   top: 946px;
@@ -287,7 +287,7 @@
 
 .web-design .line-5 {
   height: 4px;
-  left: 1169px;
+  left: 1140px;
   position: absolute;
   top: 944px;
   width: 92px;
@@ -298,7 +298,7 @@
   font-family: "Fraunces", Helvetica;
   font-size: 12px;
   font-weight: 400;
-  left: 1170px;
+  left: 1140px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
@@ -311,7 +311,7 @@
   font-family: "Fraunces", Helvetica;
   font-size: 12px;
   font-weight: 400;
-  left: 1195px;
+  left: 1168px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
@@ -321,7 +321,7 @@
 
 .web-design .line-6 {
   height: 1px;
-  left: 964px;
+  left: 936px;
   object-fit: cover;
   position: absolute;
   top: 946px;
@@ -330,7 +330,7 @@
 
 .web-design .line-7 {
   height: 4px;
-  left: 964px;
+  left: 936px;
   position: absolute;
   top: 944px;
   width: 92px;
@@ -341,7 +341,7 @@
   font-family: "Fraunces", Helvetica;
   font-size: 12px;
   font-weight: 400;
-  left: 964px;
+  left: 936px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
@@ -354,7 +354,7 @@
   font-family: "Fraunces", Helvetica;
   font-size: 12px;
   font-weight: 400;
-  left: 993px;
+  left: 964px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
@@ -1090,4 +1090,53 @@
   position: absolute;
   top: 574px;
   width: 38px;
+}
+
+/* Email and Phone icons in hero */
+.web-design .image-github {
+  aspect-ratio: 1;
+  height: 21px;
+  left: 90px;
+  object-fit: cover;
+  position: absolute;
+  top: 903px;
+  width: 21px;
+}
+
+.web-design .image-30 {
+  aspect-ratio: 1;
+  height: 16px;
+  left: 948px;
+  object-fit: cover;
+  position: absolute;
+  top: 905px;
+  width: 16px;
+}
+
+.web-design .image-31 {
+  aspect-ratio: 1;
+  height: 16px;
+  left: 1192px;
+  object-fit: cover;
+  position: absolute;
+  top: 964px;
+  width: 16px;
+}
+
+/* Lines for GitHub section */
+.web-design .line-0 {
+  height: 1px;
+  left: 92px;
+  object-fit: cover;
+  position: absolute;
+  top: 946px;
+  width: 166px;
+}
+
+.web-design .line-1 {
+  height: 4px;
+  left: 92px;
+  position: absolute;
+  top: 944px;
+  width: 92px;
 }

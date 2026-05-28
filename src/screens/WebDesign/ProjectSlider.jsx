@@ -27,6 +27,9 @@ import horariosSimify from "./img/horarios simify.png";
 import citaSimify from "./img/cita simify.png";
 import phpIcon from "./img/php.png";
 
+// ── TECH ICONS ─────────────────────────────────────────────────
+import reactImg from "./img/react.png";
+
 // ─────────────────────────────────────────────────────────────────
 // SLIDE 1 — UNEXIA
 // ─────────────────────────────────────────────────────────────────
@@ -142,7 +145,7 @@ const SlideUnexia = ({ onNext }) => (
       style={{
         position: "absolute",
         top: "63px",
-        left: "608px",
+        left: "620px",
         color: "#1a1f33",
         fontFamily: "Pinyon Script, Helvetica",
         fontSize: "230px",
@@ -158,12 +161,12 @@ const SlideUnexia = ({ onNext }) => (
       X
     </div>
 
-    {/* XIA */}
+    {/* IA */}
     <div
       style={{
         position: "absolute",
         top: "57px",
-        left: "615px",
+        left: "580px",
         color: "#1a1f33",
         fontFamily: "Fraunces, Helvetica",
         fontSize: "128px",
@@ -172,7 +175,7 @@ const SlideUnexia = ({ onNext }) => (
         width: "717px",
       }}
     >
-      XIA
+      IA
     </div>
 
     {/* Horizontal line */}
@@ -1377,11 +1380,559 @@ const SlideDoctorAppointment = ({ onPrev }) => (
 );
 
 // ─────────────────────────────────────────────────────────────────
+// SLIDE 5 — DULCERÍA CINE
+// ─────────────────────────────────────────────────────────────────
+const SlideDulceriaCine = ({ onNext, onPrev }) => (
+  <div
+    style={{
+      position: "relative",
+      width: "1440px",
+      height: "1228px",
+      backgroundColor: "#1a1f33",
+      overflow: "hidden",
+    }}
+  >
+    {/* Light card */}
+    <div
+      style={{
+        position: "absolute",
+        top: "34px",
+        left: "33px",
+        width: "1374px",
+        height: "1153px",
+        backgroundColor: "#f2f0ec",
+      }}
+    />
+
+    {/* 05 */}
+    <div
+      style={{
+        position: "absolute",
+        top: "120px",
+        left: "1060px",
+        color: "#c2bdab",
+        fontFamily: "Fraunces, Helvetica",
+        fontSize: "200px",
+        fontWeight: 400,
+        letterSpacing: "8px",
+        textShadow: "0px 4px 4px rgba(0,0,0,0.25)",
+      }}
+    >
+      05
+    </div>
+
+    {/* Title */}
+    <div
+      style={{
+        position: "absolute",
+        top: "120px",
+        left: "80px",
+        color: "#1a1f33",
+        fontFamily: "Fraunces, Helvetica",
+        fontSize: "120px",
+        fontWeight: 400,
+        whiteSpace: "nowrap",
+      }}
+    >
+      DULCERÍA
+    </div>
+
+    <div
+      style={{
+        position: "absolute",
+        top: "240px",
+        left: "80px",
+        color: "#1a1f33",
+        fontFamily: "Fraunces, Helvetica",
+        fontSize: "120px",
+        fontWeight: 400,
+        whiteSpace: "nowrap",
+      }}
+    >
+      CINE
+    </div>
+
+    {/* Description */}
+    <p
+      style={{
+        position: "absolute",
+        top: "380px",
+        left: "80px",
+        width: "500px",
+        color: "#1a1f33",
+        fontFamily: "Kurale, Helvetica",
+        fontSize: "18px",
+        fontWeight: 400,
+      }}
+    >
+      <span>A</span> modern e-commerce platform for movie-theater candy sales.
+      Seamless ordering, inventory management, and delivery tracking all in one
+      place. Built with React and integrated payment processing.
+    </p>
+
+    {/* Images */}
+    <img
+      style={{
+        position: "absolute",
+        top: "150px",
+        right: "80px",
+        width: "280px",
+        height: "400px",
+        objectFit: "cover",
+        borderRadius: "8px",
+      }}
+      alt="Home"
+      src={homeCine}
+    />
+
+    <img
+      style={{
+        position: "absolute",
+        bottom: "100px",
+        left: "80px",
+        width: "800px",
+        height: "280px",
+        objectFit: "cover",
+        borderRadius: "8px",
+      }}
+      alt="Catalog"
+      src={dulceriaCine}
+    />
+
+    {/* React icon */}
+    <img
+      style={{
+        position: "absolute",
+        bottom: "50px",
+        right: "80px",
+        width: "60px",
+        height: "60px",
+        objectFit: "cover",
+      }}
+      alt="React"
+      src={reactImg}
+    />
+
+    {/* Navigation buttons */}
+    <button
+      onClick={onPrev}
+      style={{
+        position: "absolute",
+        top: "50%",
+        left: "30px",
+        transform: "translateY(-50%)",
+        background: "none",
+        border: "none",
+        cursor: "pointer",
+        zIndex: 20,
+      }}
+    >
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="23" stroke="#f2f0ec" strokeWidth="1.5" />
+        <path
+          d="M28 16l-8 8 8 8"
+          stroke="#f2f0ec"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </button>
+
+    <button
+      onClick={onNext}
+      style={{
+        position: "absolute",
+        top: "50%",
+        right: "30px",
+        transform: "translateY(-50%)",
+        background: "none",
+        border: "none",
+        cursor: "pointer",
+        zIndex: 20,
+      }}
+    >
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="23" stroke="#f2f0ec" strokeWidth="1.5" />
+        <path
+          d="M20 16l8 8-8 8"
+          stroke="#f2f0ec"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </button>
+  </div>
+);
+
+// ─────────────────────────────────────────────────────────────────
+// SLIDE 6 — ENERQON PRO
+// ─────────────────────────────────────────────────────────────────
+const SlideEnerqonPro = ({ onNext, onPrev }) => (
+  <div
+    style={{
+      position: "relative",
+      width: "1440px",
+      height: "1228px",
+      backgroundColor: "#f1efeb",
+      overflow: "hidden",
+    }}
+  >
+    {/* Dark right bar */}
+    <div
+      style={{
+        position: "absolute",
+        top: 0,
+        right: 0,
+        width: "350px",
+        height: "1228px",
+        backgroundColor: "#1a1f33",
+      }}
+    />
+
+    {/* 06 */}
+    <div
+      style={{
+        position: "absolute",
+        top: "100px",
+        right: "80px",
+        color: "#c2bdab",
+        fontFamily: "Fraunces, Helvetica",
+        fontSize: "200px",
+        fontWeight: 400,
+        letterSpacing: "8px",
+        textShadow: "0px 4px 4px rgba(0,0,0,0.25)",
+      }}
+    >
+      06
+    </div>
+
+    {/* Title */}
+    <div
+      style={{
+        position: "absolute",
+        top: "100px",
+        left: "80px",
+        color: "#1a1f33",
+        fontFamily: "Fraunces, Helvetica",
+        fontSize: "100px",
+        fontWeight: 400,
+      }}
+    >
+      ENERQON
+    </div>
+
+    <div
+      style={{
+        position: "absolute",
+        top: "200px",
+        left: "80px",
+        color: "#1a1f33",
+        fontFamily: "Fraunces, Helvetica",
+        fontSize: "80px",
+        fontWeight: 400,
+      }}
+    >
+      PRO
+    </div>
+
+    {/* Description */}
+    <p
+      style={{
+        position: "absolute",
+        top: "320px",
+        left: "80px",
+        width: "600px",
+        color: "#1a1f33",
+        fontFamily: "Kurale, Helvetica",
+        fontSize: "18px",
+        fontWeight: 400,
+      }}
+    >
+      <span>A</span>n advanced analytics dashboard for renewable energy
+      solutions. Real-time monitoring, cost calculations, and payment processing
+      integrated into a sleek interface.
+    </p>
+
+    {/* Images */}
+    <img
+      style={{
+        position: "absolute",
+        top: "120px",
+        left: "500px",
+        width: "380px",
+        height: "280px",
+        objectFit: "cover",
+        borderRadius: "8px",
+      }}
+      alt="Quoter"
+      src={cotizadorEnerqon}
+    />
+
+    <img
+      style={{
+        position: "absolute",
+        top: "430px",
+        left: "80px",
+        width: "500px",
+        height: "280px",
+        objectFit: "cover",
+        borderRadius: "8px",
+      }}
+      alt="Packages"
+      src={paquetesEnerqon}
+    />
+
+    <img
+      style={{
+        position: "absolute",
+        bottom: "100px",
+        right: "80px",
+        width: "300px",
+        height: "280px",
+        objectFit: "cover",
+        borderRadius: "8px",
+      }}
+      alt="Payment"
+      src={pagoEnerqon}
+    />
+
+    {/* Navigation buttons */}
+    <button
+      onClick={onPrev}
+      style={{
+        position: "absolute",
+        top: "50%",
+        left: "30px",
+        transform: "translateY(-50%)",
+        background: "none",
+        border: "none",
+        cursor: "pointer",
+        zIndex: 20,
+      }}
+    >
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="23" stroke="#1a1f33" strokeWidth="1.5" />
+        <path
+          d="M28 16l-8 8 8 8"
+          stroke="#1a1f33"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </button>
+
+    <button
+      onClick={onNext}
+      style={{
+        position: "absolute",
+        top: "50%",
+        right: "30px",
+        transform: "translateY(-50%)",
+        background: "none",
+        border: "none",
+        cursor: "pointer",
+        zIndex: 20,
+      }}
+    >
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="23" stroke="#1a1f33" strokeWidth="1.5" />
+        <path
+          d="M20 16l8 8-8 8"
+          stroke="#1a1f33"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </button>
+  </div>
+);
+
+// ─────────────────────────────────────────────────────────────────
+// SLIDE 7 — SIMIFY PLUS
+// ─────────────────────────────────────────────────────────────────
+const SlideSimifyPlus = ({ onPrev }) => (
+  <div
+    style={{
+      position: "relative",
+      width: "1440px",
+      height: "1228px",
+      backgroundColor: "#f2f0ec",
+      overflow: "hidden",
+    }}
+  >
+    {/* Dark left bar */}
+    <div
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "200px",
+        height: "1228px",
+        backgroundColor: "#1a1f33",
+      }}
+    />
+
+    {/* 07 */}
+    <div
+      style={{
+        position: "absolute",
+        top: "100px",
+        left: "30px",
+        color: "#c2bdab",
+        fontFamily: "Fraunces, Helvetica",
+        fontSize: "180px",
+        fontWeight: 400,
+        letterSpacing: "8px",
+        textShadow: "0px 4px 4px rgba(0,0,0,0.25)",
+      }}
+    >
+      07
+    </div>
+
+    {/* Title */}
+    <div
+      style={{
+        position: "absolute",
+        top: "80px",
+        left: "280px",
+        color: "#1a1f33",
+        fontFamily: "Fraunces, Helvetica",
+        fontSize: "100px",
+        fontWeight: 400,
+        whiteSpace: "nowrap",
+      }}
+    >
+      SIMIFY
+    </div>
+
+    <div
+      style={{
+        position: "absolute",
+        top: "180px",
+        left: "280px",
+        color: "#1a1f33",
+        fontFamily: "Fraunces, Helvetica",
+        fontSize: "100px",
+        fontWeight: 400,
+        whiteSpace: "nowrap",
+      }}
+    >
+      PLUS
+    </div>
+
+    {/* Description */}
+    <p
+      style={{
+        position: "absolute",
+        top: "330px",
+        left: "280px",
+        width: "700px",
+        color: "#1a1f33",
+        fontFamily: "Kurale, Helvetica",
+        fontSize: "18px",
+        fontWeight: 400,
+      }}
+    >
+      <span>A</span>n enhanced healthcare management platform with patient
+      portal, appointment scheduling, and real-time notifications. Optimized for
+      medical professionals seeking efficiency and patient satisfaction.
+    </p>
+
+    {/* Images */}
+    <img
+      style={{
+        position: "absolute",
+        top: "100px",
+        right: "80px",
+        width: "350px",
+        height: "300px",
+        objectFit: "cover",
+        borderRadius: "8px",
+      }}
+      alt="Patients"
+      src={pacientesSimify}
+    />
+
+    <img
+      style={{
+        position: "absolute",
+        top: "440px",
+        left: "280px",
+        width: "450px",
+        height: "280px",
+        objectFit: "cover",
+        borderRadius: "8px",
+      }}
+      alt="Hours"
+      src={horariosSimify}
+    />
+
+    <img
+      style={{
+        position: "absolute",
+        bottom: "100px",
+        right: "80px",
+        width: "350px",
+        height: "280px",
+        objectFit: "cover",
+        borderRadius: "8px",
+      }}
+      alt="Appointment"
+      src={citaSimify}
+    />
+
+    {/* PHP icon */}
+    <img
+      style={{
+        position: "absolute",
+        bottom: "80px",
+        left: "280px",
+        width: "60px",
+        height: "60px",
+        objectFit: "cover",
+      }}
+      alt="PHP"
+      src={phpIcon}
+    />
+
+    {/* Prev button */}
+    <button
+      onClick={onPrev}
+      style={{
+        position: "absolute",
+        top: "50%",
+        left: "30px",
+        transform: "translateY(-50%)",
+        background: "none",
+        border: "none",
+        cursor: "pointer",
+        zIndex: 20,
+      }}
+    >
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="23" stroke="#1a1f33" strokeWidth="1.5" />
+        <path
+          d="M28 16l-8 8 8 8"
+          stroke="#1a1f33"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </button>
+  </div>
+);
+
+// ─────────────────────────────────────────────────────────────────
 // MAIN SLIDER
 // ─────────────────────────────────────────────────────────────────
 export const ProjectSlider = () => {
   const [current, setCurrent] = useState(0);
-  const total = 4;
+  const total = 7;
 
   const next = () => setCurrent((c) => Math.min(c + 1, total - 1));
   const prev = () => setCurrent((c) => Math.max(c - 1, 0));
@@ -1414,6 +1965,15 @@ export const ProjectSlider = () => {
         </div>
         <div style={{ width: "1440px", flexShrink: 0 }}>
           <SlideDoctorAppointment onPrev={prev} />
+        </div>
+        <div style={{ width: "1440px", flexShrink: 0 }}>
+          <SlideDulceriaCine onNext={next} onPrev={prev} />
+        </div>
+        <div style={{ width: "1440px", flexShrink: 0 }}>
+          <SlideEnerqonPro onNext={next} onPrev={prev} />
+        </div>
+        <div style={{ width: "1440px", flexShrink: 0 }}>
+          <SlideSimifyPlus onPrev={prev} />
         </div>
       </div>
 
