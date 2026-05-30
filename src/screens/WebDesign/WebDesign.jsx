@@ -41,7 +41,8 @@ import principalphoto from "./img/photo 1.png";
 import whatsappAbout from "./img/foto 1.png";
 import photo2 from "./img/foto 2.png";
 
-export const WebDesign = () => {
+export const WebDesign = ({ setExpandedImage }) => {
+  // ← CAMBIA ESTA LÍNEA
   return (
     <div className="web-design">
       {/* ════════════════════════════════
@@ -171,16 +172,37 @@ export const WebDesign = () => {
         {/* Hard Skills */}
         <div className="text-wrapper-26">Hard Skills</div>
 
-        <img className="image-20" alt="Odoo" src={odooImg} />
-        <img className="image-21" alt="CSS" src={cssImg} />
-        <img className="image-22" alt="AWS" src={aws} />
-        <img className="image-23" alt="Python" src={pythonImg} />
-        <img className="image-24" alt="Java" src={javaImg} />
-        <img className="image-25" alt="React" src={reactImg} />
-        <img className="image-26" alt="HTML" src={htmlImg} />
-        <img className="image-27" alt="Database" src={baseDatosImg} />
-        <img className="image-28" alt="PHP" src={phpImg} />
-        <img className="image-29" alt="Dart" src={dartImg} />
+        <div className="hard-skills-container">
+          {/* Fila 1 */}
+          <div className="hard-skill-row">
+            <img className="image-20" alt="Odoo" src={odooImg} />
+            <img className="image-22" alt="AWS" src={aws} />
+          </div>
+
+          {/* Fila 2 */}
+          <div className="hard-skill-row">
+            <img className="image-26" alt="HTML" src={htmlImg} />
+            <img className="image-21" alt="CSS" src={cssImg} />
+          </div>
+
+          {/* Fila 3 */}
+          <div className="hard-skill-row">
+            <img className="image-29" alt="Dart" src={dartImg} />
+            <img className="image-25" alt="React" src={reactImg} />
+          </div>
+
+          {/* Fila 4 - Spring y Python */}
+          <div className="hard-skill-row">
+            <img className="image-spring" alt="Spring" src={jsImg} />
+            <img className="image-23" alt="Python" src={pythonImg} />
+          </div>
+
+          {/* Fila 5 - PHP y Base de Datos */}
+          <div className="hard-skill-row">
+            <img className="image-28" alt="PHP" src={phpImg} />
+            <img className="image-27" alt="Database" src={baseDatosImg} />
+          </div>
+        </div>
       </div>
 
       {/* ════════════════════════════════
@@ -194,7 +216,7 @@ export const WebDesign = () => {
           CERTIFICATES
       ════════════════════════════════ */}
       <div className="certificates">
-        <CertificatesCarousel />
+        <CertificatesCarousel setExpandedImage={setExpandedImage} />
       </div>
     </div>
   );

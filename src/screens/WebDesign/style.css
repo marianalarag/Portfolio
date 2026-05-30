@@ -24,7 +24,7 @@
    HOME / HERO SECTION
    ============================================================ */
 .web-design .home {
-  height: 991px;
+  height: 850px;
   left: -18px;
   position: absolute;
   top: -7px;
@@ -44,15 +44,6 @@
   width: 1440px;
 }
 
-.web-design .rectangle-2 {
-  background-color: #24263aba;
-  height: 984px;
-  left: 18px;
-  position: absolute;
-  top: 0;
-  width: 1440px;
-}
-
 .web-design .text-wrapper {
   color: #e2ded5;
   font-family: "Fraunces", Helvetica;
@@ -65,6 +56,32 @@
   text-shadow: 0px 4px 4px #00000040;
   top: 250px;
   width: 405px;
+  z-index: 20;
+}
+
+.web-design .rectangle-2 {
+  background-color: #24263aba;
+  height: 984px;
+  left: 18px;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.web-design .text-wrapper-24 {
+  color: #c1bfbc;
+  font-family: "Fraunces", Helvetica;
+  font-size: 130px !important;
+  font-weight: 400;
+  left: -222px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  text-shadow: 0px 4px 4px #00000040;
+  top: 315px; /* AJUSTADO para mantener el centrado */
+  transform: rotate(-90.81deg);
+  width: 625px;
 }
 
 .web-design .ellipse {
@@ -86,7 +103,7 @@
   position: absolute;
   text-align: right;
   text-shadow: 0px 4px 4px #00000040;
-  top: 263px;
+  top: 250px;
 }
 
 .web-design .span {
@@ -382,11 +399,12 @@
    CERTIFICATES SECTION
    ============================================================ */
 .web-design .certificates {
-  height: 1271px;
-  left: -245px;
+  height: 1000px;
+  left: 0;
   position: absolute;
   top: 3217px;
-  width: 1877px;
+  width: 1440px;
+  background-color: #e4e4e4;
 }
 
 .web-design .text-wrapper-14 {
@@ -854,9 +872,9 @@
 .web-design .text-wrapper-23 {
   color: #c1bfbc;
   font-family: "Fraunces", Helvetica;
-  font-size: 145px;
+  font-size: 130px;
   font-weight: 400;
-  left: 1148px;
+  left: 1120px !important;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
@@ -1106,21 +1124,21 @@
 .web-design .image-30 {
   aspect-ratio: 1;
   height: 16px;
-  left: 948px;
+  left: 940px;
   object-fit: cover;
   position: absolute;
-  top: 905px;
+  top: 903px;
   width: 16px;
 }
 
 .web-design .image-31 {
   aspect-ratio: 1;
-  height: 16px;
-  left: 1192px;
+  height: 21px;
+  left: 1140px;
   object-fit: cover;
   position: absolute;
-  top: 964px;
-  width: 16px;
+  top: 903px;
+  width: 21px;
 }
 
 /* Lines for GitHub section */
@@ -1135,8 +1153,96 @@
 
 .web-design .line-1 {
   height: 4px;
-  left: 92px;
+  left: 90px;
   position: absolute;
   top: 944px;
   width: 92px;
+}
+/* ============================================================
+   HARD SKILLS ICONS - MISMO TAMAÑO
+   ============================================================ */
+
+.web-design .image-20,
+.web-design .image-21,
+.web-design .image-22,
+.web-design .image-23,
+.web-design .image-24,
+.web-design .image-25,
+.web-design .image-26,
+.web-design .image-27,
+.web-design .image-28,
+.web-design .image-29 {
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: contain !important;
+}
+
+/* Mantener las posiciones originales de cada icono */
+.web-design .image-20 {
+  left: 1292px;
+  top: 621px;
+}
+.web-design .image-21 {
+  left: 1294px;
+  top: 666px;
+}
+.web-design .image-22 {
+  left: 1335px;
+  top: 666px;
+}
+.web-design .image-23 {
+  left: 1293px;
+  top: 542px;
+}
+.web-design .image-24 {
+  left: 1334px;
+  top: 710px;
+}
+.web-design .image-25 {
+  left: 1341px;
+  top: 547px;
+}
+.web-design .image-26 {
+  left: 1290px;
+  top: 716px;
+}
+.web-design .image-27 {
+  left: 1336px;
+  top: 621px;
+}
+.web-design .image-28 {
+  left: 1290px;
+  top: 574px;
+}
+.web-design .image-29 {
+  left: 1331px;
+  top: 574px;
+}
+/* ============================================================
+   HARD SKILLS - FILAS DE 2
+   ============================================================ */
+
+.hard-skills-container {
+  position: absolute;
+  left: 1250px;
+  top: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hard-skill-row {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Todos los iconos del mismo tamaño */
+.hard-skills-container img {
+  width: 45px !important;
+  height: 45px !important;
+  object-fit: contain !important;
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
 }

@@ -27,13 +27,10 @@ import horariosSimify from "./img/horarios simify.png";
 import citaSimify from "./img/cita simify.png";
 import phpIcon from "./img/php.png";
 
-// ── TECH ICONS ─────────────────────────────────────────────────
-import reactImg from "./img/react.png";
-
 // ─────────────────────────────────────────────────────────────────
-// SLIDE 1 — UNEXIA
+// SLIDE 1 — UNEXIA (con link a odoo)
 // ─────────────────────────────────────────────────────────────────
-const SlideUnexia = ({ onNext }) => (
+const SlideUnexia = () => (
   <div
     style={{
       position: "relative",
@@ -89,7 +86,7 @@ const SlideUnexia = ({ onNext }) => (
         fontSize: "48px",
         fontWeight: 400,
         textAlign: "center",
-        textShadow: "0px 4px 4px rgba(0,0,0,0.25)",
+        textShadow: "0px 4px 4px #00000040",
       }}
     >
       Landing Page
@@ -355,39 +352,13 @@ const SlideUnexia = ({ onNext }) => (
       alt="JS"
       src={jsIcon}
     />
-
-    {/* Next arrow button */}
-    <button
-      onClick={onNext}
-      style={{
-        position: "absolute",
-        top: "50%",
-        right: "350px",
-        transform: "translateY(-50%)",
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        zIndex: 20,
-      }}
-    >
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="23" stroke="#1a1f33" strokeWidth="1.5" />
-        <path
-          d="M20 16l8 8-8 8"
-          stroke="#1a1f33"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </button>
   </div>
 );
 
 // ─────────────────────────────────────────────────────────────────
 // SLIDE 2 — ENERQON
 // ─────────────────────────────────────────────────────────────────
-const SlideEnerqon = ({ onNext, onPrev }) => (
+const SlideEnerqon = () => (
   <div
     style={{
       position: "relative",
@@ -435,7 +406,7 @@ const SlideEnerqon = ({ onNext, onPrev }) => (
         fontSize: "48px",
         fontWeight: 400,
         textAlign: "center",
-        textShadow: "0px 4px 4px rgba(0,0,0,0.25)",
+        textShadow: "0px 4px 4px #00000040",
       }}
     >
       Landing Page
@@ -722,63 +693,13 @@ const SlideEnerqon = ({ onNext, onPrev }) => (
         />
       </svg>
     </a>
-
-    {/* Prev / Next buttons */}
-    <button
-      onClick={onPrev}
-      style={{
-        position: "absolute",
-        top: "50%",
-        left: "700px",
-        transform: "translateY(-50%)",
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        zIndex: 20,
-      }}
-    >
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="23" stroke="#f2f0ec" strokeWidth="1.5" />
-        <path
-          d="M28 16l-8 8 8 8"
-          stroke="#f2f0ec"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </button>
-    <button
-      onClick={onNext}
-      style={{
-        position: "absolute",
-        top: "50%",
-        right: "40px",
-        transform: "translateY(-50%)",
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        zIndex: 20,
-      }}
-    >
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="23" stroke="#1a1f33" strokeWidth="1.5" />
-        <path
-          d="M20 16l8 8-8 8"
-          stroke="#1a1f33"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </button>
   </div>
 );
 
 // ─────────────────────────────────────────────────────────────────
 // SLIDE 3 — MOVIE CATALOGUE
 // ─────────────────────────────────────────────────────────────────
-const SlideMovieCatalogue = ({ onNext, onPrev }) => (
+const SlideMovieCatalogue = () => (
   <div
     style={{
       position: "relative",
@@ -847,30 +768,81 @@ const SlideMovieCatalogue = ({ onNext, onPrev }) => (
     </div>
 
     {/* MOVIE letters rotated */}
-    {[
-      { char: "E", top: "835px", left: "1479px", rotate: "-139.03deg" },
-      { char: "O", top: "527px", left: "1278px", rotate: "-106.11deg" },
-      { char: "I", top: "135px", left: "1278px", rotate: "-41.06deg" },
-      { char: "E", top: "29px", left: "1479px", rotate: "-24.82deg" },
-      { char: "V", top: "374px", left: "1176px", rotate: "-75.25deg" },
-    ].map((l, i) => (
-      <div
-        key={i}
-        style={{
-          position: "absolute",
-          top: l.top,
-          left: l.left,
-          color: "#f2f0ec",
-          fontFamily: "Fraunces, Helvetica",
-          fontSize: "200px",
-          fontWeight: 400,
-          transform: `rotate(${l.rotate})`,
-          whiteSpace: "nowrap",
-        }}
-      >
-        {l.char}
-      </div>
-    ))}
+    <div
+      style={{
+        position: "absolute",
+        top: "835px",
+        left: "1479px",
+        color: "#f2f0ec",
+        fontFamily: "Fraunces, Helvetica",
+        fontSize: "200px",
+        fontWeight: 400,
+        transform: "rotate(-139.03deg)",
+        whiteSpace: "nowrap",
+      }}
+    >
+      E
+    </div>
+    <div
+      style={{
+        position: "absolute",
+        top: "527px",
+        left: "1278px",
+        color: "#f2f0ec",
+        fontFamily: "Fraunces, Helvetica",
+        fontSize: "200px",
+        fontWeight: 400,
+        transform: "rotate(-106.11deg)",
+        whiteSpace: "nowrap",
+      }}
+    >
+      O
+    </div>
+    <div
+      style={{
+        position: "absolute",
+        top: "135px",
+        left: "1278px",
+        color: "#f2f0ec",
+        fontFamily: "Fraunces, Helvetica",
+        fontSize: "200px",
+        fontWeight: 400,
+        transform: "rotate(-41.06deg)",
+        whiteSpace: "nowrap",
+      }}
+    >
+      I
+    </div>
+    <div
+      style={{
+        position: "absolute",
+        top: "29px",
+        left: "1479px",
+        color: "#f2f0ec",
+        fontFamily: "Fraunces, Helvetica",
+        fontSize: "200px",
+        fontWeight: 400,
+        transform: "rotate(-24.82deg)",
+        whiteSpace: "nowrap",
+      }}
+    >
+      E
+    </div>
+    <div
+      style={{
+        position: "absolute",
+        top: "374px",
+        left: "1176px",
+        color: "#f2f0ec",
+        fontFamily: "Fraunces, Helvetica",
+        fontSize: "200px",
+        fontWeight: 400,
+        transform: "rotate(-75.25deg)",
+        whiteSpace: "nowrap",
+      }}
+    >
+      V
+    </div>
 
     {/* Images */}
     <img
@@ -987,63 +959,13 @@ const SlideMovieCatalogue = ({ onNext, onPrev }) => (
         />
       </svg>
     </a>
-
-    {/* Prev / Next */}
-    <button
-      onClick={onPrev}
-      style={{
-        position: "absolute",
-        top: "50%",
-        left: "1000px",
-        transform: "translateY(-50%)",
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        zIndex: 20,
-      }}
-    >
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="23" stroke="#f2f0ec" strokeWidth="1.5" />
-        <path
-          d="M28 16l-8 8 8 8"
-          stroke="#f2f0ec"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </button>
-    <button
-      onClick={onNext}
-      style={{
-        position: "absolute",
-        top: "50%",
-        right: "40px",
-        transform: "translateY(-50%)",
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        zIndex: 20,
-      }}
-    >
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="23" stroke="#f2f0ec" strokeWidth="1.5" />
-        <path
-          d="M20 16l8 8-8 8"
-          stroke="#f2f0ec"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </button>
   </div>
 );
 
 // ─────────────────────────────────────────────────────────────────
 // SLIDE 4 — DOCTOR APPOINTMENT
 // ─────────────────────────────────────────────────────────────────
-const SlideDoctorAppointment = ({ onPrev }) => (
+const SlideDoctorAppointment = () => (
   <div
     style={{
       position: "relative",
@@ -1350,598 +1272,32 @@ const SlideDoctorAppointment = ({ onPrev }) => (
         />
       </svg>
     </a>
-
-    {/* Prev button */}
-    <button
-      onClick={onPrev}
-      style={{
-        position: "absolute",
-        top: "50%",
-        left: "380px",
-        transform: "translateY(-50%)",
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        zIndex: 20,
-      }}
-    >
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="23" stroke="#1a1f33" strokeWidth="1.5" />
-        <path
-          d="M28 16l-8 8 8 8"
-          stroke="#1a1f33"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </button>
   </div>
 );
 
 // ─────────────────────────────────────────────────────────────────
-// SLIDE 5 — DULCERÍA CINE
-// ─────────────────────────────────────────────────────────────────
-const SlideDulceriaCine = ({ onNext, onPrev }) => (
-  <div
-    style={{
-      position: "relative",
-      width: "1440px",
-      height: "1228px",
-      backgroundColor: "#1a1f33",
-      overflow: "hidden",
-    }}
-  >
-    {/* Light card */}
-    <div
-      style={{
-        position: "absolute",
-        top: "34px",
-        left: "33px",
-        width: "1374px",
-        height: "1153px",
-        backgroundColor: "#f2f0ec",
-      }}
-    />
-
-    {/* 05 */}
-    <div
-      style={{
-        position: "absolute",
-        top: "120px",
-        left: "1060px",
-        color: "#c2bdab",
-        fontFamily: "Fraunces, Helvetica",
-        fontSize: "200px",
-        fontWeight: 400,
-        letterSpacing: "8px",
-        textShadow: "0px 4px 4px rgba(0,0,0,0.25)",
-      }}
-    >
-      05
-    </div>
-
-    {/* Title */}
-    <div
-      style={{
-        position: "absolute",
-        top: "120px",
-        left: "80px",
-        color: "#1a1f33",
-        fontFamily: "Fraunces, Helvetica",
-        fontSize: "120px",
-        fontWeight: 400,
-        whiteSpace: "nowrap",
-      }}
-    >
-      DULCERÍA
-    </div>
-
-    <div
-      style={{
-        position: "absolute",
-        top: "240px",
-        left: "80px",
-        color: "#1a1f33",
-        fontFamily: "Fraunces, Helvetica",
-        fontSize: "120px",
-        fontWeight: 400,
-        whiteSpace: "nowrap",
-      }}
-    >
-      CINE
-    </div>
-
-    {/* Description */}
-    <p
-      style={{
-        position: "absolute",
-        top: "380px",
-        left: "80px",
-        width: "500px",
-        color: "#1a1f33",
-        fontFamily: "Kurale, Helvetica",
-        fontSize: "18px",
-        fontWeight: 400,
-      }}
-    >
-      <span>A</span> modern e-commerce platform for movie-theater candy sales.
-      Seamless ordering, inventory management, and delivery tracking all in one
-      place. Built with React and integrated payment processing.
-    </p>
-
-    {/* Images */}
-    <img
-      style={{
-        position: "absolute",
-        top: "150px",
-        right: "80px",
-        width: "280px",
-        height: "400px",
-        objectFit: "cover",
-        borderRadius: "8px",
-      }}
-      alt="Home"
-      src={homeCine}
-    />
-
-    <img
-      style={{
-        position: "absolute",
-        bottom: "100px",
-        left: "80px",
-        width: "800px",
-        height: "280px",
-        objectFit: "cover",
-        borderRadius: "8px",
-      }}
-      alt="Catalog"
-      src={dulceriaCine}
-    />
-
-    {/* React icon */}
-    <img
-      style={{
-        position: "absolute",
-        bottom: "50px",
-        right: "80px",
-        width: "60px",
-        height: "60px",
-        objectFit: "cover",
-      }}
-      alt="React"
-      src={reactImg}
-    />
-
-    {/* Navigation buttons */}
-    <button
-      onClick={onPrev}
-      style={{
-        position: "absolute",
-        top: "50%",
-        left: "30px",
-        transform: "translateY(-50%)",
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        zIndex: 20,
-      }}
-    >
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="23" stroke="#f2f0ec" strokeWidth="1.5" />
-        <path
-          d="M28 16l-8 8 8 8"
-          stroke="#f2f0ec"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </button>
-
-    <button
-      onClick={onNext}
-      style={{
-        position: "absolute",
-        top: "50%",
-        right: "30px",
-        transform: "translateY(-50%)",
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        zIndex: 20,
-      }}
-    >
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="23" stroke="#f2f0ec" strokeWidth="1.5" />
-        <path
-          d="M20 16l8 8-8 8"
-          stroke="#f2f0ec"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </button>
-  </div>
-);
-
-// ─────────────────────────────────────────────────────────────────
-// SLIDE 6 — ENERQON PRO
-// ─────────────────────────────────────────────────────────────────
-const SlideEnerqonPro = ({ onNext, onPrev }) => (
-  <div
-    style={{
-      position: "relative",
-      width: "1440px",
-      height: "1228px",
-      backgroundColor: "#f1efeb",
-      overflow: "hidden",
-    }}
-  >
-    {/* Dark right bar */}
-    <div
-      style={{
-        position: "absolute",
-        top: 0,
-        right: 0,
-        width: "350px",
-        height: "1228px",
-        backgroundColor: "#1a1f33",
-      }}
-    />
-
-    {/* 06 */}
-    <div
-      style={{
-        position: "absolute",
-        top: "100px",
-        right: "80px",
-        color: "#c2bdab",
-        fontFamily: "Fraunces, Helvetica",
-        fontSize: "200px",
-        fontWeight: 400,
-        letterSpacing: "8px",
-        textShadow: "0px 4px 4px rgba(0,0,0,0.25)",
-      }}
-    >
-      06
-    </div>
-
-    {/* Title */}
-    <div
-      style={{
-        position: "absolute",
-        top: "100px",
-        left: "80px",
-        color: "#1a1f33",
-        fontFamily: "Fraunces, Helvetica",
-        fontSize: "100px",
-        fontWeight: 400,
-      }}
-    >
-      ENERQON
-    </div>
-
-    <div
-      style={{
-        position: "absolute",
-        top: "200px",
-        left: "80px",
-        color: "#1a1f33",
-        fontFamily: "Fraunces, Helvetica",
-        fontSize: "80px",
-        fontWeight: 400,
-      }}
-    >
-      PRO
-    </div>
-
-    {/* Description */}
-    <p
-      style={{
-        position: "absolute",
-        top: "320px",
-        left: "80px",
-        width: "600px",
-        color: "#1a1f33",
-        fontFamily: "Kurale, Helvetica",
-        fontSize: "18px",
-        fontWeight: 400,
-      }}
-    >
-      <span>A</span>n advanced analytics dashboard for renewable energy
-      solutions. Real-time monitoring, cost calculations, and payment processing
-      integrated into a sleek interface.
-    </p>
-
-    {/* Images */}
-    <img
-      style={{
-        position: "absolute",
-        top: "120px",
-        left: "500px",
-        width: "380px",
-        height: "280px",
-        objectFit: "cover",
-        borderRadius: "8px",
-      }}
-      alt="Quoter"
-      src={cotizadorEnerqon}
-    />
-
-    <img
-      style={{
-        position: "absolute",
-        top: "430px",
-        left: "80px",
-        width: "500px",
-        height: "280px",
-        objectFit: "cover",
-        borderRadius: "8px",
-      }}
-      alt="Packages"
-      src={paquetesEnerqon}
-    />
-
-    <img
-      style={{
-        position: "absolute",
-        bottom: "100px",
-        right: "80px",
-        width: "300px",
-        height: "280px",
-        objectFit: "cover",
-        borderRadius: "8px",
-      }}
-      alt="Payment"
-      src={pagoEnerqon}
-    />
-
-    {/* Navigation buttons */}
-    <button
-      onClick={onPrev}
-      style={{
-        position: "absolute",
-        top: "50%",
-        left: "30px",
-        transform: "translateY(-50%)",
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        zIndex: 20,
-      }}
-    >
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="23" stroke="#1a1f33" strokeWidth="1.5" />
-        <path
-          d="M28 16l-8 8 8 8"
-          stroke="#1a1f33"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </button>
-
-    <button
-      onClick={onNext}
-      style={{
-        position: "absolute",
-        top: "50%",
-        right: "30px",
-        transform: "translateY(-50%)",
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        zIndex: 20,
-      }}
-    >
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="23" stroke="#1a1f33" strokeWidth="1.5" />
-        <path
-          d="M20 16l8 8-8 8"
-          stroke="#1a1f33"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </button>
-  </div>
-);
-
-// ─────────────────────────────────────────────────────────────────
-// SLIDE 7 — SIMIFY PLUS
-// ─────────────────────────────────────────────────────────────────
-const SlideSimifyPlus = ({ onPrev }) => (
-  <div
-    style={{
-      position: "relative",
-      width: "1440px",
-      height: "1228px",
-      backgroundColor: "#f2f0ec",
-      overflow: "hidden",
-    }}
-  >
-    {/* Dark left bar */}
-    <div
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "200px",
-        height: "1228px",
-        backgroundColor: "#1a1f33",
-      }}
-    />
-
-    {/* 07 */}
-    <div
-      style={{
-        position: "absolute",
-        top: "100px",
-        left: "30px",
-        color: "#c2bdab",
-        fontFamily: "Fraunces, Helvetica",
-        fontSize: "180px",
-        fontWeight: 400,
-        letterSpacing: "8px",
-        textShadow: "0px 4px 4px rgba(0,0,0,0.25)",
-      }}
-    >
-      07
-    </div>
-
-    {/* Title */}
-    <div
-      style={{
-        position: "absolute",
-        top: "80px",
-        left: "280px",
-        color: "#1a1f33",
-        fontFamily: "Fraunces, Helvetica",
-        fontSize: "100px",
-        fontWeight: 400,
-        whiteSpace: "nowrap",
-      }}
-    >
-      SIMIFY
-    </div>
-
-    <div
-      style={{
-        position: "absolute",
-        top: "180px",
-        left: "280px",
-        color: "#1a1f33",
-        fontFamily: "Fraunces, Helvetica",
-        fontSize: "100px",
-        fontWeight: 400,
-        whiteSpace: "nowrap",
-      }}
-    >
-      PLUS
-    </div>
-
-    {/* Description */}
-    <p
-      style={{
-        position: "absolute",
-        top: "330px",
-        left: "280px",
-        width: "700px",
-        color: "#1a1f33",
-        fontFamily: "Kurale, Helvetica",
-        fontSize: "18px",
-        fontWeight: 400,
-      }}
-    >
-      <span>A</span>n enhanced healthcare management platform with patient
-      portal, appointment scheduling, and real-time notifications. Optimized for
-      medical professionals seeking efficiency and patient satisfaction.
-    </p>
-
-    {/* Images */}
-    <img
-      style={{
-        position: "absolute",
-        top: "100px",
-        right: "80px",
-        width: "350px",
-        height: "300px",
-        objectFit: "cover",
-        borderRadius: "8px",
-      }}
-      alt="Patients"
-      src={pacientesSimify}
-    />
-
-    <img
-      style={{
-        position: "absolute",
-        top: "440px",
-        left: "280px",
-        width: "450px",
-        height: "280px",
-        objectFit: "cover",
-        borderRadius: "8px",
-      }}
-      alt="Hours"
-      src={horariosSimify}
-    />
-
-    <img
-      style={{
-        position: "absolute",
-        bottom: "100px",
-        right: "80px",
-        width: "350px",
-        height: "280px",
-        objectFit: "cover",
-        borderRadius: "8px",
-      }}
-      alt="Appointment"
-      src={citaSimify}
-    />
-
-    {/* PHP icon */}
-    <img
-      style={{
-        position: "absolute",
-        bottom: "80px",
-        left: "280px",
-        width: "60px",
-        height: "60px",
-        objectFit: "cover",
-      }}
-      alt="PHP"
-      src={phpIcon}
-    />
-
-    {/* Prev button */}
-    <button
-      onClick={onPrev}
-      style={{
-        position: "absolute",
-        top: "50%",
-        left: "30px",
-        transform: "translateY(-50%)",
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        zIndex: 20,
-      }}
-    >
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="23" stroke="#1a1f33" strokeWidth="1.5" />
-        <path
-          d="M28 16l-8 8 8 8"
-          stroke="#1a1f33"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </button>
-  </div>
-);
-
-// ─────────────────────────────────────────────────────────────────
-// MAIN SLIDER
+// MAIN SLIDER — Efecto Revista (click en bordes, sin flechas)
 // ─────────────────────────────────────────────────────────────────
 export const ProjectSlider = () => {
   const [current, setCurrent] = useState(0);
-  const total = 7;
+  const total = 4;
 
-  const next = () => setCurrent((c) => Math.min(c + 1, total - 1));
-  const prev = () => setCurrent((c) => Math.max(c - 1, 0));
+  const next = () => setCurrent((c) => (c + 1) % total);
+  const prev = () => setCurrent((c) => (c - 1 + total) % total);
+
+  const slides = [
+    <SlideUnexia key={0} />,
+    <SlideEnerqon key={1} />,
+    <SlideMovieCatalogue key={2} />,
+    <SlideDoctorAppointment key={3} />,
+  ];
 
   return (
     <div
       style={{
         position: "relative",
         width: "1440px",
+        height: "1228px",
         overflow: "hidden",
       }}
     >
@@ -1954,39 +1310,55 @@ export const ProjectSlider = () => {
           width: `${total * 1440}px`,
         }}
       >
-        <div style={{ width: "1440px", flexShrink: 0 }}>
-          <SlideUnexia onNext={next} />
-        </div>
-        <div style={{ width: "1440px", flexShrink: 0 }}>
-          <SlideEnerqon onNext={next} onPrev={prev} />
-        </div>
-        <div style={{ width: "1440px", flexShrink: 0 }}>
-          <SlideMovieCatalogue onNext={next} onPrev={prev} />
-        </div>
-        <div style={{ width: "1440px", flexShrink: 0 }}>
-          <SlideDoctorAppointment onPrev={prev} />
-        </div>
-        <div style={{ width: "1440px", flexShrink: 0 }}>
-          <SlideDulceriaCine onNext={next} onPrev={prev} />
-        </div>
-        <div style={{ width: "1440px", flexShrink: 0 }}>
-          <SlideEnerqonPro onNext={next} onPrev={prev} />
-        </div>
-        <div style={{ width: "1440px", flexShrink: 0 }}>
-          <SlideSimifyPlus onPrev={prev} />
-        </div>
+        {slides.map((slide, i) => (
+          <div key={i} style={{ width: "1440px", flexShrink: 0 }}>
+            {slide}
+          </div>
+        ))}
       </div>
+
+      {/* Left navigation area (click para atrás) */}
+      <div
+        onClick={prev}
+        style={{
+          position: "absolute",
+          left: 0,
+          top: 0,
+          width: "50%",
+          height: "100%",
+          cursor: "pointer",
+          zIndex: 20,
+        }}
+      />
+
+      {/* Right navigation area (click para adelante) */}
+      <div
+        onClick={next}
+        style={{
+          position: "absolute",
+          right: 0,
+          top: 0,
+          width: "50%",
+          height: "100%",
+          cursor: "pointer",
+          zIndex: 20,
+        }}
+      />
 
       {/* Dot indicators */}
       <div
         style={{
           position: "absolute",
-          bottom: "20px",
+          bottom: "30px",
           left: "50%",
           transform: "translateX(-50%)",
           display: "flex",
-          gap: "10px",
+          gap: "16px",
           zIndex: 30,
+          background: "rgba(255,255,255,0.5)",
+          padding: "8px 20px",
+          borderRadius: "40px",
+          backdropFilter: "blur(4px)",
         }}
       >
         {Array.from({ length: total }).map((_, i) => (
@@ -1994,13 +1366,14 @@ export const ProjectSlider = () => {
             key={i}
             onClick={() => setCurrent(i)}
             style={{
-              width: "10px",
-              height: "10px",
+              width: "12px",
+              height: "12px",
               borderRadius: "50%",
-              border: "1px solid #1a1f33",
+              border: "1.5px solid #1a1f33",
               backgroundColor: i === current ? "#1a1f33" : "transparent",
               cursor: "pointer",
               padding: 0,
+              transition: "all 0.3s ease",
             }}
           />
         ))}
