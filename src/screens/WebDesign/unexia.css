@@ -140,6 +140,7 @@
   bottom: 57px;
   left: 766px;
   width: 370px;
+  top: 1140px;
   height: 2px;
   background-color: #1a1f33;
 }
@@ -229,7 +230,7 @@
 /* Iconos tecnología */
 .unexia-icon-html {
   position: absolute;
-  top: 1139px;
+  top: 1110px;
   left: 575px;
   width: 60px;
   height: 60px;
@@ -238,7 +239,7 @@
 
 .unexia-icon-css {
   position: absolute;
-  top: 1139px;
+  top: 1110px;
   left: 635px;
   width: 60px;
   height: 60px;
@@ -247,23 +248,22 @@
 
 .unexia-icon-js {
   position: absolute;
-  top: 1139px;
+  top: 1110px;
   left: 695px;
   width: 60px;
   height: 60px;
   object-fit: cover;
 }
 
-/* Flecha SVG - debe estar por encima del slider */
 .unexia-arrow-vector {
   position: absolute;
-  bottom: 70px;
-  right: 350px;
-  z-index: 9999; /* Más alto que las áreas del slider (que tienen z-index 20) */
+  bottom: 50px;
+  left: 770px; /* Posición fija desde la izquierda */
+  z-index: 10000;
   cursor: pointer;
   display: block;
   width: 40px;
-  height: 40px;
+  height: 70px;
   text-decoration: none;
 }
 
@@ -278,7 +278,7 @@
 .unexia-text-large {
   position: absolute;
   top: 306px;
-  left: 461px;
+  left: 450px;
   width: 385px;
   color: #1a1f33;
   font-family: "Kurale", Helvetica;

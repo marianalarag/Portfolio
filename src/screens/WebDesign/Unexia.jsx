@@ -31,16 +31,6 @@ export const Unexia = () => {
       {/* Número 01 */}
       <div className="unexia-number">01</div>
 
-      {/* Flecha link */}
-      <a
-        href="https://unexia.odoo.com/"
-        target="_blank"
-        className="unexia-arrow"
-        rel="noopener noreferrer"
-      >
-        ↗
-      </a>
-
       {/* Títulos */}
       <div className="unexia-title-une">UNE</div>
       <div className="unexia-title-x">X</div>

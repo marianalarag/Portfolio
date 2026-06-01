@@ -99,10 +99,10 @@ export const DoctorAppointment = () => {
 
       {/* Flecha SVG en lugar del vector */}
       <a
-        href="https://unexia.odoo.com/"
+        href="https://github.com/marianalarag/appointment-app2"
         target="_blank"
         rel="noopener noreferrer"
-        className="unexia-arrow-vector"
+        className="doctor-arrow-vector"
       >
         <svg
           width="28"

@@ -286,11 +286,11 @@
 
 .web-design .image-2 {
   aspect-ratio: 0.97;
-  height: 21px;
+  height: 18px;
   left: 332px;
   position: absolute;
   top: 903px;
-  width: 20px;
+  width: 18px;
 }
 
 .web-design .line-4 {
@@ -1127,7 +1127,7 @@
   left: 940px;
   object-fit: cover;
   position: absolute;
-  top: 903px;
+  top: 905px;
   width: 16px;
 }
 
@@ -1224,11 +1224,11 @@
 
 .hard-skills-container {
   position: absolute;
-  left: 1250px;
-  top: 520px;
+  left: 1280px;
+  top: 525px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
 }
 
 .hard-skill-row {

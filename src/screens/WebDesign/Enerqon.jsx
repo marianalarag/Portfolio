@@ -112,7 +112,7 @@ export const Enerqon = () => {
         href="https://alan-cr2020-enerqon-main-24385807.dev.odoo.com/"
         target="_blank"
         rel="noopener noreferrer"
-        className="unexia-arrow-vector"
+        className="enerqon-arrow-vector"
       >
         <svg
           width="28"

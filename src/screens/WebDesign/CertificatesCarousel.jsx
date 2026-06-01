@@ -3,7 +3,7 @@ import "./certificates-carousel.css";
 import awsCloud from "./img/aws cloud.jpg";
 import awsPractitioner from "./img/aws cloud practicioner.jpg";
 import awsBilling from "./img/aws billing.jpg";
-import javaFundamentals from "./img/java fundamentals.jpg";
+import javaFundamentals from "./img/java fundamentals.png";
 import itepImg from "./img/ITEP.jpg";
 import scrumImg from "./img/scrum.jpg";
 import ibmImg from "./img/ibm.jpg";
@@ -25,23 +25,25 @@ import ciscopython from "./img/cisco python.png";
 
 const certificates = [
   { id: 1, src: awsCloud, alt: "AWS Cloud" },
-  { id: 2, src: awsPractitioner, alt: "AWS Practitioner" },
-  { id: 3, src: awsBilling, alt: "AWS Billing" },
-  { id: 4, src: javaFundamentals, alt: "Java Fundamentals" },
-  { id: 5, src: itepImg, alt: "ITEP" },
-  { id: 6, src: scrumImg, alt: "Scrum" },
-  { id: 7, src: ibmImg, alt: "IBM" },
-  { id: 8, src: azureImg, alt: "Azure" },
-  { id: 9, src: awsJob, alt: "AWS Job" },
-  { id: 10, src: awsArchitected, alt: "AWS Architected" },
+  { id: 2, src: azureImg, alt: "Azure" },
+  { id: 3, src: awsPractitioner, alt: "AWS Practitioner" },
+  { id: 4, src: awsBilling, alt: "AWS Billing" },
+  { id: 5, src: awsJob, alt: "AWS Job" },
+  { id: 6, src: awsArchitected, alt: "AWS Architected" },
+  { id: 7, src: javaFundamentals, alt: "Java Fundamentals" },
+  { id: 8, src: scrumImg, alt: "Scrum" },
+  { id: 9, src: itepImg, alt: "ITEP" },
+  { id: 10, src: inventfortheplanet, alt: "Invent for the Planet" },
+  { id: 11, src: ibmImg, alt: "IBM" },
+  { id: 12, src: sololearnjava, alt: "SoloLearn Java" },
+
   {
-    id: 11,
+    id: 13,
     src: sololearpyhtonintroduction,
     alt: "SoloLearn Python Introduction",
   },
-  { id: 12, src: sololearnjava, alt: "SoloLearn Java" },
-  { id: 13, src: sololearnpythondeveloper, alt: "SoloLearn Python Developer" },
-  { id: 14, src: inventfortheplanet, alt: "Invent for the Planet" },
+  { id: 14, src: sololearnpythondeveloper, alt: "SoloLearn Python Developer" },
+
   { id: 15, src: ogumcv, alt: "Ogum CV" },
   { id: 16, src: ogumtendencias, alt: "Ogum Tendencias" },
   { id: 17, src: ogumtiempo, alt: "Ogum Tiempo" },
@@ -52,11 +54,11 @@ const certificates = [
   { id: 22, src: ciscopython, alt: "Cisco Python" },
 ];
 
-// Dividir en 3 filas
-const itemsPerRow = Math.ceil(certificates.length / 3); // 22 / 3 = 8 (redondeado)
-const row1 = certificates.slice(0, itemsPerRow); // ids 1-8
-const row2 = certificates.slice(itemsPerRow, itemsPerRow * 2); // ids 9-16
-const row3 = certificates.slice(itemsPerRow * 2); // ids 17-22
+// Dividir en 4 FILAS de 6 imágenes cada una (la última con 4)
+const row1 = certificates.slice(0, 6); // ids 1-6
+const row2 = certificates.slice(6, 12); // ids 7-12
+const row3 = certificates.slice(12, 17); // ids 13-18
+const row4 = certificates.slice(17, 22); // ids 19-22
 
 export const CertificatesCarousel = ({ setExpandedImage }) => {
   const handleImageClick = (cert) => {
@@ -107,6 +109,22 @@ export const CertificatesCarousel = ({ setExpandedImage }) => {
       <div className="carousel-row">
         <div className="carousel-track track-3">
           {row3.map((cert) => (
+            <div key={cert.id} className="carousel-item">
+              <img
+                src={cert.src}
+                alt={cert.alt}
+                className="cert-image"
+                onClick={() => handleImageClick(cert)}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Fila 4 */}
+      <div className="carousel-row">
+        <div className="carousel-track track-4">
+          {row4.map((cert) => (
             <div key={cert.id} className="carousel-item">
               <img
                 src={cert.src}

@@ -1,48 +1,45 @@
-import { useEffect, useState } from "react";
+import { StrictMode, useState } from "react";
+import { createRoot } from "react-dom/client";
+import { WebDesign } from "./screens/WebDesign";
+import { ScaleWrapper } from "./components/ScaleWrapper";
+import "./index.css";
 
-export const ScaleWrapper = ({
-  children,
-  designWidth = 1440,
-  designHeight = 4602,
-}) => {
-  const [scale, setScale] = useState(1);
-  const [wrapperHeight, setWrapperHeight] = useState("100vh");
+const App = () => {
+  const [expandedImage, setExpandedImage] = useState(null);
 
-  useEffect(() => {
-    const updateScale = () => {
-      const newScale = window.innerWidth / designWidth;
-      setScale(newScale);
-      // La altura ahora es dinámica basada en el contenido
-      setWrapperHeight("100vh");
-    };
-
-    updateScale();
-    window.addEventListener("resize", updateScale);
-    return () => window.removeEventListener("resize", updateScale);
-  }, [designWidth]);
+  const handleCloseModal = () => {
+    setExpandedImage(null);
+  };
 
   return (
-    <div
-      style={{
-        width: "100%",
-        height: wrapperHeight,
-        overflowY: "auto",
-        overflowX: "hidden",
-        position: "relative",
-      }}
-    >
-      <div
-        style={{
-          width: `${designWidth}px`,
-          transform: `scale(${scale})`,
-          transformOrigin: "top left",
-          position: "relative",
-          top: 0,
-          left: 0,
-        }}
-      >
-        {children}
-      </div>
-    </div>
+    <>
+      <ScaleWrapper designWidth={1440} designHeight={4602}>
+        <WebDesign setExpandedImage={setExpandedImage} />
+      </ScaleWrapper>
+
+      {expandedImage && (
+        <div className="global-modal-overlay" onClick={handleCloseModal}>
+          <div
+            className="global-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="global-modal-close" onClick={handleCloseModal}>
+              ✕
+            </button>
+            <img
+              src={expandedImage.src}
+              alt={expandedImage.alt}
+              className="global-modal-image"
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 };
+
+createRoot(document.getElementById("app")).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);

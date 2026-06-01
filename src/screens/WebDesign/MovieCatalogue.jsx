@@ -73,7 +73,7 @@ export const MovieCatalogue = () => {
 
       {/* Flecha SVG */}
       <a
-        href="https://unexia.odoo.com/"
+        href="https://github.com/marianalarag/Cine-UX-UI"
         target="_blank"
         rel="noopener noreferrer"
         className="movie-arrow"

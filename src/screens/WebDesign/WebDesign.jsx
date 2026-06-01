@@ -21,7 +21,7 @@ import linkedinImg from "./img/linkedin.png";
 import awsCloud from "./img/aws cloud.jpg";
 import awsPractitioner from "./img/aws cloud practicioner.jpg";
 import ibmImg from "./img/ibm.jpg";
-import javaFundamentals from "./img/java fundamentals.jpg";
+import javaFundamentals from "./img/java fundamentals.png";
 import itepImg from "./img/ITEP.jpg";
 import scrumImg from "./img/scrum.jpg";
 import awsBilling from "./img/aws billing.jpg";
@@ -36,6 +36,7 @@ import dartImg from "./img/dart.png";
 import phpImg from "./img/php.png";
 import odooImg from "./img/odoo.png";
 import aws from "./img/amazon.png";
+import springImg from "./img/spring.png";
 
 import principalphoto from "./img/photo 1.png";
 import whatsappAbout from "./img/foto 1.png";
@@ -192,7 +193,7 @@ export const WebDesign = ({ setExpandedImage }) => {
 
           {/* Fila 4 - Spring y Python */}
           <div className="hard-skill-row">
-            <img className="image-spring" alt="Spring" src={jsImg} />
+            <img className="image-spring" alt="Spring" src={springImg} />
             <img className="image-23" alt="Python" src={pythonImg} />
           </div>
 

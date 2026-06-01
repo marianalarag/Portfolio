@@ -10,7 +10,6 @@ export const ScaleWrapper = ({
 
   useEffect(() => {
     const updateScale = () => {
-      // Escala SOLO por ancho — igual que antes, que funcionaba bien
       const newScale = window.innerWidth / designWidth;
       setScale(newScale);
       setWrapperHeight(designHeight * newScale);

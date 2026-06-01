@@ -52,7 +52,7 @@
 .enerqon-number {
   position: absolute;
   top: 1000px;
-  left: -13px; /* 1 - 14 = -13 */
+  left: 20px;
   color: #c2bdab;
   font-family: "Fraunces", Helvetica;
   font-size: 200px;
@@ -213,7 +213,7 @@
 /* Iconos tecnología */
 .enerqon-icon-html {
   position: absolute;
-  top: 1124px;
+  top: 1120px;
   left: 878px; /* 892 - 14 = 878 */
   width: 60px;
   height: 60px;
@@ -251,10 +251,10 @@
 }
 
 /* Vector */
-.enerqon-vector {
+.enerqon-arrow-vector {
   position: absolute;
-  bottom: 100px;
-  right: 40px;
+  bottom: 80px;
+  right: 370px;
   width: 30px;
   height: 30px;
   object-fit: contain;

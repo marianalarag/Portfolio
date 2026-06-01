@@ -206,10 +206,10 @@
 /* Icono PHP */
 .doctor-icon-php {
   position: absolute;
-  top: 1133px;
-  left: 1080px;
-  width: 50px;
-  height: 30px;
+  top: 1120px;
+  left: 1070px;
+  width: 60px;
+  height: auto; /* Mantiene la proporción automáticamente */
   object-fit: contain;
 }
 
@@ -223,18 +223,6 @@
   background-color: #1a1f33;
 }
 
-/* Flecha */
-.doctor-arrow {
-  position: absolute;
-  bottom: 40px;
-  right: 40px;
-  font-size: 32px;
-  text-decoration: none;
-  color: #1a1f33;
-  z-index: 10;
-  font-weight: bold;
-}
-
 /* Vector */
 .doctor-vector {
   position: absolute;
@@ -245,13 +233,14 @@
   object-fit: contain;
   cursor: pointer;
 }
-/* Flecha SVG - la que estás usando en el JSX */
-.unexia-arrow-vector {
+
+/* Flecha SVG */
+.doctor-arrow-vector {
   position: absolute;
-  bottom: 100px;
-  right: 70px;
+  bottom: 80px;
+  right: 290px;
   width: 40px;
-  height: 10px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -260,12 +249,15 @@
   text-decoration: none;
 }
 
-.unexia-arrow-vector svg {
+.doctor-arrow-vector svg {
   width: 28px;
   height: 28px;
   stroke: #1a1f33;
+  stroke-width: 2;
+  fill: none;
+  pointer-events: none; /* El clic lo recibe el <a> */
 }
 
-.unexia-arrow-vector:hover {
+.doctor-arrow-vector:hover {
   transform: scale(1.1);
 }
