@@ -1246,3 +1246,34 @@
   left: auto !important;
   top: auto !important;
 }
+/* Aumentar z-index de toda la sección About Me */
+.web-design .about-me {
+  height: 1075px;
+  left: -52px;
+  position: absolute;
+  top: 977px;
+  width: 1532px;
+  z-index: 10; /* Agrega esto - más alto que projects */
+}
+
+/* Asegurar que las imágenes estén por encima */
+.web-design .gemini-generated,
+.web-design .whatsapp-image-2 {
+  z-index: 15 !important;
+  position: absolute;
+}
+
+/* Reducir el z-index de la sección projects para que quede debajo */
+.web-design .projects {
+  height: 1228px;
+  left: -3px;
+  position: absolute;
+  top: 1937px;
+  width: 1496px;
+  z-index: 1; /* Agrega esto - más bajo */
+}
+/* Ajustar ancho de photo2 */
+.web-design .whatsapp-image-2 {
+  width: 600px !important; /* Cambia este valor al ancho que quieras */
+  left: 700px;
+}

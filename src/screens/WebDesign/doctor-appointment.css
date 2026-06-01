@@ -1,0 +1,271 @@
+/* ============================================
+   DOCTOR APPOINTMENT SLIDE - MISMO ANCHO QUE UNEXIA (1468px)
+   ============================================ */
+
+.doctor-slide {
+  position: relative;
+  width: 1468px;
+  height: 1228px;
+  background-color: #f2f0ec;
+  overflow: hidden;
+}
+
+/* Fondo oscuro izquierdo - ajustado */
+.doctor-bg-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 1228px;
+  background-color: #1a1f33;
+}
+
+/* Número 04 rotado - ajustado */
+.doctor-number {
+  position: absolute;
+  top: 481px;
+  left: -60px;
+  color: #c2bdab;
+  font-family: "Fraunces", Helvetica;
+  font-size: 180px;
+  font-weight: 400;
+  letter-spacing: 8px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(89.32deg);
+  width: 250px;
+}
+
+/* Líneas verticales */
+.doctor-line-vertical-top {
+  position: absolute;
+  top: 51px;
+  left: 70px;
+  width: 2px;
+  height: 391px;
+  background-color: #c2bdab;
+}
+
+.doctor-line-vertical-bottom {
+  position: absolute;
+  top: 753px;
+  left: 70px;
+  width: 2px;
+  height: 391px;
+  background-color: #c2bdab;
+}
+
+/* Letra D */
+.doctor-letter-d {
+  position: absolute;
+  top: 68px;
+  left: 220px;
+  color: #1a1f33;
+  font-family: "Pinyon Script", Helvetica;
+  font-size: 200px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 170px;
+  width: 280px;
+}
+
+/* Título OCTOR */
+.doctor-title-octor {
+  position: absolute;
+  top: 81px;
+  left: 340px;
+  color: #1a1f33;
+  font-family: "Fraunces", Helvetica;
+  font-size: 110px;
+  font-weight: 400;
+  text-align: center;
+  width: 600px;
+}
+
+/* Título appointment */
+.doctor-title-appointment {
+  position: absolute;
+  top: 89px;
+  left: 890px;
+  color: #1a1f33;
+  font-family: "Pinyon Script", Helvetica;
+  font-size: 100px;
+  font-weight: 400;
+  white-space: nowrap;
+  transform: rotate(-0.19deg);
+}
+
+/* Líneas bajo el título */
+.doctor-line-under-title-left {
+  position: absolute;
+  top: 210px;
+  left: 290px;
+  width: 570px;
+  height: 2px;
+  background-color: #1a1f33;
+}
+
+.doctor-line-under-title-right {
+  position: absolute;
+  top: 210px;
+  left: 970px;
+  width: 350px;
+  height: 2px;
+  background-color: #1a1f33;
+}
+
+/* Descripción principal */
+.doctor-description-main {
+  position: absolute;
+  top: 260px;
+  left: 290px;
+  width: 550px;
+  color: #1a1f33;
+  font-family: "Kurale", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.doctor-letter-s {
+  font-family: "Kurale", Helvetica;
+  font-size: 20px;
+}
+
+.doctor-description-text {
+  font-size: 16px;
+}
+
+/* Descripción técnica */
+.doctor-description-tech {
+  position: absolute;
+  top: 245px;
+  left: 900px;
+  width: 480px;
+  color: #1a1f33;
+  font-family: "Kurale", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: right;
+}
+
+/* Imágenes */
+.doctor-image-pacientes {
+  position: absolute;
+  top: 400px;
+  left: 290px;
+  width: 550px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.doctor-image-cita {
+  position: absolute;
+  top: 400px;
+  left: 900px;
+  width: 480px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.doctor-image-horarios {
+  position: absolute;
+  top: 720px;
+  left: 290px;
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Key Features */
+.doctor-key-features-title {
+  position: absolute;
+  top: 740px;
+  left: 950px;
+  color: #1a1f33;
+  font-family: "Kurale", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.doctor-key-features-list {
+  position: absolute;
+  top: 780px;
+  left: 950px;
+  width: 400px;
+  color: #1a1f33;
+  font-family: "Kurale", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Icono PHP */
+.doctor-icon-php {
+  position: absolute;
+  top: 1133px;
+  left: 1080px;
+  width: 50px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Línea inferior */
+.doctor-line-bottom {
+  position: absolute;
+  top: 1150px;
+  left: 1150px;
+  width: 300px;
+  height: 2px;
+  background-color: #1a1f33;
+}
+
+/* Flecha */
+.doctor-arrow {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-size: 32px;
+  text-decoration: none;
+  color: #1a1f33;
+  z-index: 10;
+  font-weight: bold;
+}
+
+/* Vector */
+.doctor-vector {
+  position: absolute;
+  bottom: 100px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  cursor: pointer;
+}
+/* Flecha SVG - la que estás usando en el JSX */
+.unexia-arrow-vector {
+  position: absolute;
+  bottom: 100px;
+  right: 70px;
+  width: 40px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.unexia-arrow-vector svg {
+  width: 28px;
+  height: 28px;
+  stroke: #1a1f33;
+}
+
+.unexia-arrow-vector:hover {
+  transform: scale(1.1);
+}

@@ -42,7 +42,6 @@ import whatsappAbout from "./img/foto 1.png";
 import photo2 from "./img/foto 2.png";
 
 export const WebDesign = ({ setExpandedImage }) => {
-  // ← CAMBIA ESTA LÍNEA
   return (
     <div className="web-design">
       {/* ════════════════════════════════

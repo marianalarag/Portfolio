@@ -10,8 +10,18 @@ import ibmImg from "./img/ibm.jpg";
 import azureImg from "./img/azure.jpg";
 import awsJob from "./img/aws job.jpg";
 import awsArchitected from "./img/aws architected.jpg";
-import amazonImg from "./img/amazon.png";
-import odooImg from "./img/odoo.png";
+import sololearnjava from "./img/sololearn java.jpg";
+import sololearnpythondeveloper from "./img/sololearn python developer.jpg";
+import sololearpyhtonintroduction from "./img/sololearn python introduction.jpg";
+import inventfortheplanet from "./img/Invent for the planet.png";
+import ogumcv from "./img/ogum cv.png";
+import ogumtendencias from "./img/ogum tendencias.png";
+import ogumtiempo from "./img/ogum tiempo.png";
+import ciscocomputer from "./img/cisco computer.png";
+import ciscohardware from "./img/cisco hardware.png";
+import cisconetworking from "./img/cisco networking.png";
+import ciscooperations from "./img/cisco operating.png";
+import ciscopython from "./img/cisco python.png";
 
 const certificates = [
   { id: 1, src: awsCloud, alt: "AWS Cloud" },
@@ -24,27 +34,29 @@ const certificates = [
   { id: 8, src: azureImg, alt: "Azure" },
   { id: 9, src: awsJob, alt: "AWS Job" },
   { id: 10, src: awsArchitected, alt: "AWS Architected" },
-  { id: 11, src: amazonImg, alt: "Amazon" },
-  { id: 12, src: odooImg, alt: "Odoo" },
-  // Duplicados para el bouncing
-  { id: 13, src: awsCloud, alt: "AWS Cloud 2" },
-  { id: 14, src: awsPractitioner, alt: "AWS Practitioner 2" },
-  { id: 15, src: awsBilling, alt: "AWS Billing 2" },
-  { id: 16, src: javaFundamentals, alt: "Java Fundamentals 2" },
-  { id: 17, src: itepImg, alt: "ITEP 2" },
-  { id: 18, src: scrumImg, alt: "Scrum 2" },
-  { id: 19, src: ibmImg, alt: "IBM 2" },
-  { id: 20, src: azureImg, alt: "Azure 2" },
-  { id: 21, src: awsJob, alt: "AWS Job 2" },
-  { id: 22, src: awsArchitected, alt: "AWS Architected 2" },
-  { id: 23, src: amazonImg, alt: "Amazon 2" },
-  { id: 24, src: odooImg, alt: "Odoo 2" },
+  {
+    id: 11,
+    src: sololearpyhtonintroduction,
+    alt: "SoloLearn Python Introduction",
+  },
+  { id: 12, src: sololearnjava, alt: "SoloLearn Java" },
+  { id: 13, src: sololearnpythondeveloper, alt: "SoloLearn Python Developer" },
+  { id: 14, src: inventfortheplanet, alt: "Invent for the Planet" },
+  { id: 15, src: ogumcv, alt: "Ogum CV" },
+  { id: 16, src: ogumtendencias, alt: "Ogum Tendencias" },
+  { id: 17, src: ogumtiempo, alt: "Ogum Tiempo" },
+  { id: 18, src: ciscocomputer, alt: "Cisco Computer" },
+  { id: 19, src: ciscohardware, alt: "Cisco Hardware" },
+  { id: 20, src: cisconetworking, alt: "Cisco Networking" },
+  { id: 21, src: ciscooperations, alt: "Cisco Operations" },
+  { id: 22, src: ciscopython, alt: "Cisco Python" },
 ];
 
 // Dividir en 3 filas
-const row1 = certificates.slice(0, 8);
-const row2 = certificates.slice(8, 16);
-const row3 = certificates.slice(16, 24);
+const itemsPerRow = Math.ceil(certificates.length / 3); // 22 / 3 = 8 (redondeado)
+const row1 = certificates.slice(0, itemsPerRow); // ids 1-8
+const row2 = certificates.slice(itemsPerRow, itemsPerRow * 2); // ids 9-16
+const row3 = certificates.slice(itemsPerRow * 2); // ids 17-22
 
 export const CertificatesCarousel = ({ setExpandedImage }) => {
   const handleImageClick = (cert) => {

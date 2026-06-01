@@ -1,5 +1,5 @@
 /* ================================================
-   CERTIFICATES CAROUSEL
+   CERTIFICATES CAROUSEL - RESPONSIVO
    ================================================ */
 
 .certificates-carousel-container {
@@ -20,7 +20,7 @@
 .cert-title {
   color: #1a1f33;
   font-family: "Fraunces", Helvetica, serif;
-  font-size: 96px;
+  font-size: clamp(32px, 8vw, 96px);
   font-weight: 400;
   text-align: center;
 }
@@ -33,15 +33,16 @@
 
 .carousel-track {
   display: flex;
-  gap: 25px;
+  gap: clamp(15px, 2vw, 25px);
   padding: 15px 0;
   width: fit-content;
 }
 
+/* TAMAÑO RESPONSIVO - más grande en móvil */
 .carousel-item {
   flex-shrink: 0;
-  width: 280px;
-  height: 280px;
+  width: clamp(220px, 45vw, 280px); /* Antes: 160px, ahora: 220px mínimo */
+  height: clamp(220px, 45vw, 280px); /* Antes: 160px, ahora: 220px mínimo */
   cursor: pointer;
   border-radius: 12px;
   overflow: hidden;
@@ -65,25 +66,21 @@
 }
 
 /* ================================================
-   BOUNCING ANIMATIONS - CSS PURO
+   BOUNCING ANIMATIONS
    ================================================ */
 
-/* Fila 1 */
 .track-1 {
-  animation: bounce1 8s ease-in-out infinite alternate;
+  animation: bounce1 12s ease-in-out infinite alternate;
 }
 
-/* Fila 2 */
 .track-2 {
-  animation: bounce2 6s ease-in-out infinite alternate;
+  animation: bounce2 12s ease-in-out infinite alternate;
 }
 
-/* Fila 3 */
 .track-3 {
-  animation: bounce3 10s ease-in-out infinite alternate;
+  animation: bounce3 12s ease-in-out infinite alternate;
 }
 
-/* Pausar al hacer hover */
 .track-1:hover,
 .track-2:hover,
 .track-3:hover {
@@ -95,7 +92,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100% + 100vw - 100px));
+    transform: translateX(calc(-100% + 100vw - 10%));
   }
 }
 
@@ -104,7 +101,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100% + 100vw - 150px));
+    transform: translateX(calc(-100% + 100vw - 15%));
   }
 }
 
@@ -113,7 +110,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100% + 100vw - 80px));
+    transform: translateX(calc(-100% + 100vw - 5%));
   }
 }
 
@@ -121,26 +118,47 @@
    RESPONSIVE
    ================================================ */
 
+/* Tablet */
 @media (max-width: 1024px) {
   .carousel-item {
-    width: 220px;
-    height: 220px;
+    width: clamp(200px, 30vw, 250px);
+    height: clamp(200px, 30vw, 250px);
   }
   .cert-title {
     font-size: 72px;
   }
 }
 
+/* Móvil - TAMAÑO MÁS GRANDE */
 @media (max-width: 768px) {
-  .carousel-item {
-    width: 160px;
-    height: 160px;
+  .certificates-carousel-container {
+    padding: 40px 0;
+    gap: 25px;
   }
+
   .cert-title {
     font-size: 48px;
   }
-  .certificates-carousel-container {
-    padding: 40px 0;
+
+  .carousel-item {
+    width: clamp(250px, 55vw, 300px); /* Más grande: 250px mínimo */
+    height: clamp(250px, 55vw, 300px); /* Más grande: 250px mínimo */
+  }
+
+  .carousel-track {
     gap: 20px;
+    padding: 10px 0;
+  }
+}
+
+/* Móvil pequeño (menos de 480px) */
+@media (max-width: 480px) {
+  .carousel-item {
+    width: clamp(200px, 65vw, 280px);
+    height: clamp(200px, 65vw, 280px);
+  }
+
+  .cert-title {
+    font-size: 36px;
   }
 }
