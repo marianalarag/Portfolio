@@ -103,6 +103,7 @@ export const DoctorAppointment = () => {
         target="_blank"
         rel="noopener noreferrer"
         className="doctor-arrow-vector"
+        onClick={(e) => e.stopPropagation()}
       >
         <svg
           width="28"

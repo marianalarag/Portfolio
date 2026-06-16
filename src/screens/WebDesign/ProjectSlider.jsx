@@ -105,16 +105,16 @@ export const ProjectSlider = () => {
         onClick={next}
         style={{
           position: "absolute",
-          right: -350,
+          right: 50,
           top: 0,
-          width: "50%",
+          width: "150px",
           height: "100%",
           cursor: "pointer",
           zIndex: 20,
           display: "flex",
           alignItems: "center",
-          justifyContent: "flex-start",
-          paddingLeft: "250px",
+          justifyContent: "center",
+          paddingLeft: "0px",
         }}
       >
         {/* Círculo con flecha derecha - más transparente */}
