@@ -44,33 +44,117 @@ export const ProjectSlider = () => {
         ))}
       </div>
 
-      {/* Left navigation area - más pequeña, solo en los bordes */}
+      {/* Left navigation area */}
       <div
         onClick={prev}
         style={{
           position: "absolute",
           left: 0,
           top: 0,
-          width: "150px" /* Antes: 50% */,
+          width: "50%",
           height: "100%",
           cursor: "pointer",
           zIndex: 20,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          paddingLeft: "30px",
         }}
-      />
+      >
+        {/* Círculo con flecha izquierda - más transparente */}
+        <div
+          style={{
+            width: "48px",
+            height: "48px",
+            borderRadius: "50%",
+            backgroundColor: "rgba(255, 255, 255, 0.4)", // Más transparente
+            backdropFilter: "blur(4px)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
+            transition: "transform 0.3s ease, background-color 0.3s ease",
+            cursor: "pointer",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
+            e.currentTarget.style.transform = "scale(1.1)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.4)";
+            e.currentTarget.style.transform = "scale(1)";
+          }}
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#1a1f33"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </div>
+      </div>
 
-      {/* Right navigation area - más pequeña, solo en los bordes */}
+      {/* Right navigation area */}
       <div
         onClick={next}
         style={{
           position: "absolute",
-          right: 0,
+          right: -350,
           top: 0,
-          width: "150px" /* Antes: 50% */,
+          width: "50%",
           height: "100%",
           cursor: "pointer",
           zIndex: 20,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          paddingLeft: "250px",
         }}
-      />
+      >
+        {/* Círculo con flecha derecha - más transparente */}
+        <div
+          style={{
+            width: "48px",
+            height: "48px",
+            borderRadius: "50%",
+            backgroundColor: "rgba(255, 255, 255, 0.4)", // Más transparente
+            backdropFilter: "blur(4px)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
+            transition: "transform 0.3s ease, background-color 0.3s ease",
+            cursor: "pointer",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
+            e.currentTarget.style.transform = "scale(1.1)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.4)";
+            e.currentTarget.style.transform = "scale(1)";
+          }}
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#1a1f33"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </div>
+      </div>
 
       {/* Dot indicators */}
       <div

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export const ScaleWrapper = ({
   children,
@@ -7,18 +7,34 @@ export const ScaleWrapper = ({
 }) => {
   const [scale, setScale] = useState(1);
   const [wrapperHeight, setWrapperHeight] = useState(designHeight);
+  const contentRef = useRef(null);
 
   useEffect(() => {
     const updateScale = () => {
       const newScale = window.innerWidth / designWidth;
       setScale(newScale);
-      setWrapperHeight(designHeight * newScale);
+
+      // Calcular la altura real del contenido después del escalado
+      if (contentRef.current) {
+        const contentHeight = contentRef.current.scrollHeight;
+        // La altura del wrapper debe ser la altura del contenido * escala
+        setWrapperHeight(Math.ceil(contentHeight * newScale));
+      } else {
+        setWrapperHeight(designHeight * newScale);
+      }
     };
+
+    // Ejecutar después de que el DOM se haya actualizado
+    const timer = setTimeout(updateScale, 50);
 
     updateScale();
     window.addEventListener("resize", updateScale);
-    return () => window.removeEventListener("resize", updateScale);
-  }, [designWidth, designHeight]);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("resize", updateScale);
+    };
+  }, [designWidth, designHeight, children]);
 
   return (
     <div
@@ -26,10 +42,12 @@ export const ScaleWrapper = ({
         width: "100%",
         height: `${wrapperHeight}px`,
         overflowX: "hidden",
+        overflowY: "hidden",
         position: "relative",
       }}
     >
       <div
+        ref={contentRef}
         style={{
           width: `${designWidth}px`,
           height: `${designHeight}px`,
