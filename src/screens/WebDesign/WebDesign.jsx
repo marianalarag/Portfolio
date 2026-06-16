@@ -4,7 +4,6 @@ import "./style.css";
 import { CertificatesCarousel } from "./CertificatesCarousel";
 import { ProjectSlider } from "./ProjectSlider";
 import ellipse3 from "./img/ellipse-3.svg";
-import line2 from "./img/line_c.png";
 import line3 from "./img/Line 3.png";
 import line4 from "./img/Line 4.png";
 
