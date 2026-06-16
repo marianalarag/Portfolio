@@ -6,6 +6,8 @@ import { ProjectSlider } from "./ProjectSlider";
 import ellipse3 from "./img/ellipse-3.svg";
 import line3 from "./img/Line 3.png";
 import line4 from "./img/Line 4.png";
+import line from "./img/Line.png";
+import line2 from "./img/Line_c.png";
 
 import htmlImg from "./img/html.png";
 import githubLogo from "./img/github logo.png";
