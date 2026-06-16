@@ -98,7 +98,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100% + 85vw));
+    transform: translateX(calc(-50% + 100vw));
   }
 }
 
@@ -107,7 +107,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100% + 80vw));
+    transform: translateX(calc(-50% + 100vw));
   }
 }
 
