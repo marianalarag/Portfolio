@@ -253,12 +253,27 @@
 /* Vector */
 .enerqon-arrow-vector {
   position: absolute;
-  bottom: 80px;
-  right: 370px;
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
+  bottom: 83px;
+  right: 322px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
   cursor: pointer;
+  color: #6f7282;
+  font-family: "Kurale", Helvetica;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.enerqon-arrow-vector:hover {
+  color: #1a1f33;
+  transform: scale(1.1);
 }
 
 /* Estilos comunes para textos */

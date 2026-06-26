@@ -97,7 +97,7 @@ export const DoctorAppointment = () => {
       {/* Línea inferior */}
       <div className="doctor-line-bottom" />
 
-      {/* Flecha SVG en lugar del vector */}
+      {/* Link al proyecto */}
       <a
         href="https://github.com/marianalarag/appointment-app2"
         target="_blank"
@@ -105,18 +105,7 @@ export const DoctorAppointment = () => {
         className="doctor-arrow-vector"
         onClick={(e) => e.stopPropagation()}
       >
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#1a1f33"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M7 17L17 7M17 7H7M17 7V17" />
-        </svg>
+        Ver más
       </a>
     </div>
   );

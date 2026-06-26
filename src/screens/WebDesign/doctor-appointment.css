@@ -237,27 +237,26 @@
 /* Flecha SVG */
 .doctor-arrow-vector {
   position: absolute;
-  bottom: 80px;
-  right: 290px;
-  width: 40px;
-  height: 40px;
-  display: flex;
+  bottom: 82px;
+  right: 240px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: 78px;
   z-index: 15;
   cursor: pointer;
+  color: #6f7282;
+  font-family: "Kurale", Helvetica;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
   text-decoration: none;
-}
-
-.doctor-arrow-vector svg {
-  width: 28px;
-  height: 28px;
-  stroke: #1a1f33;
-  stroke-width: 2;
-  fill: none;
-  pointer-events: none; /* El clic lo recibe el <a> */
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .doctor-arrow-vector:hover {
+  color: #1a1f33;
   transform: scale(1.1);
 }

@@ -107,25 +107,14 @@ export const Enerqon = () => {
       <img className="enerqon-icon-css" src={cssIcon} alt="CSS" />
       <img className="enerqon-icon-js" src={jsIcon} alt="JS" />
 
-      {/* Flecha SVG en lugar del vector */}
+      {/* Link al proyecto */}
       <a
         href="https://alan-cr2020-enerqon-main-24385807.dev.odoo.com/"
         target="_blank"
         rel="noopener noreferrer"
         className="enerqon-arrow-vector"
       >
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#1a1f33"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M7 17L17 7M17 7H7M17 7V17" />
-        </svg>
+        Ver más
       </a>
     </div>
   );

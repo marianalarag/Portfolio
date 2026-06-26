@@ -71,25 +71,14 @@ export const MovieCatalogue = () => {
       {/* Vector decorativo */}
       <img className="movie-vector" src={vector} alt="Vector" />
 
-      {/* Flecha SVG */}
+      {/* Link al proyecto */}
       <a
         href="https://github.com/marianalarag/Cine-UX-UI"
         target="_blank"
         rel="noopener noreferrer"
         className="movie-arrow"
       >
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#1a1f33"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M7 17L17 7M17 7H7M17 7V17" />
-        </svg>
+        Ver más
       </a>
     </div>
   );

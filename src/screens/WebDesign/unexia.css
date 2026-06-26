@@ -257,21 +257,27 @@
 
 .unexia-arrow-vector {
   position: absolute;
-  bottom: 50px;
+  bottom: 95px;
   left: 770px; /* Posición fija desde la izquierda */
   z-index: 10000;
   cursor: pointer;
-  display: block;
-  width: 40px;
-  height: 70px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
   text-decoration: none;
-}
-
-.unexia-arrow-vector svg {
-  pointer-events: none;
+  color: #6f7282;
+  font-family: "Kurale", Helvetica;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .unexia-arrow-vector:hover {
+  color: #1a1f33;
   transform: scale(1.1);
 }
 /* Texto largo en inglés */

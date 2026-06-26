@@ -8,9 +8,25 @@
   padding: 0;
 }
 
+html {
+  background-color: #e4e4e4;
+  overflow-x: clip;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
 body {
   background-color: #e4e4e4;
   font-family: "Fraunces", Helvetica, sans-serif;
+  overflow-x: clip;
+  overflow-y: visible;
+  min-height: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* =====================
@@ -32,14 +48,8 @@ body {
 .font-quintessential {
   font-family: "Quintessential", cursive;
 }
-/* Hace que el navegador no muestre scroll horizontal */
-body {
-  overflow-x: hidden;
-}
-
-/* El ScaleWrapper ya maneja el alto correctamente */
 #app {
-  overflow-x: hidden;
+  overflow: visible;
 }
 /* ================================================
    MODAL GLOBAL - Fuera del ScaleWrapper

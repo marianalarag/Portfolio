@@ -49,8 +49,8 @@ export const ScaleWrapper = ({
       style={{
         width: "100%",
         height: `${wrapperHeight}px`,
-        overflowX: "hidden",
-        overflowY: "visible",
+        backgroundColor: "#e4e4e4",
+        overflow: "visible",
         position: "relative",
       }}
     >

@@ -28,6 +28,8 @@
   height: 850px;
   left: -18px;
   position: absolute;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   top: -7px;
   width: 1510px;
 }
@@ -129,13 +131,14 @@
   font-family: "Fraunces", Helvetica;
   font-size: 150px;
   font-weight: 400;
-  left: 370px;
+  left: 50%;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  text-align: right;
+  text-align: center;
   text-shadow: 0px 4px 4px #00000040;
   top: 20px;
+  transform: translateX(-50%);
 }
 
 .web-design .LARA {
@@ -403,6 +406,8 @@
   height: 1075px;
   left: -52px;
   position: absolute;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   top: 977px;
   width: 1532px;
   z-index: 10;
@@ -829,6 +834,8 @@
   height: 1228px;
   left: -3px;
   position: absolute;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   top: 1937px;
   width: 1496px;
   z-index: 1;
@@ -1099,6 +1106,8 @@
   height: auto;
   left: 0;
   position: absolute;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   top: 3165px;
   width: 1440px;
   background-color: #e4e4e4;
