@@ -72,6 +72,8 @@ export const CertificatesCarousel = ({ setExpandedImage }) => {
               src={cert.src}
               alt={cert.alt}
               className="masonry-img"
+              loading="lazy"
+              decoding="async"
               onClick={() => handleImageClick(cert)}
             />
           </div>

@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const ScaleWrapper = ({
   children,
@@ -6,6 +6,7 @@ export const ScaleWrapper = ({
   designHeight = 4602,
 }) => {
   const [scale, setScale] = useState(1);
+  const [viewportWidth, setViewportWidth] = useState(designWidth);
   const [wrapperHeight, setWrapperHeight] = useState(designHeight);
   const contentRef = useRef(null);
 
@@ -13,18 +14,25 @@ export const ScaleWrapper = ({
     const updateScale = () => {
       const newScale = window.innerWidth / designWidth;
       setScale(newScale);
+      setViewportWidth(window.innerWidth);
 
-      // Calcular la altura real del contenido después del escalado
-      if (contentRef.current) {
-        const contentHeight = contentRef.current.scrollHeight;
-        // La altura del wrapper debe ser la altura del contenido * escala
-        setWrapperHeight(Math.ceil(contentHeight * newScale));
-      } else {
-        setWrapperHeight(designHeight * newScale);
-      }
+      requestAnimationFrame(() => {
+        if (!contentRef.current) {
+          setWrapperHeight(designHeight * newScale);
+          return;
+        }
+
+        const contentHeight = contentRef.current.scrollHeight * newScale;
+        const contentTop = contentRef.current.getBoundingClientRect().top;
+        const certificates = contentRef.current.querySelector(".certificates");
+        const certificatesBottom = certificates
+          ? certificates.getBoundingClientRect().bottom - contentTop
+          : 0;
+
+        setWrapperHeight(Math.ceil(Math.max(contentHeight, certificatesBottom)));
+      });
     };
 
-    // Ejecutar después de que el DOM se haya actualizado
     const timer = setTimeout(updateScale, 50);
 
     updateScale();
@@ -42,13 +50,16 @@ export const ScaleWrapper = ({
         width: "100%",
         height: `${wrapperHeight}px`,
         overflowX: "hidden",
-        overflowY: "hidden",
+        overflowY: "visible",
         position: "relative",
       }}
     >
       <div
         ref={contentRef}
         style={{
+          "--page-scale": scale,
+          "--inverse-page-scale": 1 / scale,
+          "--viewport-width": `${viewportWidth}px`,
           width: `${designWidth}px`,
           height: `${designHeight}px`,
           transform: `scale(${scale})`,

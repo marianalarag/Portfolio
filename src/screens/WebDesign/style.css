@@ -1102,8 +1102,17 @@
   top: 3165px;
   width: 1440px;
   background-color: #e4e4e4;
-  overflow: visible;
-  padding-bottom: 60px;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+@media (max-width: 699px) {
+  .web-design .certificates {
+    width: var(--viewport-width, 100vw);
+    max-width: var(--viewport-width, 100vw);
+    transform: scale(var(--inverse-page-scale, 1));
+    transform-origin: top left;
+  }
 }
 
 .web-design .text-wrapper-14 {
