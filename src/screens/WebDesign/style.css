@@ -699,6 +699,14 @@
   width: 21px;
 }
 
+.web-design .contact-link {
+  display: contents;
+}
+
+.web-design .contact-link > * {
+  cursor: pointer;
+}
+
 .web-design .image-30 {
   aspect-ratio: 1;
   height: 16px;

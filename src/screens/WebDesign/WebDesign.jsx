@@ -85,28 +85,58 @@ export const WebDesign = ({ setExpandedImage }) => {
         {/* Github */}
         <img className="line-0" alt="Line" src={line} />
         <img className="line-1" alt="Line" src={line} />
-        <img className="image-github" alt="Github" src={githubLogo} />
-        <div className="text-wrapper-7">Github:</div>
-        <div className="text-wrapper-8">marianalarag</div>
+        <a
+          className="contact-link"
+          href="https://github.com/marianalarag"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub de Mariana Lara"
+        >
+          <img className="image-github" alt="Github" src={githubLogo} />
+          <div className="text-wrapper-7">Github:</div>
+          <div className="text-wrapper-8">marianalarag</div>
+        </a>
 
         {/* LinkedIn */}
-        <div className="text-wrapper-10">LinkedIn:</div>
-        <div className="text-wrapper-9">Mariana Lara</div>
-        <img className="image-2" alt="Linkedin" src={linkedinImg} />
+        <a
+          className="contact-link"
+          href="https://www.linkedin.com/in/marianalarag/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn de Mariana Lara"
+        >
+          <div className="text-wrapper-10">LinkedIn:</div>
+          <div className="text-wrapper-9">Mariana Lara</div>
+          <img className="image-2" alt="Linkedin" src={linkedinImg} />
+        </a>
 
         {/* Email */}
         <img className="line-6" alt="Line" src={line} />
         <img className="line-7" alt="Line" src={line} />
-        <img className="image-30" alt="Email" src={emailImg} />
-        <div className="text-wrapper-13">Email:</div>
-        <div className="text-wrapper-12">marianalarag@outlook.com</div>
+        <a
+          className="contact-link"
+          href="mailto:marianalarag@outlook.com"
+          aria-label="Enviar correo a marianalarag@outlook.com"
+        >
+          <img className="image-30" alt="Email" src={emailImg} />
+          <div className="text-wrapper-13">Email:</div>
+          <div className="text-wrapper-12">marianalarag@outlook.com</div>
+        </a>
 
         {/* Phone */}
         <img className="line-4" alt="Line" src={line} />
         <img className="line-5" alt="Line" src={line} />
-        <img className="image-31" alt="Phone" src={phoneImg} />
-        <div className="text-wrapper-11">Phone:</div>
-        <div className="element">+52 (999) 104 7545</div>
+        <a
+          className="contact-link"
+          href="https://wa.me/529991047545"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Enviar mensaje de WhatsApp a Mariana Lara"
+        >
+          <img className="image-31" alt="Phone" src={phoneImg} />
+          <div className="text-wrapper-11">Phone:</div>
+          <div className="element">+52 (999) 104 7545</div>
+        </a>
       </div>
 
       {/* ════════════════════════════════
