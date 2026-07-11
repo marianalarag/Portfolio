@@ -1,5 +1,3 @@
-import "./certificates-carousel.css";
-
 import awsCloud from "./img/aws cloud.jpg";
 import awsPractitioner from "./img/aws cloud practicioner.jpg";
 import awsBilling from "./img/aws billing.jpg";
@@ -60,18 +58,23 @@ export const CertificatesCarousel = ({ setExpandedImage }) => {
   };
 
   return (
-    <div className="certificates-container">
-      <div className="certificates-header">
-        <div className="cert-title">CERTIFICATES</div>
+    <div className="w-full max-w-full overflow-x-hidden bg-[#e4e4e4] py-[clamp(22px,3vw,38px)] pb-[clamp(40px,7vw,84px)]">
+      <div className="mb-[clamp(24px,4vw,54px)] w-full text-center">
+        <div className="px-4 text-center font-fraunces text-[clamp(48px,8vw,132px)] font-normal leading-none text-[#1a1f33]">
+          CERTIFICATES
+        </div>
       </div>
 
-      <div className="pinterest-masonry">
+      <div className="mx-auto w-full columns-2 gap-[10px] px-[10px] min-[361px]:gap-3 min-[361px]:px-3 min-[700px]:columns-3 min-[700px]:gap-[clamp(14px,1.8vw,26px)] min-[700px]:px-[clamp(18px,2.8vw,52px)] min-[1200px]:columns-4">
         {certificates.map((cert) => (
-          <div key={cert.id} className="masonry-item">
+          <div
+            key={cert.id}
+            className="mb-[clamp(10px,2vw,20px)] inline-block w-full cursor-pointer break-inside-avoid overflow-hidden rounded-[clamp(10px,2vw,18px)] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.1)] transition duration-200 hover:-translate-y-[3px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.15)]"
+          >
             <img
               src={cert.src}
               alt={cert.alt}
-              className="masonry-img"
+              className="block h-auto w-full"
               loading="lazy"
               decoding="async"
               onClick={() => handleImageClick(cert)}

@@ -1,7 +1,6 @@
 import { StrictMode, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { WebDesign } from "./screens/WebDesign";
-import { ScaleWrapper } from "./components/ScaleWrapper";
 import "./index.css";
 
 const App = () => {
@@ -13,9 +12,7 @@ const App = () => {
 
   return (
     <>
-      <ScaleWrapper designWidth={1440} designHeight={4602}>
-        <WebDesign setExpandedImage={setExpandedImage} />
-      </ScaleWrapper>
+      <WebDesign setExpandedImage={setExpandedImage} />
 
       {expandedImage && (
         <div className="global-modal-overlay" onClick={handleCloseModal}>

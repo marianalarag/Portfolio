@@ -1,112 +1,82 @@
-import "./doctor-appointment.css";
-
-// Tus imágenes actuales de DOCTOR APPOINTMENT
-import pacientesSimify from "./img/pacientes simify.png";
-import horariosSimify from "./img/horarios simify.png";
-import citaSimify from "./img/cita simify.png";
+import databaseIcon from "./img/base datos.png";
+import cardioLine from "./img/cardio.png";
+import doctorBg from "./img/fondo doctor web.jpg";
+import doctorRectangle from "./img/rectangulo doctor.png";
+import doctorSymbol from "./img/logo doctor.png";
+import doctorTitle from "./img/doctor title.png";
 import phpIcon from "./img/php.png";
 
-import line26 from "./img/Line 26.png";
-import line29 from "./img/Line 29.png";
-import line30 from "./img/Line 30.png";
-import line31 from "./img/Line 31.png";
-import vector from "./img/vector.png";
+const descriptionText =
+  "Simify streamlines clinical operations by centralizing patient management and scheduling into a unified, high-performance platform. Built with Laravel, the system features a robust, conflict-free booking engine and automated communications to eliminate administrative friction. Through secure role-based access and data-driven reporting, Simify delivers an efficient, scalable solution that modernizes the healthcare experience for both providers and patients.";
 
 export const DoctorAppointment = () => {
   return (
-    <div className="doctor-slide">
-      {/* Fondo oscuro izquierdo */}
-      <div className="doctor-bg-dark" />
+    <article className="relative h-full w-full overflow-hidden bg-[#f2f0ec] text-[#1a1f33]">
+      <h1 className="sr-only">Simify Medical Appointment System</h1>
 
-      {/* Número 04 rotado */}
-      <div className="doctor-number">04</div>
-
-      {/* Líneas verticales */}
-      <div className="doctor-line-vertical-top" />
-      <div className="doctor-line-vertical-bottom" />
-
-      {/* Letra D decorativa */}
-      <div className="doctor-letter-d">D</div>
-
-      {/* Título OCTOR */}
-      <div className="doctor-title-octor">OCTOR</div>
-
-      {/* Título appointment */}
-      <div className="doctor-title-appointment">appointment</div>
-
-      {/* Líneas bajo el título */}
-      <div className="doctor-line-under-title-left" />
-      <div className="doctor-line-under-title-right" />
-
-      {/* Descripción principal */}
-      <p className="doctor-description-main">
-        <span className="doctor-letter-s">S</span>
-        <span className="doctor-description-text">
-          imify optimizes healthcare management by centralizing scheduling and
-          communication. The platform bridges the gap between specialists and
-          patients, ensuring a seamless, friction-free booking process for a
-          modern, efficient clinical workflow.
-        </span>
-      </p>
-
-      {/* Descripción técnica */}
-      <p className="doctor-description-tech">
-        Built with Laravel and Eloquent, Simify leverages a modular architecture
-        to handle complex relational data. The platform implements sophisticated
-        role-based access control, a secure booking engine that prevents
-        double-scheduling, and integrated tools for automated reminders and
-        clinical data analysis.
-      </p>
-
-      {/* Imágenes del proyecto */}
       <img
-        className="doctor-image-pacientes"
-        src={pacientesSimify}
-        alt="Pacientes Simify"
+        src={doctorBg}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover object-[54%_50%]"
       />
-      <img className="doctor-image-cita" src={citaSimify} alt="Cita Simify" />
+      <div aria-hidden="true" className="absolute inset-0 bg-[#f2f0ec]/45" />
+
       <img
-        className="doctor-image-horarios"
-        src={horariosSimify}
-        alt="Horarios Simify"
+        src={doctorRectangle}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute left-[-5%] top-[2.5%] z-10 w-[72%] max-w-none object-contain opacity-90 drop-shadow-[0_18px_32px_rgba(1,58,141,0.08)] sm:left-[-3%] sm:top-[4%] sm:w-[64%] lg:left-[1.5%] lg:top-[5%] lg:w-[57%]"
       />
 
-      {/* Key Features título */}
-      <div className="doctor-key-features-title">Key Features</div>
+      <img
+        src={doctorTitle}
+        alt=""
+        aria-hidden="true"
+        className="absolute left-[4%] top-[4.2%] z-20 w-[82%] max-w-[43rem] object-contain sm:left-[4.8%] sm:top-[5.8%] sm:w-[48%] lg:left-[5%] lg:top-[6%] lg:w-[47.6%]"
+      />
 
-      {/* Key Features lista */}
-      <p className="doctor-key-features-list">
-        Role-Based Access Control: Secure management for patients, doctors, and
-        admins.
-        <br />
-        Dynamic Scheduling Engine: Conflict-free slot management for doctors.
-        <br />
-        Automated Communication: Integrated email notifications for reminders
-        and confirmations.
-        <br />
-        Data Reporting: Advanced exporting capabilities for clinical statistics
-        and monthly trends.
-        <br />
-        Scalable Architecture: Built with Laravel for reliability and easy
-        maintenance.
+      <div className="absolute left-[62%] top-[8.6%] z-30 flex items-center gap-[0.32rem] sm:left-[53%] sm:top-[14.1%] lg:left-[62.8%] lg:top-[15.2%]">
+        <img
+          src={phpIcon}
+          alt="PHP"
+          className="h-[1.2rem] w-[1.2rem] object-contain sm:h-[1.9rem] sm:w-[1.9rem] lg:h-[2.4rem] lg:w-[2.4rem]"
+        />
+
+        <img
+          src={databaseIcon}
+          alt="Database"
+          className="h-[1rem] w-[1rem] object-contain sm:h-[1.6rem] sm:w-[1.6rem] lg:h-[2rem] lg:w-[2rem]"
+        />
+      </div>
+
+      <img
+        src={cardioLine}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute left-[69%] top-[3.6%] z-20 w-[66%] max-w-none object-contain sm:left-[55.5%] sm:top-[0.4%] sm:w-[54%] lg:left-[55.7%] lg:top-[-10%] lg:w-[49%]"
+      />
+
+      <p className="absolute left-[4.2%] top-[30.6%] z-20 w-[39%] max-w-[38rem] font-kurale text-[clamp(0.74rem,2.65vw,1.05rem)] leading-[1.45] text-[#1a1f33] sm:left-[5.4%] sm:top-[34.2%] sm:w-[42%] sm:text-[clamp(1rem,1.86vw,1.5rem)] lg:left-[5.5%] lg:top-[38.6%] lg:w-[41%] lg:text-[1.42rem]">
+        {descriptionText}
       </p>
 
-      {/* Icono PHP */}
-      <img className="doctor-icon-php" src={phpIcon} alt="PHP" />
+      <img
+        src={doctorSymbol}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute right-[-27%] top-[31.5%] z-10 w-[70%] max-w-[45rem] object-contain drop-shadow-[0_18px_28px_rgba(0,64,136,0.12)] sm:right-[4%] sm:top-[36%] sm:w-[43%] lg:right-[10%] lg:top-[45.5%] lg:w-[20%]"
+      />
 
-      {/* Línea inferior */}
-      <div className="doctor-line-bottom" />
-
-      {/* Link al proyecto */}
       <a
         href="https://github.com/marianalarag/appointment-app2"
         target="_blank"
         rel="noopener noreferrer"
-        className="doctor-arrow-vector"
-        onClick={(e) => e.stopPropagation()}
+        aria-label="Ver mas sobre Simify"
+        className="absolute left-[9%] top-[87.2%] z-30 inline-flex h-[2.65rem] min-w-[7rem] items-center justify-center rounded-full bg-[#013a8d] px-[1.7rem] font-fraunces text-[0.95rem] font-normal text-white shadow-[0_10px_20px_rgba(1,58,141,0.22)] transition duration-200 hover:scale-105 hover:bg-[#074aa9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#013a8d] sm:left-[5.5%] sm:top-[84.6%] sm:h-[3.35rem] sm:min-w-[9.5rem] sm:text-[1.14rem] lg:left-[5.5%] lg:h-[3.95rem] lg:min-w-[11.3rem] lg:text-[1.35rem]"
       >
-        Ver más
+        Ver m&aacute;s
       </a>
-    </div>
+    </article>
   );
 };
