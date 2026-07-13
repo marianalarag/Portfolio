@@ -673,7 +673,7 @@ body {
   }
 
   .project-card--doctor .project-bg {
-    object-position: 51% 50%;
+    object-position: 80% 50%;
   }
 
   .project-card--doctor .project-title-bg {
@@ -681,15 +681,15 @@ body {
   }
 
   .project-card--doctor .project-logo {
-    top: 3.8%;
-    left: 3.5%;
-    width: 74%;
+    top: 1%;
+    left: -30.5%;
+    width: 130%;
     max-width: none;
   }
 
   .project-card--doctor .project-mobile-icons {
-    top: 12%;
-    left: 61%;
+    top: 15%;
+    left: 70%;
     gap: 0.28rem;
   }
 
@@ -706,28 +706,28 @@ body {
   .project-card--doctor .project-cardio {
     top: 9.8%;
     left: 67%;
-    width: 62%;
+    width: 58%;
   }
 
   .project-card--doctor .project-text {
     top: 29%;
     left: 4.5%;
-    width: 38%;
-    max-height: 19rem;
-    font-size: 0.61rem;
+    width: 40%;
+    max-height: 25rem;
+    font-size: 0.8rem;
     line-height: 1.36;
   }
 
   .project-card--doctor .project-symbol {
-    top: 34.5%;
-    right: -29%;
-    width: 88%;
+    top: 30.5%;
+    right: -12%;
+    width: 85%;
     max-width: none;
   }
 
   .project-card--doctor .project-cta {
-    top: 77.5%;
-    left: 10.5%;
+    top: 70.5%;
+    left: 4.5%;
     height: 2.15rem;
     min-width: 6.2rem;
     font-size: 0.72rem;
