@@ -560,15 +560,15 @@ body {
 
   .project-card--coffee .project-beans {
     top: -1.2%;
-    right: -7%;
-    width: 54%;
+    right: -5%;
+    width: 45%;
     max-width: none;
   }
 
   .project-card--coffee .project-title-group {
     top: 1.4%;
     left: 3.2%;
-    max-width: 88%;
+    max-width: 80%;
   }
 
   .project-card--coffee .project-title-group > div {
@@ -576,39 +576,40 @@ body {
   }
 
   .project-card--coffee .project-title-group > div > img:first-child {
-    height: 5rem;
+    height: 3.5rem;
     max-width: none;
-    margin-top: 0.1rem;
+    margin-top: 5rem;
     margin-left: 0;
   }
 
   .project-card--coffee .project-title-group > div > img:last-child {
-    width: 3.75rem;
-    height: 6.4rem;
+    width: 2.75rem;
+    height: 10.4rem;
+    margin-top: -0.4rem;
   }
 
   .project-card--coffee .project-title-group > img {
     height: 8.1rem;
     max-width: none;
-    margin-top: -0.1rem;
+    margin-top: -0.2rem;
     margin-left: 0.3rem;
   }
 
   .project-card--coffee .project-copy {
     top: 34%;
     left: 4.5%;
-    width: 41%;
+    width: 45%;
   }
 
   .project-card--coffee .project-text {
     max-height: 25.5rem;
     padding-right: 0;
-    font-size: 0.76rem;
+    font-size: 0.9rem;
     line-height: 1.32;
   }
 
   .project-card--coffee .project-cta {
-    top: 80.5%;
+    top: 65.5%;
     left: 4.5%;
     height: 2.05rem;
     min-width: 6.5rem;
@@ -616,8 +617,8 @@ body {
   }
 
   .project-card--coffee .project-hero-asset {
-    right: -12%;
-    bottom: -7.5%;
+    right: -10%;
+    bottom: -2.5%;
     width: 80%;
     max-width: none;
   }

@@ -41,7 +41,7 @@ export const CoffeeMap = () => {
           <img
             src={placeIcon}
             alt=""
-            className="h-[clamp(5.35rem,26cqw,6.2rem)] w-[clamp(3.25rem,15cqw,3.75rem)] shrink-0 object-contain sm:h-[min(12rem,20svh)] sm:w-[min(7rem,12svh)] lg:h-[10rem] lg:w-[6rem]"
+            className="self-center translate-y-[1.5rem] h-[clamp(5.35rem,26cqw,6.2rem)] w-[clamp(3.25rem,15cqw,3.75rem)] shrink-0 object-contain sm:self-start sm:translate-y-0 sm:h-[min(12rem,20svh)] sm:w-[min(7rem,12svh)] lg:h-[10rem] lg:w-[6rem]"
           />
         </div>
         <img

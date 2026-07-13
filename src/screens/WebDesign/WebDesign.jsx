@@ -116,7 +116,7 @@ export const WebDesign = ({ setExpandedImage }) => (
       <img
         src={principalphoto}
         alt="Mariana Lara"
-        className="pointer-events-none absolute bottom-0 left-1/2 z-30 h-[100%] w-[100vw] max-w-none -translate-x-1/2 object-contain object-bottom sm:h-[90%] sm:w-[62vw] md:w-[52vw] lg:h-[88%] lg:w-[42%]"
+        className="pointer-events-none absolute bottom-0 left-1/2 z-30 h-[100%] w-[95vw] max-w-none -translate-x-1/2 object-contain object-bottom sm:h-[90%] sm:w-[62vw] md:w-[52vw] lg:h-[88%] lg:w-[42%]"
       />
 
       <div className="absolute inset-x-0 bottom-[1.8%] z-40 h-[6.2rem] sm:bottom-[2.5%] sm:h-[5.5rem] lg:h-auto">
@@ -173,7 +173,7 @@ export const WebDesign = ({ setExpandedImage }) => (
     </section>
 
     <section className="relative z-20 h-[100svh] min-h-[34rem] w-full overflow-visible bg-[#e7e1d599] text-[#10172d] sm:hidden">
-      <div className="pointer-events-none absolute left-[-6.3rem] top-[7.5rem] z-0 w-[15rem] rotate-[-90deg] text-right font-fraunces text-[3.2rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] sm:text-[4.8rem]">
+      <div className="pointer-events-none absolute left-[-6.3rem] top-[7.5rem] z-0 w-[15rem] rotate-[-90deg] text-right font-fraunces text-[2.8rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] sm:text-[4.8rem]">
         MARIANA
       </div>
 
@@ -184,10 +184,10 @@ export const WebDesign = ({ setExpandedImage }) => (
       <img
         src={photoLeft}
         alt="Mariana Lara"
-        className="pointer-events-none absolute left-[-7%] top-[6%] z-10 h-[45%] w-auto max-w-none object-contain min-[480px]:max-[639px]:left-[-1%] min-[480px]:max-[639px]:top-[8%]"
+        className="pointer-events-none absolute left-[-5%] top-[6%] z-10 h-[45%] w-auto max-w-none object-contain min-[480px]:max-[639px]:left-[-1%] min-[480px]:max-[639px]:top-[8%]"
       />
 
-      <div className="absolute left-[45%] right-[6%] top-[10%] z-20 space-y-[1.7rem] text-right font-kurale text-[0.7rem] leading-[1.22] max-[380px]:text-[0.68rem]">
+      <div className="absolute left-[52%] right-[6%] top-[12%] z-20 space-y-[1.7rem] text-right font-kurale text-[0.6rem] leading-[1.22] max-[380px]:text-[0.68rem]">
         <p>
           I&apos;m a highly motivated software development student with a strong
           passion for innovation. Currently pursuing a career in software
@@ -206,7 +206,7 @@ export const WebDesign = ({ setExpandedImage }) => (
       </div>
 
       <div className="absolute left-[10%] top-[52%] z-30 w-[42%] text-center">
-        <h3 className="font-pinyon text-[2.5rem] font-normal leading-none max-[380px]:text-[2.45rem]">
+        <h3 className="font-pinyon text-[2rem] font-normal leading-none max-[380px]:text-[2.45rem]">
           Languages
         </h3>
       </div>
@@ -217,7 +217,7 @@ export const WebDesign = ({ setExpandedImage }) => (
       </div>
 
       <div className="absolute left-[3%] top-[64%] z-30">
-        <h3 className="font-pinyon text-[2.65rem] font-normal leading-none max-[380px]:text-[2.15rem]">
+        <h3 className="font-pinyon text-[2rem] font-normal leading-none max-[380px]:text-[2.15rem]">
           Tools
         </h3>
         <p className="mt-[1.1rem] font-kurale text-[0.88rem] leading-[1.35] max-[380px]:text-[0.72rem]">
@@ -235,7 +235,7 @@ export const WebDesign = ({ setExpandedImage }) => (
         </p>
       </div>
 
-      <div className="absolute left-[28%] top-[64.8%] z-30 rotate-180 font-pinyon text-[2.5rem] font-normal leading-none [writing-mode:vertical-rl] max-[380px]:text-[2rem]">
+      <div className="absolute left-[28%] top-[64.8%] z-30 rotate-180 font-pinyon text-[2rem] font-normal leading-none [writing-mode:vertical-rl] max-[380px]:text-[2rem]">
         Hard Skills
       </div>
 
