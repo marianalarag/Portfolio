@@ -386,6 +386,10 @@ body {
 }
 
 @media (max-width: 639px) {
+  .project-slider-dots {
+    display: none;
+  }
+
   .project-card {
     height: 100%;
     min-height: 100%;
@@ -420,67 +424,79 @@ body {
   }
 
   .project-card--enerqon .project-header {
-    top: 3.2%;
-    right: 5%;
-    left: 5%;
+    top: 12%;
+    right: 4%;
+    left: 4%;
     align-items: center;
-    gap: 0.65rem;
+    gap: 0.5rem;
   }
 
   .project-card--enerqon .project-logo {
-    width: 80%;
+    width: 60%;
+    max-width: none;
+  }
+
+  .project-card--enerqon .project-line {
+    display: block;
+    flex: none;
+    width: 3.9rem;
   }
 
   .project-card--enerqon .project-header > div:last-child {
-    gap: 0.38rem;
+    gap: 0.32rem;
+    margin-left: 0;
   }
 
   .project-card--enerqon .project-header > div:last-child img {
-    width: 1.28rem;
-    height: 1.28rem;
+    width: 1.1rem;
+    height: 1.6rem;
   }
 
   .project-card--enerqon .project-copy {
-    top: 11.5%;
-    left: 5.3%;
-    width: 42.5%;
+    top: 22.2%;
+    left: 7.2%;
+    width: 36%;
     max-height: none;
   }
 
   .project-card--enerqon .project-text {
-    max-height: 16.4rem;
-    font-size: 0.64rem;
-    line-height: 1.3;
+    max-height: 32.2rem;
+    font-size: 0.8rem;
+    line-height: 1.34;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.38);
   }
 
   .project-card--enerqon .project-cta {
-    margin-top: 1rem;
+    margin-top: 1.55rem;
+    height: 2rem;
+    min-width: 5.6rem;
+    padding-inline: 1.1rem;
+    font-size: 0.66rem;
   }
 
   .project-card--enerqon .project-symbol {
-    top: 31%;
-    right: -42%;
-    width: 74%;
+    top: 20%;
+    right: -20%;
+    width: 75%;
     max-width: none;
   }
 
   .project-card--enerqon .project-hero-asset {
-    right: -17%;
-    bottom: -1%;
-    width: 61%;
+    right: -30%;
+    bottom: 18.5%;
+    width: 90%;
     max-width: none;
   }
 
   .project-card--unexia .project-symbol {
-    top: 12%;
-    right: -28%;
-    width: 88%;
+    top: 27%;
+    right: -92%;
+    width: 152%;
     max-width: none;
   }
 
   .project-card--unexia .project-header {
-    top: 1.8%;
+    top: 1.2%;
     right: 4.5%;
     left: 4%;
   }
@@ -493,49 +509,66 @@ body {
   }
 
   .project-card--unexia .project-logo {
-    width: 19.5rem;
+    width: 21rem;
+  }
+
+  .project-card--unexia .project-techline {
+    left: 5.65rem;
+    top: 1.85rem;
+    gap: 0.45rem;
+  }
+
+  .project-card--unexia .project-techline > img:first-child {
+    width: 8.5rem;
+  }
+
+  .project-card--unexia .project-techline > img:not(:first-child) {
+    width: 1.05rem;
+    height: 1.05rem;
   }
 
   .project-card--unexia .project-mobile-icons {
-    top: 2.4%;
-    right: 5%;
+    display: none;
   }
 
   .project-card--unexia .project-copy {
-    top: 20.4%;
-    left: 5.4%;
-    width: 43%;
+    top: 24.5%;
+    left: 5.2%;
+    width: 37%;
     max-height: none;
   }
 
   .project-card--unexia .project-text {
-    max-height: 21.6rem;
-    font-size: 0.64rem;
-    line-height: 1.31;
+    max-height: 27.2rem;
+    font-size: 0.72rem;
+    line-height: 1.38;
   }
 
   .project-card--unexia .project-cta {
-    margin-top: 1.05rem;
+    margin-top: 1.2rem;
+    height: 2.6rem;
+    min-width: 7rem;
+    font-size: 0.8rem;
   }
 
   .project-card--unexia .project-hero-asset {
-    right: -36%;
-    bottom: -1%;
-    width: 64%;
+    right: -43%;
+    bottom: -0.5%;
+    width: 83%;
     max-width: none;
   }
 
   .project-card--coffee .project-beans {
-    top: -4.8%;
-    right: -9%;
-    width: 57%;
+    top: -1.2%;
+    right: -7%;
+    width: 54%;
     max-width: none;
   }
 
   .project-card--coffee .project-title-group {
-    top: 3.5%;
-    left: 5%;
-    max-width: 79%;
+    top: 1.4%;
+    left: 3.2%;
+    max-width: 88%;
   }
 
   .project-card--coffee .project-title-group > div {
@@ -543,143 +576,160 @@ body {
   }
 
   .project-card--coffee .project-title-group > div > img:first-child {
-    height: 4.75rem;
+    height: 5rem;
     max-width: none;
     margin-top: 0.1rem;
     margin-left: 0;
   }
 
   .project-card--coffee .project-title-group > div > img:last-child {
-    width: 3.35rem;
-    height: 5.65rem;
+    width: 3.75rem;
+    height: 6.4rem;
   }
 
   .project-card--coffee .project-title-group > img {
-    height: 6.55rem;
+    height: 8.1rem;
     max-width: none;
-    margin-top: 0.15rem;
-    margin-left: 1.9rem;
+    margin-top: -0.1rem;
+    margin-left: 0.3rem;
   }
 
   .project-card--coffee .project-copy {
-    top: 40%;
-    left: 8.2%;
-    width: 42%;
+    top: 34%;
+    left: 4.5%;
+    width: 41%;
   }
 
   .project-card--coffee .project-text {
-    max-height: 14.8rem;
+    max-height: 25.5rem;
     padding-right: 0;
-    font-size: 0.64rem;
-    line-height: 1.3;
+    font-size: 0.76rem;
+    line-height: 1.32;
   }
 
   .project-card--coffee .project-cta {
-    top: 86.5%;
-    left: 7.8%;
+    top: 80.5%;
+    left: 4.5%;
+    height: 2.05rem;
+    min-width: 6.5rem;
+    font-size: 0.78rem;
   }
 
   .project-card--coffee .project-hero-asset {
-    right: -30%;
-    bottom: -3.5%;
+    right: -12%;
+    bottom: -7.5%;
     width: 80%;
     max-width: none;
   }
 
   .project-card--movie .project-film-roll {
-    top: -6%;
-    left: -33%;
-    width: 112%;
+    top: -12%;
+    left: -26%;
+    width: 93%;
   }
 
   .project-card--movie .project-title-group {
-    top: 25.5%;
-    left: -12%;
-    width: 76%;
-    height: 28%;
+    top: 19.5%;
+    left: -6%;
+    width: 64%;
+    height: 27%;
   }
 
   .project-card--movie .project-symbol {
-    top: 37%;
-    left: 6%;
-    width: 55%;
+    top: 34%;
+    left: 12%;
+    width: 48%;
     max-width: none;
   }
 
   .project-card--movie .project-subtitle {
-    top: 69%;
-    left: 8%;
-    width: 48%;
+    top: 65%;
+    left: 15%;
+    width: 47%;
   }
 
   .project-card--movie .project-text {
-    top: 11.5%;
-    right: 5%;
-    width: 43%;
-    max-height: 25.3rem;
-    font-size: 0.66rem;
-    line-height: 1.32;
+    top: 13.5%;
+    right: 4.2%;
+    width: 39%;
+    max-height: 34rem;
+    font-size: 0.68rem;
+    line-height: 1.36;
   }
 
   .project-card--movie .project-cta {
-    top: 82%;
-    right: 7%;
+    top: 76.5%;
+    right: 7.5%;
+    height: 2.2rem;
+    min-width: 6.6rem;
   }
 
   .project-card--movie .project-hero-asset {
-    right: -18%;
-    bottom: -9%;
-    width: 67%;
+    right: -8%;
+    bottom: -18%;
+    width: 74%;
     max-width: none;
   }
 
   .project-card--doctor .project-bg {
-    object-position: 54% 50%;
+    object-position: 51% 50%;
   }
 
   .project-card--doctor .project-title-bg {
-    top: 4.2%;
-    left: -8%;
-    width: 74%;
+    display: none;
   }
 
   .project-card--doctor .project-logo {
-    top: 2.2%;
-    left: 3.2%;
-    width: 105%;
+    top: 3.8%;
+    left: 3.5%;
+    width: 74%;
     max-width: none;
   }
 
   .project-card--doctor .project-mobile-icons {
-    top: 7.2%;
-    left: 63%;
+    top: 12%;
+    left: 61%;
+    gap: 0.28rem;
+  }
+
+  .project-card--doctor .project-mobile-icons img:first-child {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .project-card--doctor .project-mobile-icons img:last-child {
+    width: 1.1rem;
+    height: 1.1rem;
   }
 
   .project-card--doctor .project-cardio {
-    top: 3%;
-    left: 69%;
-    width: 65%;
+    top: 9.8%;
+    left: 67%;
+    width: 62%;
   }
 
   .project-card--doctor .project-text {
-    top: 31%;
-    left: 5%;
-    width: 42%;
-    max-height: 23.7rem;
-    font-size: 0.66rem;
+    top: 29%;
+    left: 4.5%;
+    width: 38%;
+    max-height: 19rem;
+    font-size: 0.61rem;
     line-height: 1.36;
   }
 
   .project-card--doctor .project-symbol {
-    top: 32%;
-    right: -33%;
+    top: 34.5%;
+    right: -29%;
     width: 88%;
     max-width: none;
   }
 
   .project-card--doctor .project-cta {
-    top: 86.4%;
-    left: 8%;
+    top: 77.5%;
+    left: 10.5%;
+    height: 2.15rem;
+    min-width: 6.2rem;
+    font-size: 0.72rem;
   }
 }
 

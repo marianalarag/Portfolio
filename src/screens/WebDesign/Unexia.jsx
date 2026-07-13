@@ -42,7 +42,7 @@ export const Unexia = () => {
           />
         </div>
 
-        <div className="absolute left-[5.25rem] top-[2rem] z-40 hidden -translate-y-1/2 items-center gap-[0.7rem] sm:flex lg:left-[9.3rem] lg:right-auto lg:top-[1.6rem] lg:gap-[0.9rem]">
+        <div className="project-techline absolute left-[5.25rem] top-[2rem] z-40 flex -translate-y-1/2 items-center gap-[0.7rem] lg:left-[9.3rem] lg:right-auto lg:top-[1.6rem] lg:gap-[0.9rem]">
           <img
             src={lineUnexia}
             alt=""

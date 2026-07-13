@@ -33,7 +33,7 @@ export const Enerqon = () => {
           alt="ENERQON"
           className="project-logo h-auto w-[58%] max-w-[880px] object-contain sm:w-[66%] md:w-[62%] lg:ml-[5%]"
         />
-        <div className="hidden h-px flex-1 bg-[#00ff41] sm:block" />
+        <div className="project-line h-px flex-1 bg-[#00ff41]" />
         <div className="ml-auto flex items-center gap-[0.65rem] sm:gap-[0.85rem]">
           {icons.map(([src, alt]) => (
             <img

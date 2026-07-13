@@ -360,13 +360,12 @@ export const WebDesign = ({ setExpandedImage }) => (
       </ResponsiveStage>
     </section>
 
-    <section className="relative z-0 w-full overflow-hidden bg-[#101729] max-sm:h-[100svh] max-sm:min-h-[34rem]">
-      <div className="h-full w-full sm:hidden">
+    <section className="relative z-0 w-full overflow-hidden bg-[#101729]">
+      <div className="w-full sm:hidden">
         <ResponsiveStage
           width={390}
           height={844}
-          fit="cover"
-          className="h-full w-full"
+          className="w-full"
           contentClassName="overflow-hidden bg-[#101729]"
         >
           <ProjectSlider />

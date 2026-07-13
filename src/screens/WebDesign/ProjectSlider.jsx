@@ -38,7 +38,7 @@ export const ProjectSlider = () => {
         type="button"
         onClick={prev}
         aria-label="Proyecto anterior"
-        className="group absolute left-[0.35rem] top-1/2 z-50 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center focus-visible:outline-none sm:left-[0.6rem] sm:h-11 sm:w-11 lg:left-[0.75rem]"
+        className="project-slider-nav group absolute left-[0.35rem] top-1/2 z-50 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center focus-visible:outline-none sm:left-[0.6rem] sm:h-11 sm:w-11 lg:left-[0.75rem]"
       >
         <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/55 shadow-[0_4px_12px_rgba(0,0,0,0.15)] transition duration-300 group-hover:scale-110 group-hover:bg-white/70 group-focus-visible:scale-110 group-focus-visible:bg-white/70 sm:h-11 sm:w-11">
           <svg
@@ -61,7 +61,7 @@ export const ProjectSlider = () => {
         type="button"
         onClick={next}
         aria-label="Siguiente proyecto"
-        className="group absolute right-[0.35rem] top-1/2 z-50 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center focus-visible:outline-none sm:right-[0.6rem] sm:h-11 sm:w-11 lg:right-[0.75rem]"
+        className="project-slider-nav group absolute right-[0.35rem] top-1/2 z-50 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center focus-visible:outline-none sm:right-[0.6rem] sm:h-11 sm:w-11 lg:right-[0.75rem]"
       >
         <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/55 shadow-[0_4px_12px_rgba(0,0,0,0.15)] transition duration-300 group-hover:scale-110 group-hover:bg-white/70 group-focus-visible:scale-110 group-focus-visible:bg-white/70 sm:h-11 sm:w-11">
           <svg
@@ -80,7 +80,7 @@ export const ProjectSlider = () => {
         </span>
       </button>
 
-      <div className="absolute bottom-[1.45rem] left-1/2 z-40 flex -translate-x-1/2 gap-4 rounded-full bg-white/65 px-5 py-2 sm:bottom-[1.8rem]">
+      <div className="project-slider-dots absolute bottom-[1.45rem] left-1/2 z-40 flex -translate-x-1/2 gap-4 rounded-full bg-white/65 px-5 py-2 sm:bottom-[1.8rem]">
         {slides.map((_, index) => (
           <button
             key={index}
