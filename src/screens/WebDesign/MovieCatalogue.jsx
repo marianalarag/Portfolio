@@ -1,5 +1,6 @@
 import catalogueTitle from "./img/catalogue.png";
 import clapperBoard from "./img/claqueta cine.png";
+import movieBg from "./img/fondo movie.png";
 import movieE from "./img/E.png";
 import movieI from "./img/I.png";
 import movieM from "./img/M.png";
@@ -45,6 +46,13 @@ export const MovieCatalogue = () => {
   return (
     <article className="project-card project-card--movie relative h-full w-full overflow-hidden bg-[#101527] text-[#e5e0d9]">
       <h1 className="sr-only">Movie Catalogue</h1>
+
+      <img
+        src={movieBg}
+        alt=""
+        aria-hidden="true"
+        className="project-bg absolute inset-0 z-0 h-full w-full object-cover"
+      />
 
       <img
         src={filmRoll}

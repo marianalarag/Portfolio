@@ -624,51 +624,51 @@ body {
   }
 
   .project-card--movie .project-film-roll {
-    top: -12%;
+    top: 0%;
     left: -26%;
-    width: 93%;
+    width: 100%;
   }
 
   .project-card--movie .project-title-group {
-    top: 19.5%;
-    left: -6%;
-    width: 64%;
-    height: 27%;
+    top: 25%;
+    left: -2%;
+    width: 60%;
+    height: 10%;
   }
 
   .project-card--movie .project-symbol {
-    top: 34%;
-    left: 12%;
-    width: 48%;
+    top: 30%;
+    left: 2%;
+    width: 60%;
     max-width: none;
   }
 
   .project-card--movie .project-subtitle {
-    top: 65%;
-    left: 15%;
-    width: 47%;
+    top: 54%;
+    left: 10%;
+    width: 40%;
   }
 
   .project-card--movie .project-text {
     top: 13.5%;
     right: 4.2%;
-    width: 39%;
+    width: 35%;
     max-height: 34rem;
-    font-size: 0.68rem;
+    font-size: 0.8rem;
     line-height: 1.36;
   }
 
   .project-card--movie .project-cta {
     top: 76.5%;
-    right: 7.5%;
+    right: 3.5%;
     height: 2.2rem;
     min-width: 6.6rem;
   }
 
   .project-card--movie .project-hero-asset {
-    right: -8%;
-    bottom: -18%;
-    width: 74%;
+    right: 8%;
+    bottom: -5%;
+    width: 100%;
     max-width: none;
   }
 

@@ -116,7 +116,7 @@ export const WebDesign = ({ setExpandedImage }) => (
       <img
         src={principalphoto}
         alt="Mariana Lara"
-        className="pointer-events-none absolute bottom-0 left-1/2 z-30 h-[100%] w-[95vw] max-w-none -translate-x-1/2 object-contain object-bottom sm:h-[90%] sm:w-[62vw] md:w-[52vw] lg:h-[88%] lg:w-[42%]"
+        className="pointer-events-none absolute bottom-0 left-1/2 z-30 h-[100%] w-[95vw] max-w-none -translate-x-1/2 object-contain object-bottom sm:h-[86%] sm:w-[62vw] md:w-[52vw] lg:h-[88%] lg:w-[42%]"
       />
 
       <div className="absolute inset-x-0 bottom-[1.8%] z-40 h-[6.2rem] sm:bottom-[2.5%] sm:h-[5.5rem] lg:h-auto">
