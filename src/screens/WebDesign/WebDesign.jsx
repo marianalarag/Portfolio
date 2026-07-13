@@ -132,9 +132,7 @@ export const WebDesign = ({ setExpandedImage }) => (
           >
             <span
               className={`flex items-center gap-2 ${
-                contact.align === "right"
-                  ? "justify-end lg:justify-start"
-                  : ""
+                contact.align === "right" ? "justify-end lg:justify-start" : ""
               }`}
             >
               <img
@@ -154,14 +152,18 @@ export const WebDesign = ({ setExpandedImage }) => (
                 src={line}
                 alt=""
                 className={`absolute top-1/2 h-px w-[70%] -translate-y-1/2 object-fill opacity-70 sm:w-full ${
-                  contact.align === "right" ? "right-0 lg:left-0 lg:right-auto" : "left-0"
+                  contact.align === "right"
+                    ? "right-0 lg:left-0 lg:right-auto"
+                    : "left-0"
                 }`}
               />
               <img
                 src={line}
                 alt=""
                 className={`absolute top-0 h-1 w-[40.42%] object-fill ${
-                  contact.align === "right" ? "right-0 lg:left-0 lg:right-auto" : "left-0"
+                  contact.align === "right"
+                    ? "right-0 lg:left-0 lg:right-auto"
+                    : "left-0"
                 }`}
               />
             </span>
@@ -170,8 +172,8 @@ export const WebDesign = ({ setExpandedImage }) => (
       </div>
     </section>
 
-    <section className="relative z-20 h-[100svh] min-h-[34rem] w-full overflow-visible bg-[#e7e1d599] text-[#10172d] lg:hidden">
-      <div className="pointer-events-none absolute left-[-6.3rem] top-[8rem] z-0 w-[15rem] rotate-[-90deg] text-right font-fraunces text-[3.2rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] sm:text-[4.8rem]">
+    <section className="relative z-20 h-[100svh] min-h-[34rem] w-full overflow-visible bg-[#e7e1d599] text-[#10172d] sm:hidden">
+      <div className="pointer-events-none absolute left-[-6.3rem] top-[7.5rem] z-0 w-[15rem] rotate-[-90deg] text-right font-fraunces text-[3.2rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] sm:text-[4.8rem]">
         MARIANA
       </div>
 
@@ -182,10 +184,10 @@ export const WebDesign = ({ setExpandedImage }) => (
       <img
         src={photoLeft}
         alt="Mariana Lara"
-        className="pointer-events-none absolute left-[-5%] top-[6%] z-10 h-[45%] w-auto max-w-none object-contain"
+        className="pointer-events-none absolute left-[-7%] top-[6%] z-10 h-[45%] w-auto max-w-none object-contain min-[480px]:max-[639px]:left-[-1%] min-[480px]:max-[639px]:top-[8%]"
       />
 
-      <div className="absolute left-[53%] right-[5%] top-[11%] z-20 space-y-[1rem] text-right font-kurale text-[0.70rem] leading-[1.22] max-[380px]:text-[0.68rem]">
+      <div className="absolute left-[45%] right-[6%] top-[10%] z-20 space-y-[1.7rem] text-right font-kurale text-[0.7rem] leading-[1.22] max-[380px]:text-[0.68rem]">
         <p>
           I&apos;m a highly motivated software development student with a strong
           passion for innovation. Currently pursuing a career in software
@@ -203,8 +205,8 @@ export const WebDesign = ({ setExpandedImage }) => (
         </p>
       </div>
 
-      <div className="absolute left-[5%] top-[50.5%] z-30 w-[42%] text-center">
-        <h3 className="font-pinyon text-[3rem] font-normal leading-none max-[380px]:text-[2.45rem]">
+      <div className="absolute left-[10%] top-[52%] z-30 w-[42%] text-center">
+        <h3 className="font-pinyon text-[2.5rem] font-normal leading-none max-[380px]:text-[2.45rem]">
           Languages
         </h3>
       </div>
@@ -251,15 +253,15 @@ export const WebDesign = ({ setExpandedImage }) => (
       <img
         src={photoRight}
         alt="Mariana Lara"
-        className="pointer-events-none absolute right-[-25%] top-[42%] z-10 h-[60%] w-auto max-w-none object-contain"
+        className="pointer-events-none absolute right-[-25%] top-[42%] z-10 h-[60%] w-auto max-w-none object-contain min-[480px]:max-[639px]:right-[-12%] min-[480px]:max-[639px]:top-[45%]"
       />
 
-      <div className="pointer-events-none absolute bottom-[-0.5%] left-[1%] z-0 w-[52%] text-right font-fraunces text-[5rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] max-[380px]:text-[4rem]">
+      <div className="pointer-events-none absolute bottom-[-0.5%] left-[15%] z-0 w-[52%] text-right font-fraunces text-[5rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] max-[380px]:text-[4rem]">
         LARA
       </div>
     </section>
 
-    <section className="relative z-20 hidden w-full overflow-visible bg-[#e7e1d599] lg:block">
+    <section className="relative z-20 hidden w-full overflow-visible bg-[#e7e1d599] sm:block">
       <ResponsiveStage
         width={1440}
         height={700}
@@ -358,8 +360,29 @@ export const WebDesign = ({ setExpandedImage }) => (
       </ResponsiveStage>
     </section>
 
-    <section className="relative z-0 h-[100svh] min-h-[34rem] w-full overflow-hidden bg-[#101729]">
-      <ProjectSlider />
+    <section className="relative z-0 w-full overflow-hidden bg-[#101729] max-sm:h-[100svh] max-sm:min-h-[34rem]">
+      <div className="h-full w-full sm:hidden">
+        <ResponsiveStage
+          width={390}
+          height={844}
+          fit="cover"
+          className="h-full w-full"
+          contentClassName="overflow-hidden bg-[#101729]"
+        >
+          <ProjectSlider />
+        </ResponsiveStage>
+      </div>
+
+      <div className="hidden w-full sm:block">
+        <ResponsiveStage
+          width={1920}
+          height={900}
+          className="w-full"
+          contentClassName="desktop-project-stage overflow-hidden bg-[#101729]"
+        >
+          <ProjectSlider />
+        </ResponsiveStage>
+      </div>
     </section>
 
     <section className="w-full bg-[#e4e4e4]">

@@ -43,19 +43,19 @@ const titleLetters = [
 
 export const MovieCatalogue = () => {
   return (
-    <article className="relative h-full w-full overflow-hidden bg-[#101527] text-[#e5e0d9]">
+    <article className="project-card project-card--movie relative h-full w-full overflow-hidden bg-[#101527] text-[#e5e0d9]">
       <h1 className="sr-only">Movie Catalogue</h1>
 
       <img
         src={filmRoll}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute left-[-28%] top-[-10%] z-0 w-[112%] max-w-none object-contain sm:left-[-9%] sm:top-[-18%] sm:w-[78%] lg:left-[-1%] lg:top-[-10%] lg:w-[72%]"
+        className="project-film-roll pointer-events-none absolute left-[-28%] top-[-10%] z-0 w-[112%] max-w-none object-contain sm:left-[-9%] sm:top-[-18%] sm:w-[78%] lg:left-[-1%] lg:top-[-10%] lg:w-[72%]"
       />
 
       <div
         aria-hidden="true"
-        className="absolute left-[-5%] top-[19%] z-20 h-[31%] w-[66%] max-w-[43rem] sm:left-[3.5%] sm:top-[18%] sm:w-[47%] lg:left-[4.5%] lg:top-[20%] lg:w-[42%]"
+        className="project-title-group absolute left-[-5%] top-[19%] z-20 h-[31%] w-[66%] max-w-[43rem] sm:left-[3.5%] sm:top-[18%] sm:w-[47%] lg:left-[4.5%] lg:top-[20%] lg:w-[42%]"
       >
         {titleLetters.map((letter) => (
           <img
@@ -71,10 +71,10 @@ export const MovieCatalogue = () => {
         src={movieReel}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute left-[4%] top-[37%] z-10 w-[58%] max-w-[43rem] object-contain drop-shadow-[0_18px_26px_rgba(0,0,0,0.24)] sm:left-[5.5%] sm:top-[35%] sm:w-[42%] lg:left-[11.5%] lg:top-[35%] lg:w-[26%]"
+        className="project-symbol pointer-events-none absolute left-[4%] top-[37%] z-10 w-[58%] max-w-[43rem] object-contain drop-shadow-[0_18px_26px_rgba(0,0,0,0.24)] sm:left-[5.5%] sm:top-[35%] sm:w-[42%] lg:left-[11.5%] lg:top-[35%] lg:w-[26%]"
       />
 
-      <div className="absolute left-[9%] top-[73.2%] z-20 w-[43%] max-w-[24.5rem] sm:left-[10%] sm:top-[73%] sm:w-[29%] lg:left-[12.8%] lg:top-[78.7%]">
+      <div className="project-subtitle absolute left-[9%] top-[73.2%] z-20 w-[43%] max-w-[24.5rem] sm:left-[10%] sm:top-[73%] sm:w-[29%] lg:left-[12.8%] lg:top-[78.7%]">
         <img
           src={catalogueTitle}
           alt=""
@@ -96,7 +96,7 @@ export const MovieCatalogue = () => {
         </div>
       </div>
 
-      <p className="absolute right-[5.2%] top-[18.8%] z-20 w-[42%] max-w-[39rem] text-right font-kurale text-[clamp(0.74rem,2.45vw,1.04rem)] leading-[1.38] text-[#e5e0d9] sm:right-[4.6%] sm:top-[23.8%] sm:w-[42%] sm:text-[clamp(1rem,1.92vw,1.55rem)] lg:right-[7%] lg:top-[23.8%] lg:w-[38%] lg:text-[1.28rem]">
+      <p className="project-text absolute right-[5.2%] top-[18.8%] z-20 box-border max-h-[61svh] w-[42%] max-w-[39rem] min-w-0 overflow-hidden text-right font-kurale text-[clamp(0.74rem,2.45vw,1.04rem)] leading-[1.38] text-[#e5e0d9] sm:right-[4.6%] sm:top-[23.8%] sm:max-h-none sm:w-[42%] sm:text-[clamp(1rem,1.92vw,1.55rem)] lg:right-[7%] lg:top-[23.8%] lg:w-[38%] lg:text-[1.28rem]">
         {descriptionText}
       </p>
 
@@ -105,7 +105,7 @@ export const MovieCatalogue = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Ver mas sobre Movie Catalogue"
-        className="absolute right-[9%] top-[84.5%] z-30 inline-flex h-[2.25rem] min-w-[6rem] items-center justify-center rounded-full bg-[#f0c326] px-[1.45rem] font-fraunces text-[0.84rem] font-normal text-[#1a1f33] shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition duration-200 hover:scale-105 hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f0c326] sm:right-[6%] sm:top-[84%] sm:h-[3rem] sm:min-w-[8.6rem] sm:text-[1.08rem] lg:right-[3.8%] lg:top-[80.2%] lg:h-[3.7rem] lg:min-w-[11.3rem] lg:text-[1.35rem]"
+        className="project-cta absolute right-[9%] top-[84.5%] z-30 inline-flex h-[2.25rem] min-w-[6rem] items-center justify-center rounded-full bg-[#f0c326] px-[1.45rem] font-fraunces text-[0.84rem] font-normal text-[#1a1f33] shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition duration-200 hover:scale-105 hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f0c326] sm:right-[6%] sm:top-[84%] sm:h-[3rem] sm:min-w-[8.6rem] sm:text-[1.08rem] lg:right-[3.8%] lg:top-[80.2%] lg:h-[3.7rem] lg:min-w-[11.3rem] lg:text-[1.35rem]"
       >
         Ver m&aacute;s
       </a>
@@ -114,7 +114,7 @@ export const MovieCatalogue = () => {
         src={clapperBoard}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-[-9%] right-[-13%] z-10 w-[71%] max-w-[42rem] object-contain sm:bottom-[-11%] sm:right-[-5%] sm:w-[43%] lg:bottom-[-10%] lg:right-[5%] lg:w-[38%]"
+        className="project-hero-asset pointer-events-none absolute bottom-[-9%] right-[-13%] z-10 w-[71%] max-w-[42rem] object-contain sm:bottom-[-11%] sm:right-[-5%] sm:w-[43%] lg:bottom-[-10%] lg:right-[5%] lg:w-[38%]"
       />
     </article>
   );

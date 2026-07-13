@@ -39,6 +39,19 @@ export const ResponsiveStage = ({
         return;
       }
 
+      if (fit === "cover") {
+        const heightScale = hostHeight / height || widthScale;
+        const scale = Math.max(widthScale, heightScale);
+
+        setLayout({
+          scaleX: scale,
+          scaleY: scale,
+          x: (hostWidth - width * scale) / 2,
+          y: (hostHeight - height * scale) / 2,
+        });
+        return;
+      }
+
       if (fit === "stretch-height") {
         setLayout({
           scaleX: widthScale,
@@ -64,7 +77,7 @@ export const ResponsiveStage = ({
       ref={hostRef}
       className={`relative w-full overflow-hidden ${className}`}
       style={
-        fit === "contain" || fit === "stretch-height"
+        fit === "contain" || fit === "cover" || fit === "stretch-height"
           ? { height: "100%" }
           : { height: `${height * layout.scaleY}px` }
       }

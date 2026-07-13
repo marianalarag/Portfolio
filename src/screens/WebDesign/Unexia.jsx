@@ -18,15 +18,15 @@ const projectText =
 
 export const Unexia = () => {
   return (
-    <article className="relative h-full w-full overflow-hidden bg-[linear-gradient(180deg,#f2f0ec_0%,#f5f1f6_54%,#cfaedb_100%)] text-[#1a1f33]">
+    <article className="project-card project-card--unexia relative h-full w-full overflow-hidden bg-[linear-gradient(180deg,#f2f0ec_0%,#f5f1f6_54%,#cfaedb_100%)] text-[#1a1f33]">
       <img
         src={unexiaLogo}
         alt=""
         aria-hidden="true"
-        className="absolute right-[-55%] top-[10%] z-0 w-[118%] max-w-[880px] object-contain opacity-95 sm:right-[-34%] sm:top-[9%] sm:w-[82%] lg:right-[-10%] lg:top-[2%] lg:w-[62%]"
+        className="project-symbol absolute right-[-55%] top-[10%] z-0 w-[118%] max-w-[880px] object-contain opacity-95 sm:right-[-34%] sm:top-[9%] sm:w-[82%] lg:right-[-10%] lg:top-[2%] lg:w-[62%]"
       />
 
-      <header className="absolute left-[4.6%] right-[4.5%] top-[5.4%] z-20 flex items-start gap-[1rem] sm:left-[5.6%] sm:right-[6.5%] sm:top-[8.4%] lg:left-[9.8%]">
+      <header className="project-header absolute left-[4.6%] right-[4.5%] top-[5.4%] z-20 flex items-start gap-[1rem] sm:left-[5.6%] sm:right-[6.5%] sm:top-[8.4%] lg:left-[9.8%]">
         <img
           src={collegeIcon}
           alt=""
@@ -38,16 +38,16 @@ export const Unexia = () => {
           <img
             src={unexiaTitle}
             alt="UNEXIA Universidad de Negocios y Emprendimiento"
-            className="w-[72vw] max-w-[760px] object-contain sm:w-[58vw] lg:w-[50vw]"
+            className="project-logo w-[19.5rem] max-w-none object-contain sm:w-[38rem] lg:w-[47.5rem]"
           />
         </div>
 
-        <div className="absolute left-[5.8rem] top-[2rem] z-40 hidden -translate-y-1/2 items-center gap-[0.7rem] sm:flex lg:left-auto lg:right-[1rem] lg:top-[1.8rem] lg:gap-[0.9rem]">
+        <div className="absolute left-[5.25rem] top-[2rem] z-40 hidden -translate-y-1/2 items-center gap-[0.7rem] sm:flex lg:left-[9.3rem] lg:right-auto lg:top-[1.6rem] lg:gap-[0.9rem]">
           <img
             src={lineUnexia}
             alt=""
             aria-hidden="true"
-            className="h-px w-[12vw] max-w-[280px] object-fill lg:w-[9vw]"
+            className="h-px w-[7rem] max-w-none object-fill sm:w-[12rem] lg:w-[17.5rem]"
           />
           {icons.map(([src, alt]) => (
             <img
@@ -60,9 +60,9 @@ export const Unexia = () => {
         </div>
       </header>
 
-      <div className="absolute left-[6.1%] top-[24%] z-30 flex max-h-[68%] w-[62%] max-w-[34rem] flex-col items-start rounded-[0.35rem] bg-[#f5f1f6]/28 p-[0.15rem] backdrop-blur-[1px] sm:left-[6.1%] sm:top-[31%] sm:w-[44%] sm:bg-transparent sm:p-0 sm:backdrop-blur-0 lg:left-[12.5%] lg:top-[40%] lg:w-[38%]">
+      <div className="project-copy absolute left-[6.1%] top-[24%] z-30 box-border flex max-h-[68%] w-[62%] max-w-[34rem] min-w-0 flex-col items-start overflow-hidden rounded-[0.35rem] bg-[#f5f1f6]/38 p-[0.15rem] sm:left-[6.1%] sm:top-[31%] sm:w-[44%] sm:bg-transparent sm:p-0 lg:left-[12.5%] lg:top-[40%] lg:w-[38%]">
         <h1 className="sr-only">Unexia case study</h1>
-        <p className="font-kurale text-[clamp(0.64rem,2.05vw,0.95rem)] leading-[1.32] tracking-[-0.01em] sm:text-[clamp(0.86rem,1.58vw,1.22rem)] lg:text-[1.5rem]">
+        <p className="project-text max-h-[55svh] overflow-hidden font-kurale text-[clamp(0.64rem,2.05vw,0.95rem)] leading-[1.32] tracking-[-0.01em] sm:max-h-none sm:text-[clamp(0.86rem,1.58vw,1.22rem)] lg:text-[1.5rem]">
           {projectText}
         </p>
 
@@ -70,13 +70,13 @@ export const Unexia = () => {
           href="https://unexia.odoo.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-[1rem] inline-flex h-[2.55rem] min-w-[7.8rem] shrink-0 items-center justify-center rounded-full bg-[#9635e6] px-[1.75rem] font-fraunces text-[0.9rem] font-semibold text-white shadow-[0_12px_26px_rgba(150,53,230,0.24)] transition duration-200 hover:scale-105 hover:bg-[#842bd0] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9635e6] sm:mt-[1.65rem] sm:h-[3.35rem] sm:min-w-[9.8rem] sm:text-[1.08rem] lg:mt-[2rem] lg:h-[4rem] lg:min-w-[12rem] lg:text-[1.28rem]"
+          className="project-cta mt-[1rem] inline-flex h-[2.55rem] min-w-[7.8rem] shrink-0 items-center justify-center rounded-full bg-[#9635e6] px-[1.75rem] font-fraunces text-[0.9rem] font-semibold text-white shadow-[0_12px_26px_rgba(150,53,230,0.24)] transition duration-200 hover:scale-105 hover:bg-[#842bd0] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9635e6] sm:mt-[1.65rem] sm:h-[3.35rem] sm:min-w-[9.8rem] sm:text-[1.08rem] lg:mt-[2rem] lg:h-[4rem] lg:min-w-[12rem] lg:text-[1.28rem]"
         >
           Ver m&aacute;s
         </a>
       </div>
 
-      <div className="absolute right-[4.5%] top-[6.2%] z-30 flex items-center gap-[0.35rem] sm:hidden">
+      <div className="project-mobile-icons absolute right-[4.5%] top-[6.2%] z-30 flex items-center gap-[0.35rem] sm:hidden">
         {icons.map(([src, alt]) => (
           <img
             key={alt}
@@ -90,7 +90,7 @@ export const Unexia = () => {
       <img
         src={unexiaIcon}
         alt="Vista de interfaz móvil y promociones del proyecto Unexia"
-        className="absolute bottom-[-1.5%] right-[-38%] z-20 w-[66%] max-w-[500px] object-contain drop-shadow-[0_20px_42px_rgba(26,31,51,0.22)] sm:right-[-8%] sm:w-[58%] lg:left-[53%] lg:w-[40%]"
+        className="project-hero-asset absolute bottom-[-1.5%] right-[-38%] z-20 w-[66%] max-w-[500px] object-contain drop-shadow-[0_20px_42px_rgba(26,31,51,0.22)] sm:right-[-8%] sm:w-[58%] lg:left-[53%] lg:w-[40%]"
       />
     </article>
   );
