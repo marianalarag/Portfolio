@@ -490,20 +490,20 @@ body {
 
   .project-card--unexia .project-symbol {
     top: 27%;
-    right: -92%;
-    width: 152%;
+    right: -55%;
+    width: 120%;
     max-width: none;
   }
 
   .project-card--unexia .project-header {
-    top: 1.2%;
+    top: 10.2%;
     right: 4.5%;
     left: 4%;
   }
 
   .project-card--unexia .project-header > img {
-    top: -0.3rem;
-    left: 0;
+    top: -1.3rem;
+    left: 1rem;
     width: 3.25rem;
     height: 3.25rem;
   }
@@ -514,7 +514,7 @@ body {
 
   .project-card--unexia .project-techline {
     left: 5.65rem;
-    top: 1.85rem;
+    top: -0.01rem;
     gap: 0.45rem;
   }
 
@@ -532,15 +532,15 @@ body {
   }
 
   .project-card--unexia .project-copy {
-    top: 24.5%;
-    left: 5.2%;
-    width: 37%;
+    top: 26.5%;
+    left: 9.2%;
+    width: 32%;
     max-height: none;
   }
 
   .project-card--unexia .project-text {
-    max-height: 27.2rem;
-    font-size: 0.72rem;
+    max-height: 35.2rem;
+    font-size: 0.75rem;
     line-height: 1.38;
   }
 
@@ -552,9 +552,9 @@ body {
   }
 
   .project-card--unexia .project-hero-asset {
-    right: -43%;
+    left: 45%;
     bottom: -0.5%;
-    width: 83%;
+    width: 60%;
     max-width: none;
   }
 
