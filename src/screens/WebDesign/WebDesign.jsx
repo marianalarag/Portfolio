@@ -253,10 +253,10 @@ export const WebDesign = ({ setExpandedImage }) => (
       <img
         src={photoRight}
         alt="Mariana Lara"
-        className="pointer-events-none absolute right-[-25%] top-[42%] z-10 h-[60%] w-auto max-w-none object-contain min-[480px]:max-[639px]:right-[-12%] min-[480px]:max-[639px]:top-[45%]"
+        className="pointer-events-none absolute right-[-22%] top-[45%] z-10 h-[60%] w-auto max-w-none object-contain min-[480px]:max-[639px]:right-[-12%] min-[480px]:max-[639px]:top-[45%]"
       />
 
-      <div className="pointer-events-none absolute bottom-[-0.5%] left-[15%] z-0 w-[52%] text-right font-fraunces text-[5rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] max-[380px]:text-[4rem]">
+      <div className="pointer-events-none absolute bottom-[-0.5%] left-[15%] z-0 w-[52%] text-right font-fraunces text-[4rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] max-[380px]:text-[4rem]">
         LARA
       </div>
     </section>
