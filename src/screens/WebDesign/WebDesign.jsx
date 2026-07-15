@@ -189,93 +189,102 @@ export const WebDesign = ({ setExpandedImage }) => (
       </div>
     </section>
 
-    <section className="relative z-20 h-[100svh] min-h-[34rem] w-full overflow-visible bg-[#e7e1d599] text-[#10172d] sm:hidden">
-      <div className="pointer-events-none absolute left-[-6.6rem] top-[7.8rem] z-0 w-[15rem] rotate-[-90deg] text-right font-fraunces text-[2rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] sm:text-[4.8rem]">
-        MARIANA
-      </div>
+    <section className="relative z-20 w-full overflow-visible bg-[#e7e1d599] text-[#10172d] sm:hidden">
+      <ResponsiveStage
+        width={390}
+        height={844}
+        className="w-full overflow-visible"
+        contentClassName="overflow-visible bg-[#e7e1d599]"
+      >
+        <div className="relative h-[844px] w-[390px] overflow-visible text-[#10172d]">
+          <div className="pointer-events-none absolute left-[-6.6rem] top-[7.8rem] z-0 w-[15rem] rotate-[-90deg] text-right font-fraunces text-[2rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040]">
+            MARIANA
+          </div>
 
-      <h2 className="absolute left-[32%] top-[2.2%] z-30 w-[64%] text-center font-pinyon text-[4.25rem] font-normal leading-none max-[380px]:text-[3.55rem]">
-        About me
-      </h2>
+          <h2 className="absolute left-[32%] top-[2.2%] z-30 w-[64%] text-center font-pinyon text-[4.25rem] font-normal leading-none">
+            About me
+          </h2>
 
-      <img
-        src={photoLeft}
-        alt="Mariana Lara"
-        className="pointer-events-none absolute left-[-5%] top-[6%] z-10 h-[45%] w-auto max-w-none object-contain min-[480px]:max-[639px]:left-[-2%] min-[480px]:max-[639px]:top-[8%]"
-      />
-
-      <div className="absolute left-[40%] right-[6%] top-[12%] z-20 space-y-[1.7rem] text-right font-kurale text-[0.68rem] leading-[1.22] max-[380px]:text-[0.68rem]">
-        <p>
-          I&apos;m a highly motivated software development student with a strong
-          passion for innovation. Currently pursuing a career in software
-          development at Tecnológico de Software (2024&ndash;2028).
-        </p>
-        <p>
-          I&apos;m especially passionate about frontend development and cloud
-          computing &mdash; I enjoy creating intuitive user interfaces and
-          building scalable cloud-based solutions.
-        </p>
-        <p>
-          With a solid sense of responsibility, strong time management, and
-          quick learning skills, I approach challenges with perseverance,
-          adaptability, and a growth mindset.
-        </p>
-      </div>
-
-      <div className="absolute left-[10%] top-[52%] z-30 w-[42%] text-center">
-        <h3 className="font-pinyon text-[2rem] font-normal leading-none max-[380px]:text-[2.45rem]">
-          Languages
-        </h3>
-      </div>
-
-      <div className="absolute left-[7%] top-[58.6%] z-30 grid w-[51%] grid-cols-2 gap-x-[1rem] text-center font-kurale text-[0.75rem] leading-tight max-[380px]:text-[0.72rem]">
-        <span>English B2</span>
-        <span>Spanish Native</span>
-      </div>
-
-      <div className="absolute left-[3%] top-[64%] z-30">
-        <h3 className="font-pinyon text-[2rem] font-normal leading-none max-[380px]:text-[2.15rem]">
-          Tools
-        </h3>
-        <p className="mt-[1.1rem] font-kurale text-[0.75rem] leading-[1.35] max-[380px]:text-[0.72rem]">
-          VS Code
-          <br />
-          JetBrains
-          <br />
-          Environment
-          <br />
-          Git
-          <br />
-          Figma
-          <br />
-          Notion
-        </p>
-      </div>
-
-      <div className="absolute left-[25%] top-[63.6%] z-30 w-[38%] text-center font-pinyon text-[2rem] font-normal leading-none max-[380px]:text-[2rem]">
-        Hard Skills
-      </div>
-
-      <div className="absolute left-[35%] top-[68.8%] z-30 grid w-[6.1rem] grid-cols-2 gap-x-[0rem] gap-y-[0.50rem] max-[380px]:w-[6rem] max-[380px]:gap-x-[1.05rem]">
-        {skills.map(([src, alt]) => (
           <img
-            key={alt}
-            src={src}
-            alt={alt}
-            className="h-[1.3rem] w-[1.55rem] object-contain max-[380px]:h-[1.25rem] max-[380px]:w-[1.25rem]"
+            src={photoLeft}
+            alt="Mariana Lara"
+            className="pointer-events-none absolute left-[-5%] top-[6%] z-10 h-[45%] w-auto max-w-none object-contain"
           />
-        ))}
-      </div>
 
-      <img
-        src={photoRight}
-        alt="Mariana Lara"
-        className="pointer-events-none absolute right-[-13%] top-[45%] z-10 h-[60%] w-auto max-w-none object-contain min-[480px]:max-[639px]:right-[-1%] min-[480px]:max-[639px]:top-[45%]"
-      />
+          <div className="absolute left-[40%] right-[6%] top-[12%] z-20 space-y-[1.7rem] text-right font-kurale text-[0.68rem] leading-[1.22]">
+            <p>
+              I&apos;m a highly motivated software development student with a
+              strong passion for innovation. Currently pursuing a career in
+              software development at Tecnológico de Software (2024&ndash;2028).
+            </p>
+            <p>
+              I&apos;m especially passionate about frontend development and
+              cloud computing &mdash; I enjoy creating intuitive user interfaces
+              and building scalable cloud-based solutions.
+            </p>
+            <p>
+              With a solid sense of responsibility, strong time management, and
+              quick learning skills, I approach challenges with perseverance,
+              adaptability, and a growth mindset.
+            </p>
+          </div>
 
-      <div className="pointer-events-none absolute bottom-[-0.5%] left-[10%] z-0 w-[52%] text-right font-fraunces text-[3.2rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] max-[380px]:text-[4rem]">
-        LARA
-      </div>
+          <div className="absolute left-[10%] top-[52%] z-30 w-[42%] text-center">
+            <h3 className="font-pinyon text-[2rem] font-normal leading-none">
+              Languages
+            </h3>
+          </div>
+
+          <div className="absolute left-[7%] top-[58.6%] z-30 grid w-[51%] grid-cols-2 gap-x-[1rem] text-center font-kurale text-[0.75rem] leading-tight">
+            <span>English B2</span>
+            <span>Spanish Native</span>
+          </div>
+
+          <div className="absolute left-[3%] top-[64%] z-30">
+            <h3 className="font-pinyon text-[2rem] font-normal leading-none">
+              Tools
+            </h3>
+            <p className="mt-[1.1rem] font-kurale text-[0.75rem] leading-[1.35]">
+              VS Code
+              <br />
+              JetBrains
+              <br />
+              Environment
+              <br />
+              Git
+              <br />
+              Figma
+              <br />
+              Notion
+            </p>
+          </div>
+
+          <div className="absolute left-[25%] top-[63.6%] z-30 w-[38%] text-center font-pinyon text-[2rem] font-normal leading-none">
+            Hard Skills
+          </div>
+
+          <div className="absolute left-[35%] top-[68.8%] z-30 grid w-[6.1rem] grid-cols-2 gap-x-[0rem] gap-y-[0.50rem]">
+            {skills.map(([src, alt]) => (
+              <img
+                key={alt}
+                src={src}
+                alt={alt}
+                className="h-[1.3rem] w-[1.55rem] object-contain"
+              />
+            ))}
+          </div>
+
+          <img
+            src={photoRight}
+            alt="Mariana Lara"
+            className="pointer-events-none absolute right-[-13%] top-[45%] z-10 h-[60%] w-auto max-w-none object-contain"
+          />
+
+          <div className="pointer-events-none absolute bottom-[-0.5%] left-[10%] z-0 w-[52%] text-right font-fraunces text-[3.2rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040]">
+            LARA
+          </div>
+        </div>
+      </ResponsiveStage>
     </section>
 
     <section className="relative z-20 hidden w-full overflow-visible bg-[#e7e1d599] sm:block">
