@@ -68,6 +68,23 @@ const skills = [
   [baseDatosImg, "Database"],
 ];
 
+const desktopSkillRows = [
+  [
+    [odooImg, "Odoo"],
+    [htmlImg, "HTML"],
+    [dartImg, "Dart"],
+    [springImg, "Spring"],
+    [phpImg, "PHP"],
+  ],
+  [
+    [aws, "AWS"],
+    [cssImg, "CSS"],
+    [reactImg, "React"],
+    [pythonImg, "Python"],
+    [baseDatosImg, "Database"],
+  ],
+];
+
 export const WebDesign = ({ setExpandedImage }) => (
   <main className="w-full overflow-hidden bg-[#e4e4e4] text-[#1a1f33]">
     <section className="relative isolate h-[100svh] min-h-[34rem] overflow-hidden bg-[radial-gradient(circle_at_50%_50%,#1a1f33_0%,#4d4e5d_65%,#686875_100%)] px-[5%] pt-[3%] text-[#e2ded5] [container-type:inline-size] lg:min-h-[650px] lg:px-[4%] lg:pt-[2.2%]">
@@ -307,53 +324,62 @@ export const WebDesign = ({ setExpandedImage }) => (
             className="pointer-events-none absolute left-[700px] top-[-40px] z-10 h-[780px] w-[500px] max-w-none lg:left-[700px] lg:top-[-40px] lg:h-[780px] lg:w-[500px] max-[480px]:right-[-25%] max-[480px]:top-[45%] max-[480px]:h-[35%] max-[480px]:left-auto"
           />
 
-          <div className="absolute left-[1128px] top-[50px] z-20 w-[250px] text-center">
-            <h3 className="font-pinyon text-[56px] font-normal leading-none text-[#10172d]">
+          <div className="absolute left-[1118px] top-[24px] z-20 w-[300px] text-center text-[#10172d]">
+            <h3 className="font-pinyon text-[72px] font-normal leading-none">
               Languages
             </h3>
-            <p className="mt-[28px] font-kurale text-[17px] leading-[1.45] text-[#10172d]">
+
+            <p className="mt-[20px] font-kurale text-[18px] leading-[1.45]">
               English B2
               <br />
               Spanish Native
             </p>
+
+            <h3 className="mt-[28px] font-pinyon text-[70px] font-normal leading-none">
+              Tools
+            </h3>
+
+            <div className="mt-[30px] grid grid-cols-2 gap-x-[58px] font-kurale text-[18px] leading-[1.45]">
+              <p>
+                VS Code
+                <br />
+                JetBrains
+                <br />
+                Environment
+              </p>
+              <p>
+                Git
+                <br />
+                Figma
+                <br />
+                Notion
+              </p>
+            </div>
+
+            <h3 className="mt-[42px] font-pinyon text-[58px] font-normal leading-none">
+              Hard Skills
+            </h3>
+
+            <div className="mx-auto mt-[28px] flex w-[250px] flex-col gap-[14px]">
+              {desktopSkillRows.map((row, index) => (
+                <div
+                  key={index}
+                  className="grid grid-cols-5 items-center justify-items-center gap-x-[16px]"
+                >
+                  {row.map(([src, alt]) => (
+                    <img
+                      key={alt}
+                      src={src}
+                      alt={alt}
+                      className="h-[31px] w-[31px] object-contain"
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="absolute left-[1200px] top-[216px] z-20 w-[112px] text-center font-kurale text-[15px] leading-[1.35] text-[#10172d]">
-            VS Code
-            <br />
-            IntelliJ IDEA
-            <br />
-            Git
-            <br />
-            GitHub
-            <br />
-            Figma
-            <br />
-            Notion
-          </div>
-
-          <div className="absolute left-[1335px] top-[222px] z-20 font-pinyon text-[50px] font-normal leading-none text-[#10172d] [writing-mode:vertical-rl]">
-            Tools
-          </div>
-
-          <div className="absolute left-[1164px] top-[370px] z-20 rotate-180 font-pinyon text-[44px] font-normal leading-none text-[#10172d] [writing-mode:vertical-rl]">
-            Hard Skills
-          </div>
-
-          <div className="absolute left-[1238px] top-[400px] z-20 h-[130px] w-px bg-[#10172d]/60" />
-
-          <div className="absolute left-[1285px] top-[366px] z-20 grid w-[105px] grid-cols-2 gap-x-[22px] gap-y-[9px]">
-            {skills.map(([src, alt]) => (
-              <img
-                key={alt}
-                src={src}
-                alt={alt}
-                className="h-[30px] w-[30px] object-contain"
-              />
-            ))}
-          </div>
-
-          <div className="pointer-events-none absolute left-[1120px] top-[560px] z-0 w-[344px] text-right font-fraunces text-[110px] font-normal leading-normal text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040]">
+          <div className="pointer-events-none absolute left-[1130px] top-[610px] z-0 w-[320px] text-right font-fraunces text-[92px] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000030]">
             LARA
           </div>
         </div>
