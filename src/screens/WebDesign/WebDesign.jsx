@@ -190,7 +190,7 @@ export const WebDesign = ({ setExpandedImage }) => (
     </section>
 
     <section className="relative z-20 h-[100svh] min-h-[34rem] w-full overflow-visible bg-[#e7e1d599] text-[#10172d] sm:hidden">
-      <div className="pointer-events-none absolute left-[-6.3rem] top-[7.5rem] z-0 w-[15rem] rotate-[-90deg] text-right font-fraunces text-[2rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] sm:text-[4.8rem]">
+      <div className="pointer-events-none absolute left-[-6.6rem] top-[7.8rem] z-0 w-[15rem] rotate-[-90deg] text-right font-fraunces text-[2rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] sm:text-[4.8rem]">
         MARIANA
       </div>
 
@@ -240,11 +240,11 @@ export const WebDesign = ({ setExpandedImage }) => (
         <p className="mt-[1.1rem] font-kurale text-[0.75rem] leading-[1.35] max-[380px]:text-[0.72rem]">
           VS Code
           <br />
-          IntelliJ IDEA
+          JetBrains
+          <br />
+          Environment
           <br />
           Git
-          <br />
-          GitHub
           <br />
           Figma
           <br />
@@ -273,7 +273,7 @@ export const WebDesign = ({ setExpandedImage }) => (
         className="pointer-events-none absolute right-[-13%] top-[45%] z-10 h-[60%] w-auto max-w-none object-contain min-[480px]:max-[639px]:right-[-1%] min-[480px]:max-[639px]:top-[45%]"
       />
 
-      <div className="pointer-events-none absolute bottom-[-0.5%] left-[15%] z-0 w-[52%] text-right font-fraunces text-[3.2rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] max-[380px]:text-[4rem]">
+      <div className="pointer-events-none absolute bottom-[-0.5%] left-[10%] z-0 w-[52%] text-right font-fraunces text-[3.2rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] max-[380px]:text-[4rem]">
         LARA
       </div>
     </section>
