@@ -133,7 +133,7 @@ export const WebDesign = ({ setExpandedImage }) => (
       <img
         src={principalphoto}
         alt="Mariana Lara"
-        className="pointer-events-none absolute bottom-0 left-1/2 z-30 h-[100%] w-[95vw] max-w-none -translate-x-1/2 object-contain object-bottom sm:h-[86%] sm:w-[62vw] md:w-[52vw] lg:h-[88%] lg:w-[42%]"
+        className="pointer-events-none absolute bottom-0 left-1/2 z-30 h-[100%] w-[90vw] max-w-none -translate-x-1/2 object-contain object-bottom sm:h-[86%] sm:w-[62vw] md:w-[52vw] lg:h-[88%] lg:w-[42%]"
       />
 
       <div className="absolute inset-x-0 bottom-[1.8%] z-40 h-[6.2rem] sm:bottom-[2.5%] sm:h-[5.5rem] lg:h-auto">
@@ -190,7 +190,7 @@ export const WebDesign = ({ setExpandedImage }) => (
     </section>
 
     <section className="relative z-20 h-[100svh] min-h-[34rem] w-full overflow-visible bg-[#e7e1d599] text-[#10172d] sm:hidden">
-      <div className="pointer-events-none absolute left-[-6.3rem] top-[7.5rem] z-0 w-[15rem] rotate-[-90deg] text-right font-fraunces text-[2.8rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] sm:text-[4.8rem]">
+      <div className="pointer-events-none absolute left-[-6.3rem] top-[7.5rem] z-0 w-[15rem] rotate-[-90deg] text-right font-fraunces text-[2.5rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] sm:text-[4.8rem]">
         MARIANA
       </div>
 
@@ -201,10 +201,10 @@ export const WebDesign = ({ setExpandedImage }) => (
       <img
         src={photoLeft}
         alt="Mariana Lara"
-        className="pointer-events-none absolute left-[-5%] top-[6%] z-10 h-[45%] w-auto max-w-none object-contain min-[480px]:max-[639px]:left-[-1%] min-[480px]:max-[639px]:top-[8%]"
+        className="pointer-events-none absolute left-[-5%] top-[6%] z-10 h-[45%] w-auto max-w-none object-contain min-[480px]:max-[639px]:left-[-2%] min-[480px]:max-[639px]:top-[8%]"
       />
 
-      <div className="absolute left-[52%] right-[6%] top-[12%] z-20 space-y-[1.7rem] text-right font-kurale text-[0.6rem] leading-[1.22] max-[380px]:text-[0.68rem]">
+      <div className="absolute left-[40%] right-[6%] top-[12%] z-20 space-y-[1.7rem] text-right font-kurale text-[0.75rem] leading-[1.22] max-[380px]:text-[0.68rem]">
         <p>
           I&apos;m a highly motivated software development student with a strong
           passion for innovation. Currently pursuing a career in software
@@ -228,7 +228,7 @@ export const WebDesign = ({ setExpandedImage }) => (
         </h3>
       </div>
 
-      <div className="absolute left-[7%] top-[58.6%] z-30 grid w-[51%] grid-cols-2 gap-x-[1rem] text-center font-kurale text-[0.88rem] leading-tight max-[380px]:text-[0.72rem]">
+      <div className="absolute left-[7%] top-[58.6%] z-30 grid w-[51%] grid-cols-2 gap-x-[1rem] text-center font-kurale text-[0.75rem] leading-tight max-[380px]:text-[0.72rem]">
         <span>English B2</span>
         <span>Spanish Native</span>
       </div>
@@ -237,7 +237,7 @@ export const WebDesign = ({ setExpandedImage }) => (
         <h3 className="font-pinyon text-[2rem] font-normal leading-none max-[380px]:text-[2.15rem]">
           Tools
         </h3>
-        <p className="mt-[1.1rem] font-kurale text-[0.88rem] leading-[1.35] max-[380px]:text-[0.72rem]">
+        <p className="mt-[1.1rem] font-kurale text-[0.75rem] leading-[1.35] max-[380px]:text-[0.72rem]">
           VS Code
           <br />
           IntelliJ IDEA
@@ -252,11 +252,11 @@ export const WebDesign = ({ setExpandedImage }) => (
         </p>
       </div>
 
-      <div className="absolute left-[28%] top-[64.8%] z-30 rotate-180 font-pinyon text-[2rem] font-normal leading-none [writing-mode:vertical-rl] max-[380px]:text-[2rem]">
+      <div className="absolute left-[25%] top-[63.6%] z-30 w-[38%] text-center font-pinyon text-[2rem] font-normal leading-none max-[380px]:text-[2rem]">
         Hard Skills
       </div>
 
-      <div className="absolute left-[40%] top-[63.8%] z-30 grid w-[7.1rem] grid-cols-2 gap-x-[0rem] gap-y-[0.62rem] max-[380px]:w-[6rem] max-[380px]:gap-x-[1.05rem]">
+      <div className="absolute left-[35%] top-[68.8%] z-30 grid w-[6.1rem] grid-cols-2 gap-x-[0rem] gap-y-[0.62rem] max-[380px]:w-[6rem] max-[380px]:gap-x-[1.05rem]">
         {skills.map(([src, alt]) => (
           <img
             key={alt}
@@ -270,10 +270,10 @@ export const WebDesign = ({ setExpandedImage }) => (
       <img
         src={photoRight}
         alt="Mariana Lara"
-        className="pointer-events-none absolute right-[-22%] top-[45%] z-10 h-[60%] w-auto max-w-none object-contain min-[480px]:max-[639px]:right-[-12%] min-[480px]:max-[639px]:top-[45%]"
+        className="pointer-events-none absolute right-[-13%] top-[45%] z-10 h-[60%] w-auto max-w-none object-contain min-[480px]:max-[639px]:right-[-1%] min-[480px]:max-[639px]:top-[45%]"
       />
 
-      <div className="pointer-events-none absolute bottom-[-0.5%] left-[15%] z-0 w-[52%] text-right font-fraunces text-[4rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] max-[380px]:text-[4rem]">
+      <div className="pointer-events-none absolute bottom-[-0.5%] left-[15%] z-0 w-[52%] text-right font-fraunces text-[3.5rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] max-[380px]:text-[4rem]">
         LARA
       </div>
     </section>
