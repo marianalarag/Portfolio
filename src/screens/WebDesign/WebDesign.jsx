@@ -190,7 +190,7 @@ export const WebDesign = ({ setExpandedImage }) => (
     </section>
 
     <section className="relative z-20 h-[100svh] min-h-[34rem] w-full overflow-visible bg-[#e7e1d599] text-[#10172d] sm:hidden">
-      <div className="pointer-events-none absolute left-[-6.3rem] top-[7.5rem] z-0 w-[15rem] rotate-[-90deg] text-right font-fraunces text-[2.5rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] sm:text-[4.8rem]">
+      <div className="pointer-events-none absolute left-[-6.3rem] top-[7.5rem] z-0 w-[15rem] rotate-[-90deg] text-right font-fraunces text-[2rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] sm:text-[4.8rem]">
         MARIANA
       </div>
 
@@ -204,7 +204,7 @@ export const WebDesign = ({ setExpandedImage }) => (
         className="pointer-events-none absolute left-[-5%] top-[6%] z-10 h-[45%] w-auto max-w-none object-contain min-[480px]:max-[639px]:left-[-2%] min-[480px]:max-[639px]:top-[8%]"
       />
 
-      <div className="absolute left-[40%] right-[6%] top-[12%] z-20 space-y-[1.7rem] text-right font-kurale text-[0.75rem] leading-[1.22] max-[380px]:text-[0.68rem]">
+      <div className="absolute left-[40%] right-[6%] top-[12%] z-20 space-y-[1.7rem] text-right font-kurale text-[0.68rem] leading-[1.22] max-[380px]:text-[0.68rem]">
         <p>
           I&apos;m a highly motivated software development student with a strong
           passion for innovation. Currently pursuing a career in software
@@ -256,13 +256,13 @@ export const WebDesign = ({ setExpandedImage }) => (
         Hard Skills
       </div>
 
-      <div className="absolute left-[35%] top-[68.8%] z-30 grid w-[6.1rem] grid-cols-2 gap-x-[0rem] gap-y-[0.62rem] max-[380px]:w-[6rem] max-[380px]:gap-x-[1.05rem]">
+      <div className="absolute left-[35%] top-[68.8%] z-30 grid w-[6.1rem] grid-cols-2 gap-x-[0rem] gap-y-[0.50rem] max-[380px]:w-[6rem] max-[380px]:gap-x-[1.05rem]">
         {skills.map(([src, alt]) => (
           <img
             key={alt}
             src={src}
             alt={alt}
-            className="h-[1.55rem] w-[1.55rem] object-contain max-[380px]:h-[1.25rem] max-[380px]:w-[1.25rem]"
+            className="h-[1.3rem] w-[1.55rem] object-contain max-[380px]:h-[1.25rem] max-[380px]:w-[1.25rem]"
           />
         ))}
       </div>
@@ -273,7 +273,7 @@ export const WebDesign = ({ setExpandedImage }) => (
         className="pointer-events-none absolute right-[-13%] top-[45%] z-10 h-[60%] w-auto max-w-none object-contain min-[480px]:max-[639px]:right-[-1%] min-[480px]:max-[639px]:top-[45%]"
       />
 
-      <div className="pointer-events-none absolute bottom-[-0.5%] left-[15%] z-0 w-[52%] text-right font-fraunces text-[3.5rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] max-[380px]:text-[4rem]">
+      <div className="pointer-events-none absolute bottom-[-0.5%] left-[15%] z-0 w-[52%] text-right font-fraunces text-[3.2rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040] max-[380px]:text-[4rem]">
         LARA
       </div>
     </section>
