@@ -197,7 +197,7 @@ export const WebDesign = ({ setExpandedImage }) => (
         contentClassName="overflow-visible bg-[#e7e1d599]"
       >
         <div className="relative h-[844px] w-[390px] overflow-visible text-[#10172d]">
-          <div className="pointer-events-none absolute left-[-6.6rem] top-[7.8rem] z-0 w-[15rem] rotate-[-90deg] text-right font-fraunces text-[2rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040]">
+          <div className="pointer-events-none absolute left-[-6.6rem] top-[8.8rem] z-0 w-[15rem] rotate-[-90deg] text-right font-fraunces text-[2.5rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040]">
             MARIANA
           </div>
 
@@ -211,7 +211,7 @@ export const WebDesign = ({ setExpandedImage }) => (
             className="pointer-events-none absolute left-[-5%] top-[6%] z-10 h-[45%] w-auto max-w-none object-contain"
           />
 
-          <div className="absolute left-[40%] right-[6%] top-[12%] z-20 space-y-[1.7rem] text-right font-kurale text-[0.68rem] leading-[1.22]">
+          <div className="absolute left-[55%] right-[6%] top-[12%] z-20 space-y-[1.7rem] text-right font-kurale text-[0.68rem] leading-[1.22]">
             <p>
               I&apos;m a highly motivated software development student with a
               strong passion for innovation. Currently pursuing a career in
@@ -277,7 +277,7 @@ export const WebDesign = ({ setExpandedImage }) => (
           <img
             src={photoRight}
             alt="Mariana Lara"
-            className="pointer-events-none absolute right-[-13%] top-[45%] z-10 h-[60%] w-auto max-w-none object-contain"
+            className="pointer-events-none absolute right-[-22%] top-[45%] z-10 h-[60%] w-auto max-w-none object-contain"
           />
 
           <div className="pointer-events-none absolute bottom-[-0.5%] left-[10%] z-0 w-[52%] text-right font-fraunces text-[3.2rem] font-normal leading-none text-[#c1bfbc] [text-shadow:0_4px_4px_#00000040]">
