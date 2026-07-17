@@ -73,7 +73,7 @@ export const CoffeeMap = () => {
       </div>
 
       <a
-        href="https://coffee-map-delta.vercel.app/login"
+        href="https://coffe-map-khaki.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Ver mas sobre Coffee Map"
