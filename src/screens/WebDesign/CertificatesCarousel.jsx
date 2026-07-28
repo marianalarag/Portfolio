@@ -22,6 +22,7 @@ import ciscohardware from "./img/cisco hardware.png";
 import cisconetworking from "./img/cisco networking.png";
 import ciscooperations from "./img/cisco operating.png";
 import ciscopython from "./img/cisco python.png";
+import cybersecurityFundamentals from "./img/Fundamentos ciberseguridad.jpg";
 
 const awsCertificates = [
   { id: "cloud-operations", src: cloudOperations, alt: "Cloud Operations" },
@@ -103,7 +104,15 @@ const soloCertificates = [
   { id: "ibm", src: ibmImg, alt: "IBM" },
 ];
 
-const remainingCertificates = [...soloFeaturedCertificates, ...soloCertificates];
+const remainingCertificates = [
+  ...soloFeaturedCertificates,
+  ...soloCertificates,
+  {
+    id: "cybersecurity-fundamentals",
+    src: cybersecurityFundamentals,
+    alt: "Fundamentos de Ciberseguridad",
+  },
+];
 const folderColor = "#101729";
 
 const CertificateCard = ({ cert, onClick }) => (
