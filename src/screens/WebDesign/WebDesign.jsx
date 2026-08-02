@@ -1,4 +1,8 @@
 ﻿import { CertificatesCarousel } from "./CertificatesCarousel";
+import { useEffect } from "react";
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
+
 import { ProjectSlider } from "./ProjectSlider";
 import { ResponsiveStage } from "../../components/ResponsiveStage";
 import line from "./img/Line.png";
@@ -85,8 +89,145 @@ const desktopSkillRows = [
   ],
 ];
 
-export const WebDesign = ({ setExpandedImage }) => (
-  <main className="w-full overflow-hidden bg-[#e4e4e4] text-[#1a1f33]">
+export const WebDesign = ({ setExpandedImage }) => {
+  useEffect(() => {
+    const lenis = new Lenis({
+      autoRaf: true,
+      duration: 1.1,
+      smoothWheel: true,
+      syncTouch: true,
+      easing: (time) => 1 - Math.pow(1 - time, 4),
+    });
+
+    return () => lenis.destroy();
+  }, []);
+
+  useEffect(() => {
+    const main = document.querySelector("#app > main");
+    if (!main || !("IntersectionObserver" in window)) return undefined;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-scroll-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+    );
+    const projectSection = main.querySelector(":scope > section:nth-child(4)");
+    const projectSectionObserver = projectSection
+      ? new IntersectionObserver(
+          ([entry]) => {
+            if (!entry.isIntersecting) return;
+            projectSection.classList.add("is-project-section-visible");
+            projectSectionObserver.unobserve(projectSection);
+          },
+          { threshold: 0.18 },
+        )
+      : null;
+    const revealElements = [];
+
+    const revealVisibleElements = () => {
+      const viewportHeight = window.innerHeight;
+
+      revealElements.forEach((element) => {
+        if (element.classList.contains("is-scroll-visible")) return;
+        const rect = element.getBoundingClientRect();
+        const isVisible = rect.top < viewportHeight * 0.94 && rect.bottom > 0;
+
+        if (isVisible) {
+          element.classList.add("is-scroll-visible");
+          observer.unobserve(element);
+        }
+      });
+    };
+
+    const addRevealTargets = (selector, variant) => {
+      main.querySelectorAll(selector).forEach((element, index) => {
+        element.classList.add("scroll-reveal", `scroll-reveal--${variant}`);
+        element.style.setProperty(
+          "--reveal-delay",
+          `${Math.min((index % 5) * 90, 360)}ms`,
+        );
+        revealElements.push(element);
+        observer.observe(element);
+      });
+    };
+
+    addRevealTargets(
+      ":scope > section:first-child h1, :scope > section:first-child > p, :scope > section:first-child > div:not(.ellipse):not(:last-child)",
+      "text",
+    );
+    addRevealTargets(
+      ":scope > section:nth-child(2) h2, :scope > section:nth-child(2) p, :scope > section:nth-child(2) h3, :scope > section:nth-child(3) h2, :scope > section:nth-child(3) p, :scope > section:nth-child(3) h3",
+      "text",
+    );
+    addRevealTargets(
+      ":scope > section:last-child .certificate-card, :scope > section:last-child [aria-label^=\"Open\"]",
+      "visual",
+    );
+
+    if (projectSectionObserver && projectSection) {
+      projectSectionObserver.observe(projectSection);
+    }
+
+    window.addEventListener("scroll", revealVisibleElements, { passive: true });
+    window.setTimeout(revealVisibleElements, 700);
+    revealVisibleElements();
+
+    return () => {
+      observer.disconnect();
+      projectSectionObserver?.disconnect();
+      window.removeEventListener("scroll", revealVisibleElements);
+    };
+  }, []);
+
+  useEffect(() => {
+    const main = document.querySelector("#app > main");
+    if (!main) return undefined;
+
+    let frame = null;
+    let latestPointer = { x: 0, y: 0 };
+
+    const updateMotion = () => {
+      frame = null;
+      const x = latestPointer.x / window.innerWidth - 0.5;
+      const y = latestPointer.y / window.innerHeight - 0.5;
+
+      main.style.setProperty("--pointer-x", `${x * 14}px`);
+      main.style.setProperty("--pointer-y", `${y * 10}px`);
+      main.style.setProperty("--pointer-x-reverse", `${x * -10}px`);
+      main.style.setProperty("--pointer-y-reverse", `${y * -7}px`);
+    };
+
+    const handlePointerMove = (event) => {
+      latestPointer = { x: event.clientX, y: event.clientY };
+      if (frame === null) frame = requestAnimationFrame(updateMotion);
+    };
+
+    const resetMotion = () => {
+      main.style.setProperty("--pointer-x", "0px");
+      main.style.setProperty("--pointer-y", "0px");
+      main.style.setProperty("--pointer-x-reverse", "0px");
+      main.style.setProperty("--pointer-y-reverse", "0px");
+    };
+
+    window.addEventListener("pointermove", handlePointerMove, {
+      passive: true,
+    });
+    window.addEventListener("blur", resetMotion);
+
+    return () => {
+      window.removeEventListener("pointermove", handlePointerMove);
+      window.removeEventListener("blur", resetMotion);
+      if (frame !== null) cancelAnimationFrame(frame);
+    };
+  }, []);
+
+  return (
+    <main className="w-full overflow-hidden bg-[#e4e4e4] text-[#1a1f33]">
     <section className="relative isolate h-[100svh] min-h-[34rem] overflow-hidden bg-[radial-gradient(circle_at_50%_50%,#1a1f33_0%,#4d4e5d_65%,#686875_100%)] px-[5%] pt-[3%] text-[#e2ded5] [container-type:inline-size] lg:min-h-[650px] lg:px-[4%] lg:pt-[2.2%]">
       <h1 className="absolute inset-x-0 top-[10.5%] z-10 text-center font-fraunces text-[clamp(4.2rem,17cqw,7rem)] font-normal leading-[0.82] tracking-[-0.04em] text-[#c1bfbc] [text-shadow:0_4px_4px_#0005] sm:top-[8%] lg:relative lg:top-auto lg:z-20 lg:text-[10.2cqw]">
         PORTFOLIO
@@ -422,5 +563,6 @@ export const WebDesign = ({ setExpandedImage }) => (
     <section className="w-full bg-[#e4e4e4]">
       <CertificatesCarousel setExpandedImage={setExpandedImage} />
     </section>
-  </main>
-);
+    </main>
+  );
+};

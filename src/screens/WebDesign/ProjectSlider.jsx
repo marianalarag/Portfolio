@@ -28,7 +28,12 @@ export const ProjectSlider = () => {
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="h-full w-full shrink-0">
+          <div
+            key={index}
+            className={`project-slide h-full w-full shrink-0 ${
+              index === current ? "project-slide--active" : ""
+            }`}
+          >
             {slide}
           </div>
         ))}

@@ -13,11 +13,18 @@ html {
   overflow-x: clip;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 body {
   background-color: #e4e4e4;
   font-family: "Fraunces", Helvetica, sans-serif;
+  font-synthesis: none;
   overflow-x: clip;
   overflow-y: visible;
   min-height: 100%;
@@ -804,4 +811,635 @@ body {
 
 .global-modal-close:hover {
   background-color: rgba(26, 31, 51, 1);
+}
+
+/* ================================================
+   MOTION LAYER
+   Animaciones sutiles añadidas sin alterar el layout.
+   ================================================ */
+
+@keyframes heroTitleIn {
+  from {
+    opacity: 0;
+    letter-spacing: 0.08em;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: -0.04em;
+  }
+}
+
+@keyframes fadeUpIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    /* `none` evita que el texto quede rasterizado sobre una capa transformada. */
+    transform: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes portraitIn {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes projectFloat {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(0, -16px, 0) rotate(0.6deg);
+  }
+}
+
+@keyframes projectZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.075);
+  }
+}
+
+@keyframes modalOverlayIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heroGradientDrift {
+  from {
+    background-position: 46% 46%;
+  }
+  to {
+    background-position: 54% 54%;
+  }
+}
+
+@keyframes heroGlowDrift {
+  0%,
+  100% {
+    opacity: 0.12;
+    transform: translate3d(-2%, -1%, 0) scale(1);
+  }
+  50% {
+    opacity: 0.24;
+    transform: translate3d(2%, 1%, 0) scale(1.06);
+  }
+}
+
+@keyframes imageBreath {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+}
+
+@keyframes projectSheen {
+  from {
+    transform: translateX(-115%) skewX(-16deg);
+  }
+  to {
+    transform: translateX(115%) skewX(-16deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference), (prefers-reduced-motion: reduce) {
+  /* Hero */
+  main > section:first-child h1 {
+    animation: heroTitleIn 1s 100ms both cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  main > section:first-child > p {
+    animation: fadeUpIn 750ms 350ms both cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  main > section:first-child > div:not(.ellipse):not(:last-child) {
+    animation: fadeUpIn 800ms 500ms both cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  main > section:first-child > div:last-child {
+    animation: fadeUpIn 800ms 850ms both cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  main > section:first-child .ellipse {
+    animation: fadeIn 1.4s 300ms both ease-out;
+  }
+
+  main > section:first-child > img {
+    animation: portraitIn 1.1s 250ms both ease-out;
+  }
+
+  main > section:first-child {
+    background-size: 115% 115%;
+    animation: heroGradientDrift 18s ease-in-out infinite alternate;
+  }
+
+  main > section:first-child::before {
+    content: "";
+    position: absolute;
+    inset: -12%;
+    z-index: 1;
+    pointer-events: none;
+    background: radial-gradient(
+      circle at 28% 35%,
+      rgba(226, 222, 213, 0.35),
+      transparent 28%
+    );
+    opacity: 0.12;
+    animation: heroGlowDrift 11s ease-in-out infinite;
+  }
+
+  /* About section: both responsive versions use the same entrance rhythm. */
+  main > section:nth-child(2) h2,
+  main > section:nth-child(3) h2 {
+    animation: fadeUpIn 800ms 100ms both cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  main > section:nth-child(2) p,
+  main > section:nth-child(3) p {
+    animation: fadeUpIn 700ms 250ms both cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  main > section:nth-child(2) p:nth-of-type(2),
+  main > section:nth-child(3) p:nth-of-type(2) {
+    animation-delay: 400ms;
+  }
+
+  main > section:nth-child(2) p:nth-of-type(3),
+  main > section:nth-child(3) p:nth-of-type(3) {
+    animation-delay: 550ms;
+  }
+
+  main > section:nth-child(2) img:not([src*="photo"]),
+  main > section:nth-child(3) img:not([src*="photo"]) {
+    animation: fadeIn 900ms 650ms both ease-out;
+  }
+
+  main > section:nth-child(2) h3,
+  main > section:nth-child(3) h3 {
+    animation: fadeUpIn 700ms 650ms both cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  main > section:nth-child(2) img[alt]:not([alt="Mariana Lara"]),
+  main > section:nth-child(3) img[alt]:not([alt="Mariana Lara"]) {
+    animation: fadeIn 900ms 650ms both ease-out;
+    transition:
+      transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+      filter 260ms ease;
+  }
+
+  main > section:nth-child(2) img[alt="Mariana Lara"],
+  main > section:nth-child(3) img[alt="Mariana Lara"] {
+    animation: imageBreath 8s ease-in-out infinite;
+  }
+
+  /* Project slides */
+  .project-card .project-bg {
+    animation: projectZoom 12s 300ms ease-in-out infinite alternate;
+  }
+
+  .project-card .project-symbol,
+  .project-card .project-hero-asset,
+  .project-card .project-beans,
+  .project-card .project-film-roll,
+  .project-card .project-cardio {
+    animation: projectFloat 4.5s ease-in-out infinite alternate;
+  }
+
+  .project-card .project-header,
+  .project-card .project-title-group,
+  .project-card .project-copy,
+  .project-card .project-subtitle {
+    animation: fadeUpIn 850ms 250ms both cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .project-card .project-cta {
+    animation: fadeIn 700ms 650ms both ease-out;
+  }
+
+  .project-card::after {
+    content: "";
+    position: absolute;
+    inset: -35% auto -35% -35%;
+    z-index: 1;
+    width: 28%;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    opacity: 0;
+    transition: opacity 450ms ease;
+  }
+
+  .project-card:hover::after,
+  .project-card:focus-within::after {
+    opacity: 1;
+    animation: projectSheen 1.1s ease-out both;
+  }
+
+  .project-card:hover .project-symbol,
+  .project-card:hover .project-hero-asset,
+  .project-card:focus-within .project-symbol,
+  .project-card:focus-within .project-hero-asset {
+    filter: brightness(1.06) saturate(1.08);
+    transition: filter 450ms ease;
+  }
+
+  /* Certificates and modal */
+  main > section:last-child > div > div:first-child > div {
+    animation: heroTitleIn 900ms 100ms both cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .certificate-card {
+    animation: fadeIn 650ms both ease-out;
+  }
+
+  .certificate-card img {
+    transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .certificate-card:hover img,
+  .certificate-card:focus-within img {
+    transform: scale(1.035);
+  }
+
+  .global-modal-overlay {
+    animation: modalOverlayIn 220ms ease-out both;
+  }
+
+  .global-modal-close {
+    transition:
+      background-color 200ms ease,
+      transform 200ms ease;
+  }
+
+  .global-modal-close:hover {
+    transform: rotate(90deg) scale(1.08);
+  }
+}
+
+/* Reveals por scroll: texto y piezas visuales entran sin cambiar el layout. */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  clip-path: inset(0 0 100% 0);
+  transition:
+    opacity 720ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 720ms cubic-bezier(0.22, 1, 0.36, 1),
+    clip-path 720ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform, clip-path;
+  animation: none !important;
+}
+
+.scroll-reveal--visual {
+  clip-path: inset(0 0 8% 0);
+}
+
+.scroll-reveal.is-scroll-visible {
+  opacity: 1;
+  /* Al terminar se elimina la transformación para mantener el texto nítido. */
+  transform: none;
+  clip-path: none;
+}
+
+/* Los textos de cada proyecto entran cuando aparece su tarjeta, no al cargar la página. */
+.project-card.scroll-reveal .project-header,
+.project-card.scroll-reveal .project-title-group,
+.project-card.scroll-reveal .project-copy,
+.project-card.scroll-reveal .project-subtitle,
+.project-card.scroll-reveal .project-cta {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: none;
+}
+
+.project-card.scroll-reveal.is-scroll-visible .project-header,
+.project-card.scroll-reveal.is-scroll-visible .project-title-group,
+.project-card.scroll-reveal.is-scroll-visible .project-copy,
+.project-card.scroll-reveal.is-scroll-visible .project-subtitle {
+  animation: fadeUpIn 850ms var(--reveal-delay, 120ms) both
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card.scroll-reveal.is-scroll-visible .project-cta {
+  animation: fadeUpIn 700ms calc(var(--reveal-delay, 120ms) + 220ms) both
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Imágenes, logos e íconos de cada proyecto siguen el mismo reveal que el texto. */
+.project-card.scroll-reveal .project-bg,
+.project-card.scroll-reveal .project-logo,
+.project-card.scroll-reveal .project-line,
+.project-card.scroll-reveal .project-mobile-icons,
+.project-card.scroll-reveal .project-techline,
+.project-card.scroll-reveal .project-symbol,
+.project-card.scroll-reveal .project-hero-asset,
+.project-card.scroll-reveal .project-beans,
+.project-card.scroll-reveal .project-film-roll,
+.project-card.scroll-reveal .project-cardio {
+  opacity: 0;
+}
+
+.project-card.scroll-reveal.is-scroll-visible .project-logo,
+.project-card.scroll-reveal.is-scroll-visible .project-line,
+.project-card.scroll-reveal.is-scroll-visible .project-mobile-icons,
+.project-card.scroll-reveal.is-scroll-visible .project-techline {
+  animation: fadeIn 850ms calc(var(--reveal-delay, 120ms) + 80ms) both ease-out;
+}
+
+.project-card.scroll-reveal.is-scroll-visible .project-bg {
+  animation:
+    fadeIn 850ms calc(var(--reveal-delay, 120ms) + 80ms) both ease-out,
+    projectZoom 12s 300ms ease-in-out infinite alternate;
+}
+
+.project-card.scroll-reveal.is-scroll-visible .project-symbol,
+.project-card.scroll-reveal.is-scroll-visible .project-hero-asset,
+.project-card.scroll-reveal.is-scroll-visible .project-beans,
+.project-card.scroll-reveal.is-scroll-visible .project-film-roll,
+.project-card.scroll-reveal.is-scroll-visible .project-cardio {
+  animation:
+    fadeIn 900ms calc(var(--reveal-delay, 120ms) + 140ms) both ease-out,
+    projectFloat 4.5s ease-in-out infinite alternate;
+}
+
+/* Los CTA de proyectos crecen al interactuar, sin cambiar su posición. */
+.project-cta:hover,
+.project-cta:focus-visible {
+  scale: 1.12;
+}
+
+@keyframes projectTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    clip-path: inset(0);
+  }
+}
+
+@keyframes projectVisualReveal {
+  from {
+    scale: 0.94;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+/* El primer slide espera a entrar en la secciÃ³n; los siguientes esperan el clic. */
+main > section:nth-child(4) .project-card .project-bg,
+main > section:nth-child(4) .project-card .project-logo,
+main > section:nth-child(4) .project-card .project-line,
+main > section:nth-child(4) .project-card .project-mobile-icons,
+main > section:nth-child(4) .project-card .project-techline,
+main > section:nth-child(4) .project-card .project-symbol,
+main > section:nth-child(4) .project-card .project-hero-asset,
+main > section:nth-child(4) .project-card .project-beans,
+main > section:nth-child(4) .project-card .project-film-roll,
+main > section:nth-child(4) .project-card .project-cardio,
+main > section:nth-child(4) .project-card .project-header,
+main > section:nth-child(4) .project-card .project-title-group,
+main > section:nth-child(4) .project-card .project-copy,
+main > section:nth-child(4) .project-card .project-subtitle,
+main > section:nth-child(4) .project-card .project-cta {
+  animation: none;
+  clip-path: none;
+}
+
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-copy,
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-subtitle {
+  animation: projectTextReveal 850ms both cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-copy {
+  animation-delay: 180ms;
+}
+
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-subtitle {
+  animation-delay: 240ms;
+}
+
+/* Movie Catalogue y Simify tienen su párrafo directamente en la tarjeta. */
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card--movie
+  .project-text,
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card--doctor
+  .project-text {
+  animation: projectTextReveal 850ms 180ms both
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-cta {
+  animation: projectTextReveal 700ms 360ms both
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-bg {
+  animation:
+    projectVisualReveal 900ms 60ms both ease-out,
+    projectZoom 12s 300ms ease-in-out infinite alternate;
+}
+
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-logo,
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-title-group,
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-line,
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-mobile-icons,
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-techline {
+  animation: projectVisualReveal 850ms 110ms both ease-out;
+}
+
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-symbol,
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-hero-asset,
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-beans,
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-film-roll,
+main > section:nth-child(4).is-project-section-visible
+  .project-slide--active
+  .project-card
+  .project-cardio {
+  animation:
+    projectVisualReveal 900ms 140ms both ease-out,
+    projectFloat 4.5s ease-in-out infinite alternate;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  main > section:first-child h1,
+  main > section:first-child > p,
+  main > section:first-child > div:not(.ellipse):not(:last-child) {
+    scale: 1;
+    transform-origin: center;
+    transition: scale 280ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  main > section:first-child h1:hover,
+  main > section:first-child > p:hover,
+  main > section:first-child > div:not(.ellipse):not(:last-child):hover {
+    scale: 1.035;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .scroll-reveal {
+    transition-duration: 600ms;
+  }
+}
+
+/* Skills: el icono crece al interactuar, sin desplazamiento vertical. */
+main > section:nth-child(2) img[alt]:not([alt="Mariana Lara"]),
+main > section:nth-child(3) img[alt]:not([alt="Mariana Lara"]) {
+  position: relative;
+  z-index: 1;
+  transform-origin: center;
+  transition:
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 260ms ease;
+}
+
+main > section:nth-child(2) img[alt]:not([alt="Mariana Lara"]):hover,
+main > section:nth-child(2) img[alt]:not([alt="Mariana Lara"]):focus-visible,
+main > section:nth-child(2) img[alt]:not([alt="Mariana Lara"]):active,
+main > section:nth-child(3) img[alt]:not([alt="Mariana Lara"]):hover,
+main > section:nth-child(3) img[alt]:not([alt="Mariana Lara"]):focus-visible,
+main > section:nth-child(3) img[alt]:not([alt="Mariana Lara"]):active {
+  z-index: 40;
+  transform: scale(1.45);
+  filter: drop-shadow(0 6px 8px rgba(16, 23, 45, 0.22));
+}
+
+/* Parallax del cursor: usa los elementos existentes y no altera el layout. */
+@media (hover: hover) and (pointer: fine) {
+  main > section:first-child h1,
+  main > section:first-child .ellipse {
+    translate: var(--pointer-x-reverse, 0px) var(--pointer-y-reverse, 0px);
+    transition: translate 180ms ease-out;
+  }
+
+  main > section:first-child > img {
+    translate: var(--pointer-x, 0px) var(--pointer-y, 0px);
+    transition: translate 220ms ease-out;
+  }
+
+  .project-card .project-symbol,
+  .project-card .project-hero-asset,
+  .project-card .project-beans,
+  .project-card .project-film-roll,
+  .project-card .project-cardio {
+    translate: var(--pointer-x-reverse, 0px) var(--pointer-y-reverse, 0px);
+    transition: translate 220ms ease-out, filter 450ms ease;
+  }
+}
+
+/* Movimiento ambiental continuo: permanece dentro de los límites actuales. */
+@media (prefers-reduced-motion: no-preference), (prefers-reduced-motion: reduce) {
+  main > section:first-child {
+    animation-duration: 9s;
+  }
+
+  main > section:first-child::before {
+    animation-duration: 6s;
+  }
+
+  .project-card .project-bg {
+    animation-duration: 7s;
+  }
+
+  .project-card .project-symbol,
+  .project-card .project-hero-asset,
+  .project-card .project-beans,
+  .project-card .project-film-roll,
+  .project-card .project-cardio {
+    animation-duration: 3.2s;
+  }
+
+  .project-card::after {
+    opacity: 0.08;
+    animation: projectSheen 8s 1.2s ease-in-out infinite;
+  }
+
+  .project-card:hover::after,
+  .project-card:focus-within::after {
+    opacity: 0.2;
+    animation-duration: 1s;
+  }
 }

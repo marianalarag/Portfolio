@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Mariana Lara — Portfolio</title>
+  <desc id="desc">Frontend development and cloud computing portfolio by Mariana Lara.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="75%">
+      <stop offset="0" stop-color="#4d4e5d"/>
+      <stop offset="1" stop-color="#151827"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#c7c5ca" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#c7c5ca" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop offset="0" stop-color="#00ff41" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#00ff41"/>
+      <stop offset="1" stop-color="#00ff41" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <ellipse cx="625" cy="395" rx="475" ry="240" fill="url(#glow)"/>
+  <path d="M0 566C270 515 410 600 690 554s355-7 510-52v128H0Z" fill="#0c1020" opacity=".78"/>
+  <text x="68" y="88" fill="#d9d7d2" font-family="Georgia,serif" font-size="25" letter-spacing="8">PORTFOLIO</text>
+  <text x="68" y="183" fill="#f3f0ea" font-family="Georgia,serif" font-size="54" letter-spacing="2">SOFTWARE</text>
+  <text x="68" y="242" fill="#f3f0ea" font-family="Georgia,serif" font-size="54" letter-spacing="2">DEVELOPMENT</text>
+  <text x="68" y="301" fill="#f3f0ea" font-family="Georgia,serif" font-size="54" letter-spacing="2">STUDENT</text>
+  <rect x="70" y="332" width="328" height="2" fill="url(#line)"/>
+  <text x="68" y="386" fill="#00ff41" font-family="Georgia,serif" font-size="48" font-style="italic">Mariana Lara</text>
+  <text x="70" y="438" fill="#e2ded5" font-family="Arial,sans-serif" font-size="20">Frontend Development</text>
+  <text x="70" y="470" fill="#e2ded5" font-family="Arial,sans-serif" font-size="20">Cloud Computing</text>
+  <text x="1132" y="578" text-anchor="end" fill="#c1bfbc" font-family="Georgia,serif" font-size="70" letter-spacing="5" opacity=".65">LARA</text>
+  <circle cx="920" cy="272" r="124" fill="#c7c5ca" opacity=".12"/>
+  <circle cx="920" cy="245" r="56" fill="#d9d7d2" opacity=".84"/>
+  <path d="M820 470c12-102 69-150 100-150s88 48 100 150" fill="#d9d7d2" opacity=".72"/>
+  <path d="M856 217c7-52 28-82 64-82s57 30 64 82c-22-17-42-25-64-25s-42 8-64 25Z" fill="#151827" opacity=".9"/>
+</svg>
