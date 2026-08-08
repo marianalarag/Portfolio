@@ -4451,6 +4451,30 @@ main > section:nth-child(3) img[alt]:not([alt="Mariana Lara"]):active {
   .certificate-experience__sidebar h2 {
     font-size: clamp(2rem, 10.4cqw, 2.65rem);
   }
+
+  .certificate-experience__gallery.view-traditional {
+    min-height: 0;
+    flex: 0 0 auto;
+    overflow: visible;
+    touch-action: auto;
+  }
+
+  .view-traditional .certificate-experience__traditional-content {
+    position: relative;
+    inset: auto;
+    overflow: visible;
+    padding: 1rem 1rem max(4rem, calc(env(safe-area-inset-bottom) + 3rem));
+  }
+
+  .certificate-experience__gallery.view-stacked
+    .certificate-experience__caption {
+    bottom: max(5.25rem, calc(env(safe-area-inset-bottom) + 4.25rem));
+  }
+
+  .certificate-experience__gallery.view-stacked
+    .certificate-experience__navigation {
+    bottom: max(1.75rem, calc(env(safe-area-inset-bottom) + 1.25rem));
+  }
 }
 
 @media (max-width: 639px) {

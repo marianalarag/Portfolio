@@ -343,22 +343,26 @@ export const CertificatesCarousel = ({ setExpandedImage }) => {
           </div>
         )}
 
-        <div className="certificate-experience__caption">
-          <strong>{activeCertificate.alt}</strong>
-          <span>{activeCertificate.category}</span>
-          <small>
-            {String(activeIndex + 1).padStart(2, "0")} / {String(certificates.length).padStart(2, "0")}
-          </small>
-        </div>
+        {viewMode === "stacked" && (
+          <>
+            <div className="certificate-experience__caption">
+              <strong>{activeCertificate.alt}</strong>
+              <span>{activeCertificate.category}</span>
+              <small>
+                {String(activeIndex + 1).padStart(2, "0")} / {String(certificates.length).padStart(2, "0")}
+              </small>
+            </div>
 
-        <div className="certificate-experience__navigation" aria-label="Navigate certificates">
-          <button type="button" onClick={() => moveActive(-1)} aria-label="Previous certificate">
-            &larr;
-          </button>
-          <button type="button" onClick={() => moveActive(1)} aria-label="Next certificate">
-            &rarr;
-          </button>
-        </div>
+            <div className="certificate-experience__navigation" aria-label="Navigate certificates">
+              <button type="button" onClick={() => moveActive(-1)} aria-label="Previous certificate">
+                &larr;
+              </button>
+              <button type="button" onClick={() => moveActive(1)} aria-label="Next certificate">
+                &rarr;
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </section>
   );
